@@ -1,0 +1,12 @@
+Workflow
+
+Depedency installation : 1hr
+
+UI/UX Desing : 2 days
+
+API integration 2: days
+
+Testing 1 : day
+
+Delivery
+
