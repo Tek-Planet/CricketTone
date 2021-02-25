@@ -33,9 +33,12 @@ function DetailedScreen ()  {
     </View>
     )}
 
+    const access_token = 's1362178663747031042s1365294091465792064'
+
+
   useEffect(() => {
     setTimeout(() => {
-      axios.get('https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=2s1362178663747031042s1364907355665475353')
+      axios.get(`https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${access_token}`)
       .then(res => {
         console.log(res.data)
         setState({

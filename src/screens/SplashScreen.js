@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
-export default class Splash extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  render() {
+export default function Splash () {
+  const image =  require('../assets/flag.png')
     return (
-      <View>
-        <Text> Splash </Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Image style={{width:100, height:100, borderRadius:100, margin:10}}   source={require('../assets/imgs/cricket.png')}/>
+          <Text style={{fontSize:22, fontWeight:'bold', color:'#23395d'}}>CricketTone</Text>
       </View>
     );
-  }
+  
 }

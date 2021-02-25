@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator,ScrollView} from 'react-native';
 import CustomNavigation from '../navigation/CustomBottomNav'
 import axios from 'axios';
-import { ScrollView } from 'react-native-gesture-handler';
+
 
 function NewsScreen ({route, navigation}) {
  
@@ -12,10 +12,13 @@ function NewsScreen ({route, navigation}) {
   })
 
   const {key} = route.params;
+
+  const access_token = 's1362178663747031042s1365294091465792064'
+
   
   useEffect(() => {
     setTimeout(() => {
-      axios.get(`https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=2s1362178663747031042s1364907355665475353`)
+      axios.get(`https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=${access_token}`)
       .then(res => {
         console.log(res.data)
         setState({
@@ -65,7 +68,7 @@ function NewsScreen ({route, navigation}) {
                   <CustomNavigation match = {state.match} />     
       
              </ScrollView>):(
-              <View style={{ alignItems:'center',}} >
+              <View style={{  alignItems: 'center', justifyContent: 'center' }}>
                   <Text style={styles.loadingText}>Loading Data Please Wait</Text>
                   <ActivityIndicator size={50} color={'#000'}/>
               </View>
@@ -88,20 +91,20 @@ const styles = StyleSheet.create({
   scoreBox: {padding:10, margin:5, borderRadius:10, flexDirection:'row', justifyContent:"space-between", backgroundColor:'#fff',
   elevation: 5,},
 
-  imgFlag: {width:30, height:30, borderRadius:100,},
-
   teamName: {color: '#000', fontSize:20, fontWeight:'bold', },
 
   subTeamName: {color:  '#000', fontSize:16,  textAlign:'center' },
 
   team: {flexDirection:"column", alignItems:'center'},
 
-  row: {flexDirection:"row"},
-
   score:{color:'#000', fontSize:16, marginTop:10},
 
-  seperator:{color:'#000', fontSize:18, fontWeight:'bold'}
-  
+  seperator:{color:'#000', fontSize:18, fontWeight:'bold'},
+
+  loadingText:{
+    fontSize:20,
+    marginTop:200
+  }, 
 })
 
 

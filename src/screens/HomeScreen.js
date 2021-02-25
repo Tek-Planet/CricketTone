@@ -10,9 +10,11 @@ export default function HomeScreen({navigation}) {
     isLoaded:false
   })
 
+  const access_token = 's1362178663747031042s1365294091465792064'
+
   useEffect(() => {
     setTimeout(() => {
-      axios.get('https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=2s1362178663747031042s1364907355665475353')
+      axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`)
       .then(res => {
       
         setState({
@@ -73,7 +75,7 @@ export default function HomeScreen({navigation}) {
             />
 
           ):( 
-          <View style={{ alignItems:'center',}} >
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
               <Text style={styles.loadingText}>Loading Data Please Wait</Text>
               <ActivityIndicator size={50} color={'#000'}/>
           </View>

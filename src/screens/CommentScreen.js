@@ -24,11 +24,10 @@ function CommentScreen ({match}){
        
          <Image style={{width:50, height:50, borderRadius:100, margin:10}}  source={item.image} />
       
-
         <View style={{width:"75%" }}>         
             <Text style={{ fontSize:18, fontWeight:'bold', color:'#000',marginTop:10, }}>{item.title} </Text> 
             <Text style={{ fontSize:16, fontWeight:'bold', color:'#000',marginTop:5, }}> {item.time}</Text>
-            <Text style={[{marginTop:5, fontSize:16, textAlign:'justify', color:'#000', lineHeight:20}
+            <Text style={[{paddingBottom:10, marginTop:5, fontSize:16, textAlign:'justify', color:'#000', lineHeight:20}
           ]}>{item.body } </Text> 
         </View>
         
