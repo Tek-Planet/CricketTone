@@ -8,7 +8,7 @@ import SeriesTopNav from '../navigation/SeriesTopNav'
 export default function SeriesDetailsScreen({route, navigation}) {
 
   const [state, setState] = React.useState({
-    match : {},
+    serie : {},
     isLoaded:false,
    
   })
@@ -17,12 +17,12 @@ export default function SeriesDetailsScreen({route, navigation}) {
 
 
   const fetchData = () => {
-    axios.get(`https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${access_token}`)
+    axios.get(`https://rest.cricketapi.com/rest/v2/season/${key}/?access_token=${access_token}`)
     .then(res => {
       console.log(res.data.data)
       setState({
         ...state,
-        series:res.data.data,
+        serie:res.data.data,
         isLoaded:true
     });
     
@@ -42,24 +42,13 @@ useEffect(() => {
   }, 5000);
 }, []);
 
-const seriesListItem = (item) => {
-  return(
-  <View style={styles.scoreBox}>
-    <TouchableOpacity
-      onPress={() => navigation.navigate('SeriesDetails',  {key: item.key})} >
-      <Text style={styles.teamName}>{item.name}</Text>   
-      </TouchableOpacity>
-      <Text style={styles.score}>Venue: {item.venue}</Text>         
-      <Text style={styles.score}>Start Date: {item.start_date.str}</Text>          
-  </View>
-  )}
 
   return (
     <View>
-       <View style={styles.headingBox}>
-             <Text style={styles.headingText}>{name}</Text>                  
+      <View style={styles.headingBox}>
+             <Text style={styles.headingText}>{key}</Text>                  
         </View>
-        <SeriesTopNav />  
+        {/* <SeriesTopNav serie = {state.serie} />   */}
      </View>
   );
 }

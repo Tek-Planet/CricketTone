@@ -6,7 +6,7 @@ import SeriesTableScreen from '../screens/SeriesTableScreen'
 
 
 
-function CustomBottomNav ({match}) {
+function CustomBottomNav ({serie}) {
 
     const [selector, setSelector] = useState (1)
 
@@ -31,7 +31,7 @@ function CustomBottomNav ({match}) {
             {
                 <View>
                     {
-                        selector === 1 ? ( <SeriesMatchesScreen />) : null
+                        selector === 1 ? ( <SeriesMatchesScreen matches = {serie.season.matches}/>) : null
                         
                     }
 
@@ -52,7 +52,7 @@ export default CustomBottomNav;
 
 const styles = StyleSheet.create({
   button:  { 
-        width:'32%',
+        width:'50%',
         padding:5,
         borderRadius:5,
         borderWidth:1,

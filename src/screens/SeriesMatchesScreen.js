@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,FlatList } from 'react-native';
+import MatchListItem from '../components/MatchListItem'
 
-class SeriesMatchesScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
 
-  render() {
+
+function SeriesMatchesScreen ({matches}) {
+
+
     return (
-      <View>
-        <Text> SeriesMatchesScreen </Text>
-      </View>
+            <View>
+                            <Text>hey:</Text>
+            <FlatList    
+            data = {matches}
+            renderItem = {({item}) =>{   
+             return (MatchListItem(item))
+            }}
+            />
+            </View>
     );
-  }
+  
 }
 
 export default SeriesMatchesScreen;
