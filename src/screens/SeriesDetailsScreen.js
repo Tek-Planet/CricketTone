@@ -1,6 +1,8 @@
 import React, {useEffect}from 'react';
 import { Text, View, StyleSheet, ScrollView, FlatList,ActivityIndicator,TouchableOpacity } from 'react-native'
 import axios from 'axios';
+import SeriesTopNav from '../navigation/SeriesTopNav'
+
 
 
 export default function SeriesDetailsScreen({route, navigation}) {
@@ -57,7 +59,7 @@ const seriesListItem = (item) => {
        <View style={styles.headingBox}>
              <Text style={styles.headingText}>{name}</Text>                  
         </View>
-       <Text >{key}</Text>   
+        <SeriesTopNav />  
      </View>
   );
 }
