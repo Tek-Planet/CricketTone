@@ -6,7 +6,7 @@ import SeriesTableScreen from '../screens/SeriesTableScreen'
 
 
 
-function CustomBottomNav ({serie}) {
+function CustomBottomNav ({matches, navigation, table}) {
 
     const [selector, setSelector] = useState (1)
 
@@ -31,12 +31,12 @@ function CustomBottomNav ({serie}) {
             {
                 <View>
                     {
-                        selector === 1 ? ( <SeriesMatchesScreen matches = {serie.season.matches}/>) : null
+                        selector === 1 ? ( <SeriesMatchesScreen matches = {matches}   navigation = {navigation}/>) : null
                         
                     }
 
                     {
-                        selector === 2 ? (  <SeriesTableScreen />   ) : null
+                        selector === 2 ? (  <SeriesTableScreen  teams = {table} />   ) : null
                         
                     }
          

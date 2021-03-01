@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, StyleSheet,Image, ActivityIndicator,FlatList, TouchableOpacity, ScrollView} from 'react-native';
 import axios from 'axios';
+import MatchListItem from '../components/MatchListItem'
+import LoadingData from '../components/LoadingData'
 
 
 export default function HomeScreen({navigation}) {
@@ -10,23 +12,27 @@ export default function HomeScreen({navigation}) {
     isLoaded:false
   })
 
-  const access_token = '2s1362178663747031042s1365667590042688960'
+  const access_token = '2s1362178663747031042s1365950273549384486'
+
+  const fetchData = () =>{
+    axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`)
+    .then(res => {
+
+      setState({
+        ...state,
+         scores:res.data.data.cards,
+         isLoaded:true
+    });
+    
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   useEffect(() => {
     setTimeout(() => {
-      axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`)
-      .then(res => {
-      
-        setState({
-          ...state,
-           scores:res.data.data.cards,
-           isLoaded:true
-      });
-      
-      })
-        .catch(err => {
-          console.log(err)
-        })
+        fetchData()
     }, 5000);
   }, []);
 
@@ -58,9 +64,10 @@ export default function HomeScreen({navigation}) {
     )}
 
 
+
   return (
 
-       <ScrollView>
+       <View style={{flex:1}}>
          <View style={styles.headingBox}>
              <Text style={styles.headingText}>Live Scores</Text>                  
          </View>
@@ -70,19 +77,17 @@ export default function HomeScreen({navigation}) {
             <FlatList    
             data = {state.scores}
             renderItem = {({item}) =>{   
-             return (scoreListItem(item))
+             return (MatchListItem(item, navigation))
             }}
+            keyExtractor={(item) => item.key}
             />
 
           ):( 
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text style={styles.loadingText}>Loading Data Please Wait</Text>
-              <ActivityIndicator size={50} color={'#000'}/>
-          </View>
+              <LoadingData />
             )      
 
           }
-      </ScrollView>
+      </View>
   );
 }
 
@@ -105,11 +110,6 @@ const styles = StyleSheet.create({
   score:{color:'#000', fontSize:16},
 
   seperator:{color:'#000', fontSize:18, fontWeight:'bold'},
-
-  loadingText:{
-    fontSize:20,
-    marginTop:200
-  },
 
   completed:{
     marginTop:10,

@@ -2,6 +2,8 @@ import React, { useEffect,useState } from 'react'
 import { Text, View, StyleSheet, ScrollView, FlatList,ActivityIndicator,TouchableOpacity } from 'react-native'
 import axios from 'axios';
 
+import LoadingData from '../components/LoadingData'
+
 export function SeriesScreen ({navigation})  {
 
   const [state, setState] = useState({
@@ -9,12 +11,11 @@ export function SeriesScreen ({navigation})  {
     isLoaded:false
   })
         
-  const access_token = '2s1362178663747031042s1365667590042688960'
+  const access_token = '2s1362178663747031042s1365950273549384486'
 
   const fetchData = () => {
               axios.get(`https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${access_token}`)
               .then(res => {
-                console.log(res.data.data)
                 setState({
                   ...state,
                   series:res.data.data,
@@ -27,7 +28,7 @@ export function SeriesScreen ({navigation})  {
                 })
             }
           
-          useEffect(() => {
+  useEffect(() => {
             setTimeout(() => {
                   if(!state.isLoaded){
                   fetchData()
@@ -37,43 +38,49 @@ export function SeriesScreen ({navigation})  {
             }, 5000);
           }, []);
 
-          const seriesListItem = (item) => {
-            return(
-            <View style={styles.scoreBox}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('SeriesDetails',  {key: item.key,name: item.name})} >
-                <Text style={styles.teamName}>{item.name}</Text>   
-                </TouchableOpacity>
-                <Text style={styles.score}>Venue: {item.venue}</Text>         
-                <Text style={styles.score}>Start Date: {item.start_date.str}</Text>          
-            </View>
-            )}
+  const seriesListItem = (item) => {
+    return(
+    <View style={styles.scoreBox}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SeriesDetails',  {key: item.key,name: item.name})} >
+        <Text style={styles.teamName}>{item.name}</Text>   
+        </TouchableOpacity>
+        <Text style={styles.score}>Venue: {item.venue}</Text>         
+        <Text style={styles.score}>Start Date: {item.start_date.str}</Text>          
+    </View>
+    )}
 
-            return (
-              <ScrollView>
-              <View style={styles.headingBox}>
-                  <Text style={styles.headingText}>Series</Text>                  
-              </View>
+    const ListHeaderComponent = ()=>{
+      return(
+      <View style={styles.headingBox}>
+      <Text style={styles.headingText}>Series</Text>                  
+      </View>
+      )
+    }
+
+        return (  
+
+            <View style={{flex:1}}>
+              { ListHeaderComponent()}
 
               {
-       state.isLoaded ? (
-         <FlatList    
-         data = {state.series}
-         renderItem = {({item}) =>{   
-          return (seriesListItem(item))
-         }}
-         />
+                
+                 state.isLoaded ? (
+                  <FlatList    
+                  
+                  data = {state.series}
+                  renderItem = {({item}) =>{   
+                    return (seriesListItem(item))
+                  }} 
+                  keyExtractor={(item) => item.key}
+                  />
+    
+                ):( <LoadingData /> )      
+    
+              }
+            </View>
 
-       ):( 
-       <View style={{ alignItems:'center',}} >
-           <Text style={styles.loadingText}>Fetching Series</Text>
-           <ActivityIndicator size={50} color={'#000'}/>
-       </View>
-         )      
-
-       }
-
-      </ScrollView>
+       
     )
   
 }

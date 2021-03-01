@@ -1,8 +1,8 @@
 import React, {useEffect } from 'react';
 import { View, Text, StyleSheet, Image,ScrollView, FlatList,ActivityIndicator, Linking } from 'react-native';
 import axios from 'axios';
-
-
+import NewsListItem from '../components/NewListItem'
+import LoadingData  from '../components/LoadingData'
 
 function DetailedScreen ()  {
 
@@ -11,52 +11,36 @@ function DetailedScreen ()  {
     isLoaded:false
   })
 
-  const newsListItem = (item) => {
-    return(
-    <View style={styles.scoreBox}>
-      <View style={styles.teamB}>
-      <View style={{width:'70%'}}>
-        <Text style={styles.teamName}>{item.title}</Text>
-        <Text style={styles.score}>{item.description_text}</Text>
-        
 
-        <Text style={styles.textStyle} onPress={ ()=> Linking.openURL(`${item.provider.url}`) } >Click Here To Visit source.</Text>
+  const access_token = '2s1362178663747031042s1365950273549384486'
 
-      </View>
-      <View style={{margin: 10, width:'30%', justifyContent:'center'}}>
-         <Image 
-          style={styles.imgFlag}
-          source={require('../assets/flag.png')}
-        /> 
-         </View>
-      </View>               
-    </View>
-    )}
+  const fetchData = () => {
 
-    const access_token = '2s1362178663747031042s1365667590042688960'
-
+    axios.get(`https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${access_token}`)
+    .then(res => {
+   //   console.log(res.data)
+      setState({
+        ...state,
+         news:res.data.data.news,
+         isLoaded:true
+    });
+    
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   useEffect(() => {
     setTimeout(() => {
-      axios.get(`https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${access_token}`)
-      .then(res => {
-        console.log(res.data)
-        setState({
-          ...state,
-           news:res.data.data.news,
-           isLoaded:true
-      });
-      
-      })
-        .catch(err => {
-          console.log(err)
-        })
+      if(!state.isLoaded)
+          fetchData()
     }, 5000);
   }, []);
 
   
     return (
-      <ScrollView>
+      <View style={{flex:1}}>
       <View style={styles.headingBox}>
           <Text style={styles.headingText}>Latest News</Text>                  
       </View>
@@ -66,19 +50,17 @@ function DetailedScreen ()  {
          <FlatList    
          data = {state.news}
          renderItem = {({item}) =>{   
-          return (newsListItem(item))
+          return (NewsListItem(item))
          }}
+         keyExtractor={(item) => item.title}
          />
 
        ):( 
-       <View style={{ alignItems:'center',}} >
-           <Text style={styles.loadingText}>Fetching News</Text>
-           <ActivityIndicator size={50} color={'#000'}/>
-       </View>
+            <LoadingData />
          )      
 
        }
-   </ScrollView>         
+   </View>         
      
     );
   

@@ -8,10 +8,9 @@ export default function HomeScreen({navigation}) {
   const [state, setState] = React.useState({
     scores : {},
     isLoaded:false,
-    matches:[{'key':'nzaus_2021_t20_05'},
-    {'key':'nzaus_2021_t20_04'},
-    {'key':'nzaus_2021_t20_03'}]
+    matches:[]
   })
+
 
   const access_token = '2s1362178663747031042s1365667590042688960'
 
@@ -19,10 +18,10 @@ export default function HomeScreen({navigation}) {
     setTimeout(() => {
       axios.get(`https://rest.cricketapi.com/rest/v2/season/nzaus_2021/?access_token=${access_token}`)
       .then(res => {
-        console.log(res.data.data.season.matches)
+   //     console.log(res.data.data.season.matches)
         setState({
           ...state,
-           scores:res.data.data.season.matches,
+           scores:Object.values(res.data.data.season.matches),
            matches:state.scores,
            isLoaded:true
       });
@@ -39,14 +38,27 @@ export default function HomeScreen({navigation}) {
             <View>
               <TouchableOpacity
                 onPress={() => navigation.navigate('MatchDetails',  {key: item.key})} >
-                    <View style={styles.scoreBox}>                         
-                             <Text style={styles.teamName}>{item.key}</Text>                                               
+                    <View style={styles.scoreBox}>
+                      <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>                 
+                             <Text style={styles.teamName}>{item.teams.a.name}</Text>
+                            <View style={{alignItems:'center'}}><Text style={styles.score}>120/3</Text>
+                              <Text style={styles.score}>14.4</Text>
+                            </View>
+
+                            <Text style={styles.seperator}>-</Text> 
+
+                          <View style={{alignItems:'center'}}>
+                              <Text style={styles.score}>120/3</Text>
+                              <Text style={styles.score}>14.4</Text>
+                          </View>
+                          <Text style={styles.teamName}>{item.teams.b.name}</Text>  
+                      </View>
+                      <Text style={styles.completed}>{item.msgs.completed}</Text>  
                       </View>
                       </TouchableOpacity>   
                 </View>
 
     )}
-
 
   return (
 
@@ -54,20 +66,16 @@ export default function HomeScreen({navigation}) {
          <View style={styles.headingBox}>
              <Text style={styles.headingText}>Live Scores</Text>                  
          </View>
-        {
-        //  scoreListItem(state.scores)
-        }
-
+    
          {
           state.isLoaded ? (
-            // <FlatList    
-            // data = {state.matches}
-            // renderItem = {({item}) =>{   
-            //  return (scoreListItem(item))
-            // }}
-            // />
-            state.matches.map((step)=> <Text style={styles.teamName}>{JSON.stringify(step)}</Text>)
-
+            <FlatList    
+            data = {state.scores}
+            renderItem = {({item}) =>{   
+             return (scoreListItem(item))
+            }}
+            keyExtractor={(item) => item.key}
+            />
 
           ):( 
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -76,7 +84,7 @@ export default function HomeScreen({navigation}) {
           </View>
             )      
 
-          } 
+          }
       </ScrollView>
   );
 }
