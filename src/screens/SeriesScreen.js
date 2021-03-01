@@ -11,7 +11,7 @@ export function SeriesScreen ({navigation})  {
     isLoaded:false
   })
         
-  const access_token = '2s1362178663747031042s1365950273549384486'
+  const access_token = '2s1362178663747031042s1366722683991114530'
 
   const fetchData = () => {
               axios.get(`https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${access_token}`)

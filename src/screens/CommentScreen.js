@@ -47,6 +47,7 @@ function CommentScreen ({match}){
                 renderItem = {({item}) =>{
                   return (messageListItem(item))
                 }}
+                keyExtractor={(item) => item.title}
                 />
           </View>
 

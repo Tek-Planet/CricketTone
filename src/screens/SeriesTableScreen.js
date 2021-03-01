@@ -48,17 +48,20 @@ function SeriesTable (table) {
 
         </View>
 
-  
+        {/* <Text>{JSON.stringify(table.teams[0].rounds[0].groups)}</Text> */}
 
-        <FlatList     
-            data = {table.teams}
+  {
+        table.teams[0].rounds[0] !== [] ?
+          ( <FlatList     
+            data = {table.teams[0].rounds[0].groups[0].teams}
             renderItem = {({item}) =>{   
             return (tableListItem(item))
             }}
             keyExtractor={(item) => item.name}
            
-            />
-
+            />):(null)
+       
+}
       </View>
     );
   }

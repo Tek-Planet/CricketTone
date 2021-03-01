@@ -13,7 +13,7 @@ function NewsScreen ({route, navigation}) {
 
   const {key} = route.params;
 
-  const access_token = '2s1362178663747031042s1365950273549384486'
+  const access_token = '2s1362178663747031042s1366722683991114530'
 
   
   useEffect(() => {

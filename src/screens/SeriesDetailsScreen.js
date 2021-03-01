@@ -12,10 +12,14 @@ export default function SeriesDetailsScreen({route, navigation}) {
     matches : [],
     table : [],
     isLoaded:false,
+    tbl:[]
    
   })
+
   const {key,name} =route.params;
-  const access_token = '2s1362178663747031042s1365950273549384486'
+
+  const access_token = '2s1362178663747031042s1366722683991114530'
+  // 2s1362178663747031042s1366722683991114530
   const matchesQuerry = axios.get(`https://rest.cricketapi.com/rest/v2/season/${key}/?access_token=${access_token}`)
   const tableQuerry = axios.get(`https://rest.cricketapi.com/rest/v2/season/${key}/points/?access_token=${access_token}`)
 
@@ -23,20 +27,25 @@ export default function SeriesDetailsScreen({route, navigation}) {
   const fetchData = () => {
     Promise.all([matchesQuerry,tableQuerry])
     .then(res => {
-      console.log(res[1].data.data.points.rounds[0].groups[0].teams)
-      if (condition) {
-        
-      }
+       console.log(res.data.data)
+    
       setState({
         ...state,
         matches:Object.values(res[0].data.data.season.matches),
-        table:Object.values(res[1].data.data.points),
+        // table:Object.values(res[1].data.data.points.rounds[0].groups[0].teams),
+        tbl:Object.values(res[1].data.data),
         isLoaded:true
     });
     //  table:res[1].data.data.points.rounds[0].groups[0].teams,
     })
       .catch(err => {
-        console.log(err)
+           if (err === 'TypeError'){
+             console.log('Typo')
+           }
+
+           else{
+             console.log('internet error')
+           }
       })
   }
 
@@ -56,7 +65,7 @@ useEffect(() => {
              <Text style={styles.headingText}>{key}</Text>                  
         </View>
         {state.isLoaded ? ( 
-        <SeriesTopNav matches = {state.matches} navigation = {navigation}  table={state.table.rounds[0].groups[0].teams} />  
+        <SeriesTopNav matches = {state.matches} navigation = {navigation}  table={state.tbl} />  
         ): (
           <LoadingData />
         )}

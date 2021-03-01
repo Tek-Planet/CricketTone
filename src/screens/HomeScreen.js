@@ -9,10 +9,11 @@ export default function HomeScreen({navigation}) {
   //  hold all state
   const [state, setState] = React.useState({
     scores : [],
-    isLoaded:false
+    isLoaded:false,
+    error:false
   })
 
-  const access_token = '2s1362178663747031042s1365950273549384486'
+  const access_token = '2s1362178663747031042s1366722683991114530'
 
   const fetchData = () =>{
     axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`)
@@ -26,7 +27,16 @@ export default function HomeScreen({navigation}) {
     
     })
       .catch(err => {
-        console.log(err)
+      //  console.log(err.type)
+        if(err.message === "Network Error")
+       { console.log('Internet Problem')
+       setState({
+        ...state,
+         error:true
+    });
+      }
+        else  console.log('non Internet Problem')
+        
       })
   }
 
@@ -36,35 +46,7 @@ export default function HomeScreen({navigation}) {
     }, 5000);
   }, []);
 
-  const scoreListItem = (item) => {
-    return(
-            <View>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('MatchDetails',  {key: item.key})} >
-                    <View style={styles.scoreBox}>
-                      <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>                 
-                             <Text style={styles.teamName}>{item.teams.a.name}</Text>
-                            <View style={{alignItems:'center'}}><Text style={styles.score}>120/3</Text>
-                              <Text style={styles.score}>14.4</Text>
-                            </View>
-
-                            <Text style={styles.seperator}>-</Text> 
-
-                          <View style={{alignItems:'center'}}>
-                              <Text style={styles.score}>120/3</Text>
-                              <Text style={styles.score}>14.4</Text>
-                          </View>
-                          <Text style={styles.teamName}>{item.teams.b.name}</Text>  
-                      </View>
-                      <Text style={styles.completed}>{item.msgs.completed}</Text>  
-                      </View>
-                      </TouchableOpacity>   
-                </View>
-
-    )}
-
-
-
+  
   return (
 
        <View style={{flex:1}}>
@@ -83,7 +65,9 @@ export default function HomeScreen({navigation}) {
             />
 
           ):( 
-              <LoadingData />
+             !state.error ? ( <LoadingData />):(
+               <Text>Aswear Error Dey</Text>
+             )
             )      
 
           }
