@@ -12,81 +12,56 @@ export default function HomeScreen({navigation}) {
   })
 
 
-  const access_token = '2s1362178663747031042s1365667590042688960'
+ function validate() {
+	
+		let formData = new FormData();
+		formData.append('type', 'login');
+		formData.append('email', 'techplanet49@gmail.com');
+		formData.append('password', '123');
+
+		return fetch('https://trailerbabu.com/authentication.php', {
+			method: 'POST',
+			body: formData
+		})
+			.then((res) =>  {
+
+        console.log(res) })
+		
+			.catch((error) => {
+				console.error(error);
+			});
+  }
+  
 
   useEffect(() => {
     setTimeout(() => {
-      axios.get(`https://rest.cricketapi.com/rest/v2/season/nzaus_2021/?access_token=${access_token}`)
-      .then(res => {
-   //     console.log(res.data.data.season.matches)
-        setState({
-          ...state,
-           scores:Object.values(res.data.data.season.matches),
-           matches:state.scores,
-           isLoaded:true
-      });
-      
-      })
-        .catch(err => {
-          console.log(err)
-        })
+          if(!state.isLoaded){
+          validate()
+          }
+  
     }, 5000);
   }, []);
 
-  const scoreListItem = (item) => {
-    return(
-            <View>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('MatchDetails',  {key: item.key})} >
-                    <View style={styles.scoreBox}>
-                      <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>                 
-                             <Text style={styles.teamName}>{item.teams.a.name}</Text>
-                            <View style={{alignItems:'center'}}><Text style={styles.score}>120/3</Text>
-                              <Text style={styles.score}>14.4</Text>
-                            </View>
 
-                            <Text style={styles.seperator}>-</Text> 
 
-                          <View style={{alignItems:'center'}}>
-                              <Text style={styles.score}>120/3</Text>
-                              <Text style={styles.score}>14.4</Text>
-                          </View>
-                          <Text style={styles.teamName}>{item.teams.b.name}</Text>  
-                      </View>
-                      <Text style={styles.completed}>{item.msgs.completed}</Text>  
-                      </View>
-                      </TouchableOpacity>   
-                </View>
+ 
+  return ( 
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+         <Image 
+                 style={{width:150, height:150, borderRadius:100, marginBottom:20}}
+                  source={require('../assets/imgs/error.png')}
+              />
+        <Text style={{color:'#fff', fontSize:18, marginBottom:10}}>Hmm. We’re having trouble fetching data</Text>
 
-    )}
+        <Text style={{color:'#fff', fontSize:18, marginBottom:20}}>Check your network connection.</Text>
 
-  return (
+          <TouchableOpacity
+                    style={[styles.categoryList,{backgroundColor: '#bd10e0'}]}>
+                  <Text style={styles.categoryListText}> Try Again</Text>
+          </TouchableOpacity>
+      </View>) 
 
-       <ScrollView>
-         <View style={styles.headingBox}>
-             <Text style={styles.headingText}>Live Scores</Text>                  
-         </View>
     
-         {
-          state.isLoaded ? (
-            <FlatList    
-            data = {state.scores}
-            renderItem = {({item}) =>{   
-             return (scoreListItem(item))
-            }}
-            keyExtractor={(item) => item.key}
-            />
-
-          ):( 
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text style={styles.loadingText}>Loading Data Please Wait</Text>
-              <ActivityIndicator size={50} color={'#000'}/>
-          </View>
-            )      
-
-          }
-      </ScrollView>
-  );
 }
 
 const styles = StyleSheet.create({
@@ -95,30 +70,14 @@ const styles = StyleSheet.create({
   
   headingText: {color: '#FFF', fontSize:22, fontWeight:'bold'},
 
-  scoreBox: {padding:10, margin:5, borderRadius:10,  backgroundColor:'#fff',elevation: 5, borderWidth:1, borderColor:'#23395d'},
-
-  imgFlag: {width:30, height:30, borderRadius:100, marginBottom:20},
-
-  teamName: {color: '#000', fontWeight:'bold', fontSize:18, marginLeft:10, marginRight:10, width:100, textAlign:'center'},
-
-  teamA: {flexDirection:"row"},
-
-  teamB: {flexDirection:"row"},
-
-  score:{color:'#000', fontSize:16},
-
-  seperator:{color:'#000', fontSize:18, fontWeight:'bold'},
-
-  loadingText:{
-    fontSize:20,
-    marginTop:200
+  categoryList: {
+    padding:14,
+    borderRadius:10,
+    backgroundColor: '#0037018D'
   },
-
-  completed:{
-    marginTop:10,
-    marginStart:10,
-    fontSize:15,
-    color:'#000'
-  }
+  categoryListText:{
+    color:'#ffffff',
+    fontSize:14
+  },
   
 })
