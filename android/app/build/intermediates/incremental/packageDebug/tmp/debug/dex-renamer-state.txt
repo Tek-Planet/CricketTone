@@ -1,4 +1,10 @@
-#Thu Feb 25 09:29:29 WAT 2021
-base.0=/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Wed Mar 03 09:01:28 WAT 2021
+path.2=classes3.dex
+path.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes3.dex
+base.1=/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
+base.0=/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex

@@ -1,21 +1,23 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator,ScrollView} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity,ScrollView} from 'react-native';
 import CustomNavigation from '../navigation/CustomBottomNav'
 import axios from 'axios';
+import LoadingData from '../components/LoadingData'
+
 
 
 function NewsScreen ({route, navigation}) {
  
   const [state, setState] = React.useState({
     match : {},
-    isLoaded:false
+    isLoaded:false,
+    error:false
   })
 
   const {key} = route.params;
 
   const access_token = '2s1362178663747031042s1366722683991114530'
 
-  
   useEffect(() => {
     setTimeout(() => {
       axios.get(`https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=${access_token}`)
@@ -29,13 +31,21 @@ function NewsScreen ({route, navigation}) {
       
       })
         .catch(err => {
-          console.log(err)
+          if(err.message === "Network Error")
+       { console.log('Internet Problem')
+       setState({
+        ...state,
+         error:true
+    });
+      }
+        else  console.log('non Internet Problem')
+    
         })
-    }, 5000);
+    }, 1000);
   }, []);
 
     return (
-      <View style={{marginBottom:60}}>
+      <View style={{flex:1, marginBottom:60}}>
          <View style={styles.headingBox}>
              <Text style={styles.headingText}>Match Details</Text>                  
          </View>
@@ -68,10 +78,29 @@ function NewsScreen ({route, navigation}) {
                   <CustomNavigation match = {state.match} />     
       
              </ScrollView>):(
-              <View style={{  alignItems: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.loadingText}>Loading Data Please Wait</Text>
-                  <ActivityIndicator size={50} color={'#000'}/>
-              </View>
+               !state.error ? ( <LoadingData />):(
+           
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                     <Image 
+                             style={{width:200, height:200, borderRadius:100, marginBottom:20}}
+                              source={require('../assets/imgs/err.jpg')}
+                          />
+                    <Text style={{color:'#000', fontSize:18, marginBottom:10}}>Hmm. We’re having trouble fetching data</Text>
+            
+                    <Text style={{color:'#000', fontSize:18, marginBottom:20}}>Check your network connection.</Text>
+            
+                      <TouchableOpacity
+                                onPress={()=> [fetchData(),   setState({  
+                                  ...state,
+                                  error: false,
+                                  })]}
+      
+                                style={[styles.categoryList]}>
+                              <Text style={styles.categoryListText}> Try Again</Text>
+                      </TouchableOpacity>
+                  </View>
+            
+             )
             )
         }
       </View>
@@ -105,6 +134,16 @@ const styles = StyleSheet.create({
     fontSize:20,
     marginTop:200
   }, 
+
+  categoryList: {
+    padding:14,
+    borderRadius:10,
+    backgroundColor: '#23395d'
+  },
+  categoryListText:{
+    color:'#ffffff',
+    fontSize:14
+  },  
 })
 
 

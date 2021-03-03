@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react'
-import { Text, View, StyleSheet, ScrollView, FlatList,ActivityIndicator,TouchableOpacity } from 'react-native'
+import { Text, View, StyleSheet,  FlatList, TouchableOpacity,Image } from 'react-native'
 import axios from 'axios';
 
 import LoadingData from '../components/LoadingData'
@@ -8,7 +8,8 @@ export function SeriesScreen ({navigation})  {
 
   const [state, setState] = useState({
     series : [],
-    isLoaded:false
+    isLoaded:false,
+    error:false
   })
         
   const access_token = '2s1362178663747031042s1366722683991114530'
@@ -24,10 +25,45 @@ export function SeriesScreen ({navigation})  {
               
               })
                 .catch(err => {
-                  console.log(err)
+                  if(err.message === "Network Error")
+                  { console.log('Internet Problem')
+                  setState({
+                   ...state,
+                    error:true
+               });
+                 }
+                   else  console.log('non Internet Problem')
+                   
+                 
                 })
             }
-          
+     
+ const errorPage = () => {
+              return (
+                       
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Image 
+                        style={{width:200, height:200, borderRadius:100, marginBottom:20}}
+                         source={require('../assets/imgs/err.jpg')}
+                     />
+               <Text style={{color:'#000', fontSize:18, marginBottom:10}}>Hmm. We’re having trouble fetching data</Text>
+              
+               <Text style={{color:'#000', fontSize:18, marginBottom:20}}>Check your network connection.</Text>
+              
+                 <TouchableOpacity
+                           onPress={()=> [fetchData(),   setState({  
+                             ...state,
+                             error: false,
+                             })]}
+              
+                           style={[styles.categoryList]}>
+                         <Text style={styles.categoryListText}> Try Again</Text>
+                 </TouchableOpacity>
+              </View>
+              )
+              }
+                        
+  
   useEffect(() => {
             setTimeout(() => {
                   if(!state.isLoaded){
@@ -35,10 +71,11 @@ export function SeriesScreen ({navigation})  {
                   }
                   else(console.log("Data is available"))
 
-            }, 5000);
+            }, 1000);
           }, []);
 
-  const seriesListItem = (item) => {
+ 
+   const seriesListItem = (item) => {
     return(
     <View style={styles.scoreBox}>
       <TouchableOpacity
@@ -75,7 +112,9 @@ export function SeriesScreen ({navigation})  {
                   keyExtractor={(item) => item.key}
                   />
     
-                ):( <LoadingData /> )      
+                ):( 
+                  !state.error ? ( <LoadingData />):(errorPage())
+                )      
     
               }
             </View>
@@ -111,7 +150,16 @@ const styles = StyleSheet.create({
     color: '#E91E63',
     textDecorationLine: 'underline'
  
-  }
+  },
+  categoryList: {
+    padding:14,
+    borderRadius:10,
+    backgroundColor: '#23395d'
+  },
+  categoryListText:{
+    color:'#ffffff',
+    fontSize:14
+  },
   
 })
 

@@ -48,18 +48,20 @@ function SeriesTable (table) {
 
         </View>
 
-        {/* <Text>{JSON.stringify(table.teams[0].rounds[0].groups)}</Text> */}
+        {/* <Text>{JSON.stringify(table.teams[0].rounds)}</Text> */}
 
-  {
-        table.teams[0].rounds[0] !== [] ?
-          ( <FlatList     
+  {    table.teams[0].rounds.length > 0 ?
+          ( 
+          <FlatList     
             data = {table.teams[0].rounds[0].groups[0].teams}
             renderItem = {({item}) =>{   
             return (tableListItem(item))
             }}
             keyExtractor={(item) => item.name}
            
-            />):(null)
+            />
+            // <Text style={{fontSize:30}}>{table.teams[0].rounds.length} </Text>
+            ):(   <Text style={{fontSize:20, textAlign:'center'}}>No Data Found</Text>)
        
 }
       </View>

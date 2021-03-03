@@ -1,5 +1,5 @@
 import React, {useEffect}from 'react';
-import { Text, View, StyleSheet, ScrollView, FlatList,ActivityIndicator,TouchableOpacity } from 'react-native'
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import axios from 'axios';
 import SeriesTopNav from '../navigation/SeriesTopNav'
 import LoadingData from  '../components/LoadingData'
@@ -12,9 +12,12 @@ export default function SeriesDetailsScreen({route, navigation}) {
     matches : [],
     table : [],
     isLoaded:false,
-    tbl:[]
+    error:false,
+    errorType:'',
+    tbl:[],
+    
    
-  })
+  })                          
 
   const {key,name} =route.params;
 
@@ -27,25 +30,36 @@ export default function SeriesDetailsScreen({route, navigation}) {
   const fetchData = () => {
     Promise.all([matchesQuerry,tableQuerry])
     .then(res => {
-       console.log(res.data.data)
-    
+     if (res[0].data.status_code === 200){
       setState({
         ...state,
         matches:Object.values(res[0].data.data.season.matches),
         // table:Object.values(res[1].data.data.points.rounds[0].groups[0].teams),
         tbl:Object.values(res[1].data.data),
-        isLoaded:true
-    });
-    //  table:res[1].data.data.points.rounds[0].groups[0].teams,
+        isLoaded:true,
+       
+    })
+     }
+
+     else{
+      setState({
+        ...state,
+        error:true,
+        errorType:'bad response'
+    })
+     }
+    
     })
       .catch(err => {
-           if (err === 'TypeError'){
-             console.log('Typo')
-           }
-
-           else{
-             console.log('internet error')
-           }
+        if(err.message === "Network Error")
+        { console.log('Internet Problem')
+        setState({
+         ...state,
+          error:true,
+          errorType:'network'
+     });
+       }
+         else  console.log(err.message)
       })
   }
 
@@ -55,19 +69,65 @@ useEffect(() => {
         fetchData()
         }
 
-  }, 5000);
+  }, 500);
 }, []);
 
+const errorPage = () => {
+  return (
+           
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Image 
+            style={{width:200, height:200, borderRadius:100, marginBottom:20}}
+             source={require('../assets/imgs/err.jpg')}
+         />
+   <Text style={{color:'#000', fontSize:18, marginBottom:10}}>Hmm. We’re having trouble fetching data</Text>
+  
+   <Text style={{color:'#000', fontSize:18, marginBottom:20}}>Check your network connection.</Text>
+  
+     <TouchableOpacity
+               onPress={()=> [fetchData(),   setState({  
+                 ...state,
+                 error: false,
+                 })]}
+  
+               style={[styles.categoryList]}>
+             <Text style={styles.categoryListText}> Try Again</Text>
+     </TouchableOpacity>
+  </View>
+  )
+  }
 
+const badResponsePage = () => {
+    return (
+             
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Image 
+              style={{width:200, height:200, borderRadius:100, marginBottom:20}}
+               source={require('../assets/imgs/forbidden.png')}
+           />
+    
+     {/* <Text style={{color:'#000', fontSize:18, marginBottom:20}}>Bad Response</Text> */}
+    
+       <TouchableOpacity onPress={()=> navigation.goBack()}  style={[styles.categoryList]}>
+               <Text style={styles.categoryListText}>Go Back</Text>
+       </TouchableOpacity>
+    </View>
+    )
+    }
+    
   return (
     <View style={{flex:1, marginBottom:30}}>
         <View style={styles.headingBox}>
              <Text style={styles.headingText}>{key}</Text>                  
         </View>
+
         {state.isLoaded ? ( 
         <SeriesTopNav matches = {state.matches} navigation = {navigation}  table={state.tbl} />  
         ): (
-          <LoadingData />
+          !state.error   ?  ( <LoadingData />):( 
+            state.errorType === 'network' ? errorPage() : (badResponsePage())            
+            )
+
         )}
      </View>
   );
@@ -95,4 +155,14 @@ const styles = StyleSheet.create({
     fontSize:20,
     marginTop:200
   }, 
+  categoryList: {
+    padding:14,
+    borderRadius:10,
+    backgroundColor: '#23395d'
+  },
+  categoryListText:{
+    color:'#ffffff',
+    fontSize:16
+  },
+  
 })

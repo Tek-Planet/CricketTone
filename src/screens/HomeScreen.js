@@ -1,105 +1,186 @@
 import React, {useState, useEffect} from 'react';
-import { View, Text, StyleSheet,Image, ActivityIndicator,FlatList, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import axios from 'axios';
-import MatchListItem from '../components/MatchListItem'
-import LoadingData from '../components/LoadingData'
-
+import MatchListItem from '../components/MatchListItem';
+import LoadingData from '../components/LoadingData';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeScreen({navigation}) {
   //  hold all state
-  const [state, setState] = React.useState({
-    scores : [],
-    isLoaded:false,
-    error:false
-  })
+  const [state, setState] = useState({
+    scores: [],
+    isLoaded: false,
+    error: false,
+    access_token: '',
+    accessCodes: {
+      access_token: 'default',
+      expires: '0',
+    },
+  });
 
-  const access_token = '2s1362178663747031042s1366722683991114530'
+  // getData from async storage
+  const getData = async () => {
+    try {
+      const accessCodes = await AsyncStorage.getItem('accessCodes');
 
-  const fetchData = () =>{
-    axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`)
-    .then(res => {
-
-      setState({
-        ...state,
-         scores:res.data.data.cards,
-         isLoaded:true
-    });
-    
-    })
-      .catch(err => {
-      //  console.log(err.type)
-        if(err.message === "Network Error")
-       { console.log('Internet Problem')
-       setState({
-        ...state,
-         error:true
-    });
+      if (accessCodes !== null) {
+        // conver the retrived data to json
+        const newCodes = JSON.parse(accessCodes);
+        // fetch data using stored access stoken
+        fetchData(newCodes.access_token);
+      } else {
+        console.log('No JSON data found');
       }
-        else  console.log('non Internet Problem')
-        
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+  // make request to the api server
+  const fetchData = (access_token) => {
+    axios
+      .get(
+        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`,
+      )
+      .then((res) => {
+        setState({
+          ...state,
+          scores: res.data.data.cards,
+          isLoaded: true,
+        });
       })
-  }
+      .catch((err) => {
+        //  console.log(err.type)
+        if (err.message === 'Network Error') {
+          console.log('Internet Problem');
+          setState({
+            ...state,
+            error: true,
+          });
+        } else console.log('non Internet Problem');
+      });
+  };
 
   useEffect(() => {
     setTimeout(() => {
-        fetchData()
+      getData();
     }, 5000);
   }, []);
 
-  
-  return (
+  const errorPage = () => {
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Image
+          style={{width: 200, height: 200, borderRadius: 100, marginBottom: 20}}
+          source={require('../assets/imgs/err.jpg')}
+        />
+        <Text style={{color: '#000', fontSize: 18, marginBottom: 10}}>
+          Hmm. We’re having trouble fetching data
+        </Text>
 
-       <View style={{flex:1}}>
-         <View style={styles.headingBox}>
-             <Text style={styles.headingText}>Live Scores</Text>                  
-         </View>
+        <Text style={{color: '#000', fontSize: 18, marginBottom: 20}}>
+          Check your network connection.
+        </Text>
 
-         {
-          state.isLoaded ? (
-            <FlatList    
-            data = {state.scores}
-            renderItem = {({item}) =>{   
-             return (MatchListItem(item, navigation))
-            }}
-            keyExtractor={(item) => item.key}
-            />
-
-          ):( 
-             !state.error ? ( <LoadingData />):(
-               <Text>Aswear Error Dey</Text>
-             )
-            )      
-
-          }
+        <TouchableOpacity
+          onPress={() => [
+            fetchData(),
+            setState({
+              ...state,
+              error: false,
+            }),
+          ]}
+          style={[styles.categoryList]}>
+          <Text style={styles.categoryListText}> Try Again</Text>
+        </TouchableOpacity>
       </View>
+    );
+  };
+
+  return (
+    <View style={{flex: 1}}>
+      <View style={styles.headingBox}>
+        <Text style={styles.headingText}>Live Scores</Text>
+      </View>
+
+      {state.isLoaded ? (
+        <FlatList
+          data={state.scores}
+          renderItem={({item}) => {
+            return MatchListItem(item, navigation);
+          }}
+          keyExtractor={(item) => item.key}
+        />
+      ) : !state.error ? (
+        <LoadingData />
+      ) : (
+        errorPage()
+      )}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  headingBox: {
+    padding: 10,
+    backgroundColor: '#23395d',
+    margin: 5,
+    borderRadius: 10,
+  },
 
-  headingBox: {padding:10, backgroundColor:'#23395d', margin:5, borderRadius:10},
-  
-  headingText: {color: '#FFF', fontSize:22, fontWeight:'bold'},
+  headingText: {color: '#FFF', fontSize: 22, fontWeight: 'bold'},
 
-  scoreBox: {padding:10, margin:5, borderRadius:10,  backgroundColor:'#fff',elevation: 5, borderWidth:1, borderColor:'#23395d'},
+  scoreBox: {
+    padding: 10,
+    margin: 5,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: '#23395d',
+  },
 
-  imgFlag: {width:30, height:30, borderRadius:100, marginBottom:20},
+  imgFlag: {width: 30, height: 30, borderRadius: 100, marginBottom: 20},
 
-  teamName: {color: '#000', fontWeight:'bold', fontSize:18, marginLeft:10, marginRight:10, width:100, textAlign:'center'},
+  teamName: {
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 18,
+    marginLeft: 10,
+    marginRight: 10,
+    width: 100,
+    textAlign: 'center',
+  },
 
-  teamA: {flexDirection:"row"},
+  teamA: {flexDirection: 'row'},
 
-  teamB: {flexDirection:"row"},
+  teamB: {flexDirection: 'row'},
 
-  score:{color:'#000', fontSize:16},
+  score: {color: '#000', fontSize: 16},
 
-  seperator:{color:'#000', fontSize:18, fontWeight:'bold'},
+  seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
 
-  completed:{
-    marginTop:10,
-    marginStart:10,
-    fontSize:15,
-    color:'#000'
-  }
-  
-})
+  completed: {
+    marginTop: 10,
+    marginStart: 10,
+    fontSize: 15,
+    color: '#000',
+  },
+
+  categoryList: {
+    padding: 14,
+    borderRadius: 10,
+    backgroundColor: '#23395d',
+  },
+  categoryListText: {
+    color: '#ffffff',
+    fontSize: 16,
+  },
+});
