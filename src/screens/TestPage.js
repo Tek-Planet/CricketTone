@@ -1,19 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {Text, View} from 'react-native';
-import {getData} from '../redux/actions/dataAction';
+import {useStateValue} from '../data/StateProvider';
 
 export function MoreScreen() {
-  // const msg = getData();
-
+  const token = useContext(useStateValue);
   useEffect(() => {
-    setTimeout(() => {
-      console.log(getData());
-    }, 1500);
+    setTimeout(() => {}, 1500);
   }, []);
 
   return (
     <View>
-      <Text> textInComponent </Text>
+      <Text> textInComponent {token} </Text>
     </View>
   );
 }

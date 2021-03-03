@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import axios from 'axios';
+import useStateValue from './src/data/StateProvider';
 
 import {
   NavigationContainer,
@@ -23,6 +24,7 @@ const CustomDefaultTheme = {
 
 const App = () => {
   // variables
+  // const [{}, dispatch] = useStateValue();
   const [state, setState] = useState({
     accessCodes: {},
     isLoading: true,
