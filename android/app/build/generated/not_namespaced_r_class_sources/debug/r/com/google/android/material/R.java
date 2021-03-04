@@ -1351,9 +1351,9 @@ public final class R {
         public static final int notification_template_icon_low_bg = 0x7f0700a2;
         public static final int notification_tile_bg = 0x7f0700a3;
         public static final int notify_panel_notification_icon_bg = 0x7f0700a4;
-        public static final int test_custom_background = 0x7f0700a7;
-        public static final int tooltip_frame_dark = 0x7f0700a8;
-        public static final int tooltip_frame_light = 0x7f0700a9;
+        public static final int test_custom_background = 0x7f0700af;
+        public static final int tooltip_frame_dark = 0x7f0700b0;
+        public static final int tooltip_frame_light = 0x7f0700b1;
     }
     public static final class id {
         private id() {}
@@ -3391,9 +3391,9 @@ public final class R {
     public static final class xml {
         private xml() {}
 
-        public static final int standalone_badge = 0x7f120001;
-        public static final int standalone_badge_gravity_bottom_end = 0x7f120002;
-        public static final int standalone_badge_gravity_bottom_start = 0x7f120003;
-        public static final int standalone_badge_gravity_top_start = 0x7f120004;
+        public static final int standalone_badge = 0x7f120002;
+        public static final int standalone_badge_gravity_bottom_end = 0x7f120003;
+        public static final int standalone_badge_gravity_bottom_start = 0x7f120004;
+        public static final int standalone_badge_gravity_top_start = 0x7f120005;
     }
 }

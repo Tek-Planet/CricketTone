@@ -1407,6 +1407,14 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable redbox_top_border_background
 drawable src_assets_flag
+drawable src_assets_imgs_cricket
+drawable src_assets_imgs_err
+drawable src_assets_imgs_forbidden
+drawable src_assets_imgs_more_five
+drawable src_assets_imgs_more_four
+drawable src_assets_imgs_more_one
+drawable src_assets_imgs_more_three
+drawable src_assets_imgs_more_two
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1863,6 +1871,10 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
+mipmap ic_launcher_custom
+mipmap ic_launcher_custom_background
+mipmap ic_launcher_custom_foreground
+mipmap ic_launcher_custom_round
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw app
@@ -2816,6 +2828,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_provider_paths
 xml rn_dev_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

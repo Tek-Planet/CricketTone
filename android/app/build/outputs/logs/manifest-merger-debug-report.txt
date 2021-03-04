@@ -18,6 +18,7 @@ MERGED from [:react-native-reanimated] /home/tekplanet/Documents/Project/React n
 MERGED from [:react-native-safe-area-context] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ac94430d8599ffb0befd83177c9c13ff/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
@@ -110,6 +111,8 @@ application
 ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ac94430d8599ffb0befd83177c9c13ff/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ac94430d8599ffb0befd83177c9c13ff/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:11:5-20
@@ -142,13 +145,13 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/tekpl
 	tools:ignore
 		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-52
-		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-59
+		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-59
 	tools:targetApi
 		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-41
-		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-48
+		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-48
 	android:allowBackup
 		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:11:7-34
 		ADDED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:11:7-34
@@ -216,6 +219,8 @@ MERGED from [:react-native-screens] /home/tekplanet/Documents/Project/React nati
 MERGED from [:react-native-screens] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ac94430d8599ffb0befd83177c9c13ff/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ac94430d8599ffb0befd83177c9c13ff/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -352,6 +357,22 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.54.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/54a7aae5b034135aecf18fe01026e016/flipper-0.54.0/AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.54.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/54a7aae5b034135aecf18fe01026e016/flipper-0.54.0/AndroidManifest.xml:16:22-73
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a8ef91eee7724822cdf22cc939a82131/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:13:5-79
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79

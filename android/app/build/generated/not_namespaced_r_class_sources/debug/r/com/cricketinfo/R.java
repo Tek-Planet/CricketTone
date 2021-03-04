@@ -6603,9 +6603,17 @@ public final class R {
     public static final int notify_panel_notification_icon_bg=0x7f0700a4;
     public static final int redbox_top_border_background=0x7f0700a5;
     public static final int src_assets_flag=0x7f0700a6;
-    public static final int test_custom_background=0x7f0700a7;
-    public static final int tooltip_frame_dark=0x7f0700a8;
-    public static final int tooltip_frame_light=0x7f0700a9;
+    public static final int src_assets_imgs_cricket=0x7f0700a7;
+    public static final int src_assets_imgs_err=0x7f0700a8;
+    public static final int src_assets_imgs_forbidden=0x7f0700a9;
+    public static final int src_assets_imgs_more_five=0x7f0700aa;
+    public static final int src_assets_imgs_more_four=0x7f0700ab;
+    public static final int src_assets_imgs_more_one=0x7f0700ac;
+    public static final int src_assets_imgs_more_three=0x7f0700ad;
+    public static final int src_assets_imgs_more_two=0x7f0700ae;
+    public static final int test_custom_background=0x7f0700af;
+    public static final int tooltip_frame_dark=0x7f0700b0;
+    public static final int tooltip_frame_light=0x7f0700b1;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -7069,7 +7077,11 @@ public final class R {
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0c0000;
-    public static final int ic_launcher_round=0x7f0c0001;
+    public static final int ic_launcher_custom=0x7f0c0001;
+    public static final int ic_launcher_custom_background=0x7f0c0002;
+    public static final int ic_launcher_custom_foreground=0x7f0c0003;
+    public static final int ic_launcher_custom_round=0x7f0c0004;
+    public static final int ic_launcher_round=0x7f0c0005;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0d0000;
@@ -23280,10 +23292,11 @@ public final class R {
     public static final int ViewStubCompat_android_inflatedId=2;
   }
   public static final class xml {
-    public static final int rn_dev_preferences=0x7f120000;
-    public static final int standalone_badge=0x7f120001;
-    public static final int standalone_badge_gravity_bottom_end=0x7f120002;
-    public static final int standalone_badge_gravity_bottom_start=0x7f120003;
-    public static final int standalone_badge_gravity_top_start=0x7f120004;
+    public static final int file_provider_paths=0x7f120000;
+    public static final int rn_dev_preferences=0x7f120001;
+    public static final int standalone_badge=0x7f120002;
+    public static final int standalone_badge_gravity_bottom_end=0x7f120003;
+    public static final int standalone_badge_gravity_bottom_start=0x7f120004;
+    public static final int standalone_badge_gravity_top_start=0x7f120005;
   }
 }

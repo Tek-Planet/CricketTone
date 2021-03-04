@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CricketInfo.iml" filepath="$PROJECT_DIR$/.idea/modules/CricketInfo.iml" group="CricketInfo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="CricketInfo/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/941191510/react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/941191510/react-native-async-storage_async-storage.iml" group="CricketInfo/react-native-async-storage_async-storage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/402119826/react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/402119826/react-native-community_masked-view.iml" group="CricketInfo/react-native-community_masked-view" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1373803352/react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/-1373803352/react-native-firebase_app.iml" group="CricketInfo/react-native-firebase_app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1518107726/react-native-firebase_firestore.iml" filepath="$PROJECT_DIR$/.idea/modules/-1518107726/react-native-firebase_firestore.iml" group="CricketInfo/react-native-firebase_firestore" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/429066373/react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/429066373/react-native-gesture-handler.iml" group="CricketInfo/react-native-gesture-handler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1894410633/react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/-1894410633/react-native-reanimated.iml" group="CricketInfo/react-native-reanimated" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/667292590/react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/667292590/react-native-safe-area-context.iml" group="CricketInfo/react-native-safe-area-context" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1374131526/react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1374131526/react-native-screens.iml" group="CricketInfo/react-native-screens" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1065196175/react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-1065196175/react-native-vector-icons.iml" group="CricketInfo/react-native-vector-icons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/633074104/react-native-webview.iml" filepath="$PROJECT_DIR$/.idea/modules/633074104/react-native-webview.iml" group="CricketInfo/react-native-webview" />
     </modules>
   </component>
 </project>
