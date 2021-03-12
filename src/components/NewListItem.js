@@ -1,15 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
-const newsListItem = (item) => {
+const newsListItem = (item, navigation) => {
   return (
     <View style={styles.scoreBox}>
       <Text style={styles.teamName}>{item.title}</Text>
       <Text style={styles.score}>{item.description_text}</Text>
       <Text
         style={styles.textStyle}
-        onPress={() => Linking.openURL(`${item.provider.url}`)}>
-        Click Here To Visit source.
+        onPress={() =>
+          navigation.navigate('NewsDetails', {
+            screen: 'NewsInfo',
+            params: {url: item.provider.url},
+          })
+        }>
+        continue reading
       </Text>
     </View>
   );

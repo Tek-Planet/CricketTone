@@ -10,20 +10,21 @@ import {
 import axios from 'axios';
 import NewsListItem from '../components/NewListItem';
 import LoadingData from '../components/LoadingData';
+import {useStateValue} from '../data/StateProvider';
 
-function DetailedScreen() {
+function NewsScreen({navigation}) {
+  const [{token}, dispatch] = useStateValue();
+
   const [state, setState] = React.useState({
     news: [],
     isLoaded: false,
     error: false,
   });
 
-  const access_token = '2s1362178663747031042s1366722683991114530';
-
   const fetchData = () => {
     axios
       .get(
-        `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${access_token}`,
+        `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
       )
       .then((res) => {
         //   console.log(res.data)
@@ -82,15 +83,15 @@ function DetailedScreen() {
 
   return (
     <View style={{flex: 1}}>
-      <View style={styles.headingBox}>
+      {/* <View style={styles.headingBox}>
         <Text style={styles.headingText}>Latest News</Text>
-      </View>
+      </View> */}
 
       {state.isLoaded ? (
         <FlatList
           data={state.news}
           renderItem={({item}) => {
-            return NewsListItem(item);
+            return NewsListItem(item, navigation);
           }}
           keyExtractor={(item) => item.title}
         />
@@ -103,7 +104,7 @@ function DetailedScreen() {
   );
 }
 
-export default DetailedScreen;
+export default NewsScreen;
 
 const styles = StyleSheet.create({
   headingBox: {

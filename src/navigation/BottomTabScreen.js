@@ -8,7 +8,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import NewsScreen from '../screens/NewsScreen';
 import SeriesScreen from '../screens/SeriesScreen';
-import MoreScreen from '../screens/TestPage';
+import MoreScreen from '../screens/MoreScreen';
 
 // const Tab = createMaterialBottomTabNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -39,11 +39,79 @@ const MainTabScreen = () => (
         return <Ionicons name={iconName} size={26} color={color} />;
       },
     })}>
-    <Tab.Screen name="Matches" component={HomeScreen} />
-    <Tab.Screen name="News" component={NewsScreen} />
-    <Tab.Screen name="Series" component={SeriesScreen} />
-    <Tab.Screen name="More" component={MoreScreen} />
+    <Tab.Screen name="Matches" component={HomeStackScreen} />
+    <Tab.Screen name="News" component={NewsStackScreen} />
+    <Tab.Screen name="Series" component={SeriesStackScreen} />
+    <Tab.Screen name="More" component={MoreStackScreen} />
   </Tab.Navigator>
 );
 
 export default MainTabScreen;
+
+const HomeStackScreen = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTitle: 'Live Scores',
+
+      headerStyle: {
+        backgroundColor: '#23395d',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <Stack.Screen name="Home" component={HomeScreen} />
+  </Stack.Navigator>
+);
+
+const NewsStackScreen = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTitle: 'Latest News',
+
+      headerStyle: {
+        backgroundColor: '#23395d',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <Stack.Screen name="News" component={NewsScreen} />
+  </Stack.Navigator>
+);
+
+const SeriesStackScreen = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTitle: 'Series',
+
+      headerStyle: {
+        backgroundColor: '#23395d',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <Stack.Screen name="Series" component={SeriesScreen} />
+  </Stack.Navigator>
+);
+
+const MoreStackScreen = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTitle: 'Gallery',
+
+      headerStyle: {
+        backgroundColor: '#23395d',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <Stack.Screen name="More" component={MoreScreen} />
+  </Stack.Navigator>
+);

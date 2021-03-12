@@ -18,16 +18,6 @@ export default function HomeScreen({navigation}) {
     matches: [],
   });
 
-  let getMessages = async () => {
-    const messages = await firestore()
-      .collection('messages')
-      .doc('mdp19m6VYe4zdljbWANr')
-      .get();
-    console.log(messages);
-
-    console.log('messages');
-  };
-
   function validate() {
     let formData = new FormData();
     formData.append('type', 'login');
@@ -47,11 +37,11 @@ export default function HomeScreen({navigation}) {
       });
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      //   getMessages();
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     //   getMessages();
+  //   }, 5000);
+  // }, []);
 
   const [images, setImages] = useState([
     {
@@ -104,9 +94,6 @@ export default function HomeScreen({navigation}) {
 
   return (
     <View style={{flex: 1}}>
-      <View style={styles.headingBox}>
-        <Text style={styles.headingText}>Images</Text>
-      </View>
       <FlatList
         numColumns={2}
         data={images}

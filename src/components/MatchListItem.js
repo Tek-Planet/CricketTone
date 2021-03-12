@@ -5,20 +5,47 @@ function scoreListItem(item, navigation) {
   return (
     <View>
       <TouchableOpacity
-        onPress={() => navigation.navigate('MatchDetails', {key: item.key})}>
+        onPress={() =>
+          navigation.navigate('MatchDetails', {
+            screen: 'MatchInfo',
+            params: {key: item.key},
+          })
+        }>
         <View style={styles.scoreBox}>
           <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
             <Text style={styles.teamName}>{item.teams.a.name}</Text>
             <View style={{alignItems: 'center'}}>
-              <Text style={styles.score}>120/3</Text>
-              <Text style={styles.score}>14.4</Text>
+              {Object.keys(item.innings).length !== 0 ? (
+                <View style={{alignItems: 'center'}}>
+                  <Text style={styles.score}>
+                    {item.innings.a_1.runs} / {item.innings.a_1.wickets}
+                  </Text>
+                  <Text style={styles.score}>{item.innings.a_1.overs}</Text>
+                </View>
+              ) : (
+                <View style={{alignItems: 'center'}}>
+                  <Text style={styles.score}>0 / 0</Text>
+                  <Text style={styles.score}>0</Text>
+                </View>
+              )}
             </View>
 
             <Text style={styles.seperator}>-</Text>
 
             <View style={{alignItems: 'center'}}>
-              <Text style={styles.score}>120/3</Text>
-              <Text style={styles.score}>14.4</Text>
+              {Object.keys(item.innings).length !== 0 ? (
+                <View style={{alignItems: 'center'}}>
+                  <Text style={styles.score}>
+                    {item.innings.b_1.runs} / {item.innings.b_1.wickets}
+                  </Text>
+                  <Text style={styles.score}>{item.innings.b_1.overs}</Text>
+                </View>
+              ) : (
+                <View style={{alignItems: 'center'}}>
+                  <Text style={styles.score}>0 / 0</Text>
+                  <Text style={styles.score}>0</Text>
+                </View>
+              )}
             </View>
             <Text style={styles.teamName}>{item.teams.b.name}</Text>
           </View>
@@ -52,9 +79,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  score: {color: '#000', fontSize: 16},
+  score: {color: '#000', fontSize: 16, fontWeight: 'bold'},
 
-  seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
+  seperator: {
+    color: '#000',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginStart: 20,
+    marginEnd: 20,
+  },
 
   completed: {
     marginTop: 10,

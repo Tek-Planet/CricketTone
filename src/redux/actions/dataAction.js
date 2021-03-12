@@ -18,3 +18,10 @@ export const getToken = () => {
       console.log(err.message);
     });
 };
+
+export function setToken(key, dispatch) {
+  dispatch({
+    type: 'SET_TOKEN',
+    token: key,
+  });
+}

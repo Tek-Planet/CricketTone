@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -9,56 +9,22 @@ import {
   Image,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import firestore from '@react-native-firebase/firestore';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 function CommentScreen({match}) {
-  const [message, setMessage] = useState([
-    {
-      title: 'Viajes Deza',
-      type: 'Agencia',
-      status: 'unread',
-      time: '1hr',
-      image: require('../assets/flag.png'),
-      body:
-        'omo ma lo send e ooo. I need an augmented reality application. I use cad model and view in camera and the app will match it with real physical objects and I would like to see the',
-      id: 0,
-    },
-    {
-      title: 'Last Minute',
-      type: 'Agencia',
-      status: 'unread',
-      time: '1hr',
-      image: require('../assets/flag.png'),
-      body: 'Hola qué tal como podria...',
-      id: 1,
-    },
-    {
-      title: 'Dream CC',
-      type: 'Agencia',
-      status: 'unread',
-      time: '1hr',
-      image: require('../assets/flag.png'),
-      body: 'Hola qué tal como podria...',
-      id: 2,
-    },
-    {
-      title: 'Jorge Aristegui',
-      type: 'Particular',
-      status: 'read',
-      time: '4d',
-      image: require('../assets/flag.png'),
-      body: 'Hola qué tal como podria...',
-      id: 3,
-    },
-    {
-      title: 'Melissa Zuñiga',
-      type: 'Particular',
-      status: 'read',
-      time: '5d',
-      image: require('../assets/flag.png'),
-      body: 'Hola qué tal como podria...',
-      id: 4,
-    },
-  ]);
+  dayjs.extend(relativeTime);
+  const [state, setState] = useState({
+    comments: [],
+    body: '',
+  });
+
+  useEffect(() => {
+    setTimeout(() => {
+      getComments();
+    }, 5000);
+  }, []);
 
   const messageListItem = (item) => {
     return (
@@ -82,17 +48,17 @@ function CommentScreen({match}) {
               color: '#000',
               marginTop: 10,
             }}>
-            {item.title}{' '}
+            {item.userName}
           </Text>
           <Text
             style={{
               fontSize: 16,
-              fontWeight: 'bold',
+              fontStyle: 'italic',
               color: '#000',
               marginTop: 5,
             }}>
             {' '}
-            {item.time}
+            {dayjs(item.createdAt).fromNow()}
           </Text>
           <Text
             style={[
@@ -105,21 +71,87 @@ function CommentScreen({match}) {
                 lineHeight: 20,
               },
             ]}>
-            {item.body}{' '}
+            {item.body}
           </Text>
         </View>
       </View>
     );
   };
 
+  const saveComment = () => {
+    if (state.body.length > 0) {
+      const newComments = {
+        body: state.body,
+        matchId: match.key,
+        teamId: 'teamId 002',
+        userId: 'anonymous',
+        userName: 'Anonymous',
+        createdAt: new Date().toISOString(),
+      };
+
+      firestore()
+        .collection('messages')
+        .add(newComments)
+        .then(() => {
+          console.log('User added!');
+          setState({
+            ...state,
+            comments: state.comments.push(newComments),
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else alert('comment body cannot be empty');
+  };
+
+  const getComments = () => {
+    firestore()
+      .collection('messages')
+      .where('matchId', '==', `${match.key}`)
+      .orderBy('createdAt', 'desc')
+      .get()
+      .then((data) => {
+        let msgs = [];
+        data.forEach((doc) => {
+          msgs.push({
+            commentId: doc.id,
+            body: doc.data().body,
+            matchId: doc.data().matchId,
+            teamId: doc.data().teamId,
+            userId: doc.data().userId,
+            userName: doc.data().userName,
+            createdAt: doc.data().createdAt,
+            image: require('../assets/flag.png'),
+          });
+        });
+        setState({
+          ...state,
+          comments: msgs,
+        });
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  const textInputChange = (val) => {
+    if (val.trim().length >= 4) {
+      setState({
+        ...state,
+        body: val,
+      });
+    }
+  };
+
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 0.7}}>
         <View style={styles.headingBox}>
-          <Text style={styles.headingText}>Recent Comments</Text>
+          <Text style={styles.headingText}>Recent Comments </Text>
         </View>
         <FlatList
-          data={message}
+          data={state.comments}
           renderItem={({item}) => {
             return messageListItem(item);
           }}
@@ -141,7 +173,9 @@ function CommentScreen({match}) {
         </View>
 
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => {
+            saveComment();
+          }}
           style={[
             styles.signIn,
             {

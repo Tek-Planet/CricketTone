@@ -1,47 +1,25 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {WebView} from 'react-native-webview';
 
-function DetailedScreen() {
+function MyWeb({route}) {
+  const {url} = route.params;
   return (
-    <View style={styles.scoreBox}>
-      <Image style={styles.imgFlag} source={require('../assets/flag.png')} />
-      <Text style={styles.teamName}>Headline One</Text>
-      <Text style={styles.score}>
-        Divergences not only signal a potential trend reversal, but they can
-        also be used as a possible.
-      </Text>
+    <View style={{flex: 1}}>
+      <WebView originWhitelist={['*']} source={{uri: url}} />
     </View>
   );
 }
 
-export default DetailedScreen;
+export default MyWeb;
 
 const styles = StyleSheet.create({
-  scoreBox: {
-    flex: 1,
+  headingBox: {
     padding: 10,
+    backgroundColor: '#23395d',
     margin: 5,
     borderRadius: 10,
-    backgroundColor: '#fff',
-    elevation: 5,
-    alignItems: 'center',
   },
 
-  imgFlag: {width: 150, height: 150, borderRadius: 10},
-
-  teamName: {
-    color: 'grey',
-    fontSize: 20,
-    marginTop: 20,
-    marginBottom: 10,
-    fontWeight: 'bold',
-  },
-
-  teamA: {flexDirection: 'row'},
-
-  teamB: {flexDirection: 'row'},
-
-  score: {color: '#000', fontSize: 16, textAlign: 'justify'},
-
-  seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
+  headingText: {color: '#FFF', fontSize: 22, fontWeight: 'bold'},
 });

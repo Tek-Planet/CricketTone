@@ -11,9 +11,13 @@ import axios from 'axios';
 import MatchListItem from '../components/MatchListItem';
 import LoadingData from '../components/LoadingData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useStateValue} from '../data/StateProvider';
+import {setToken} from '../redux/actions/dataAction';
 
 export default function HomeScreen({navigation}) {
   //  hold all state
+  const [{token}, dispatch] = useStateValue();
+
   const [state, setState] = useState({
     scores: [],
     isLoaded: false,
@@ -25,6 +29,14 @@ export default function HomeScreen({navigation}) {
     },
   });
 
+  // app entering
+
+  useEffect(() => {
+    setTimeout(() => {
+      getData();
+    }, 5000);
+  }, []);
+
   // getData from async storage
   const getData = async () => {
     try {
@@ -33,7 +45,9 @@ export default function HomeScreen({navigation}) {
       if (accessCodes !== null) {
         // conver the retrived data to json
         const newCodes = JSON.parse(accessCodes);
-        // fetch data using stored access stoken
+        // this will save token in the context api for other aplliations to use
+        setToken(newCodes.access_token, dispatch);
+        // fetch data from api using stored access stoken
         fetchData(newCodes.access_token);
       } else {
         console.log('No JSON data found');
@@ -47,7 +61,7 @@ export default function HomeScreen({navigation}) {
   const fetchData = (access_token) => {
     axios
       .get(
-        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}`,
+        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}&card_type=summary_card`,
       )
       .then((res) => {
         setState({
@@ -67,12 +81,6 @@ export default function HomeScreen({navigation}) {
         } else console.log('non Internet Problem');
       });
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      getData();
-    }, 5000);
-  }, []);
 
   const errorPage = () => {
     return (
@@ -106,9 +114,9 @@ export default function HomeScreen({navigation}) {
 
   return (
     <View style={{flex: 1}}>
-      <View style={styles.headingBox}>
+      {/* <View style={styles.headingBox}>
         <Text style={styles.headingText}>Live Scores</Text>
-      </View>
+      </View> */}
 
       {state.isLoaded ? (
         <FlatList
