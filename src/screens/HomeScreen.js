@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -11,12 +11,14 @@ import axios from 'axios';
 import MatchListItem from '../components/MatchListItem';
 import LoadingData from '../components/LoadingData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useStateValue} from '../data/StateProvider';
 import {setToken} from '../redux/actions/dataAction';
+import  {AuthContext} from  '../context/AuthProvider'
 
 export default function HomeScreen({navigation}) {
+
+  const { token } = useContext(AuthContext);
   //  hold all state
-  const [{token}, dispatch] = useStateValue();
+  // const [{token}, dispatch] = useStateValue();
 
   const [state, setState] = useState({
     scores: [],
@@ -33,7 +35,7 @@ export default function HomeScreen({navigation}) {
 
   useEffect(() => {
     setTimeout(() => {
-      getData();
+     fetchData(token);
     }, 5000);
   }, []);
 
@@ -58,10 +60,10 @@ export default function HomeScreen({navigation}) {
   };
 
   // make request to the api server
-  const fetchData = (access_token) => {
+  const fetchData = (token) => {
     axios
       .get(
-        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${access_token}&card_type=summary_card`,
+        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
       )
       .then((res) => {
         setState({
@@ -78,7 +80,7 @@ export default function HomeScreen({navigation}) {
             ...state,
             error: true,
           });
-        } else console.log('non Internet Problem');
+        } else console.log(err.message);
       });
   };
 

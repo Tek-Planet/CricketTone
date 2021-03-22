@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -10,10 +10,12 @@ import {
 import CustomNavigation from '../navigation/CustomBottomNav';
 import axios from 'axios';
 import LoadingData from '../components/LoadingData';
-import {useStateValue} from '../data/StateProvider';
+import  {AuthContext} from  '../context/AuthProvider'
 
 function NewsScreen({route, navigation}) {
-  const [{token}, dispatch] = useStateValue();
+  
+  const {token} = useContext(AuthContext);
+  
   const [state, setState] = React.useState({
     match: {},
     isLoaded: false,

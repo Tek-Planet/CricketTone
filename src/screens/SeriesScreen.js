@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {
   Text,
   View,
@@ -10,10 +10,10 @@ import {
 import axios from 'axios';
 
 import LoadingData from '../components/LoadingData';
-import {useStateValue} from '../data/StateProvider';
+import  {AuthContext} from  '../context/AuthProvider'
 
 export function SeriesScreen({navigation}) {
-  const [{token}, dispatch] = useStateValue();
+  const {token} = useContext(AuthContext);
   const [state, setState] = useState({
     series: [],
     isLoaded: false,

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -11,17 +11,20 @@ import axios from 'axios';
 import NewsListItem from '../components/NewListItem';
 import LoadingData from '../components/LoadingData';
 import {useStateValue} from '../data/StateProvider';
+import  {AuthContext} from  '../context/AuthProvider'
+
 
 function NewsScreen({navigation}) {
-  const [{token}, dispatch] = useStateValue();
+
+  const { token } = useContext(AuthContext);
 
   const [state, setState] = React.useState({
-    news: [],
+    news: [], 
     isLoaded: false,
     error: false,
   });
 
-  const fetchData = () => {
+  const fetchData = (token) => {
     axios
       .get(
         `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
@@ -47,7 +50,7 @@ function NewsScreen({navigation}) {
 
   useEffect(() => {
     setTimeout(() => {
-      if (!state.isLoaded) fetchData();
+     fetchData(token);
     }, 5000);
   }, []);
 

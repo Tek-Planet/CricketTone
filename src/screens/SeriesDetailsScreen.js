@@ -1,12 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import axios from 'axios';
 import SeriesTopNav from '../navigation/SeriesTopNav';
 import LoadingData from '../components/LoadingData';
-import {useStateValue} from '../data/StateProvider';
+import  {AuthContext} from  '../context/AuthProvider'
+
 
 export default function SeriesDetailsScreen({route, navigation}) {
-  const [{token}, dispatch] = useStateValue();
+  const {token} = useContext(AuthContext);
+  
   const [state, setState] = React.useState({
     matches: [],
     table: [],
