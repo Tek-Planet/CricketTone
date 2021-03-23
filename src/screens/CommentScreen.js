@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -8,16 +8,20 @@ import {
   FlatList,
   Image,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import firestore from '@react-native-firebase/firestore';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import  {AuthContext} from  '../context/AuthProvider'
+
 
 function CommentScreen({match}) {
+  const { user } = useContext(AuthContext);
   dayjs.extend(relativeTime);
   const [state, setState] = useState({
     comments: [],
     body: '',
+    name:'', 
+    email:''
   });
 
   useEffect(() => {
@@ -135,18 +139,59 @@ function CommentScreen({match}) {
       });
   };
 
+ 
   const textInputChange = (val) => {
-    if (val.trim().length >= 4) {
+
+    if (val.trim().length > 0 ) {
       setState({
         ...state,
         body: val,
       });
     }
+    else{
+      setState({
+        ...state,
+        body: '',
+      });
+    }
   };
+
+  const handleNameChange = (val) => {
+
+    if (val.trim().length > 0 ) {
+      setState({
+        ...state,
+        name: val,
+      });
+    }
+    else{
+      setState({
+        ...state,
+        name: '',
+      });
+    }
+  };
+
+  const handleMailChange = (val) => {
+
+    if (val.trim().length > 0 ) {
+      setState({
+        ...state,
+        email: val,
+      });
+    }
+    else{
+      setState({
+        ...state,
+        email: '',
+      });
+    }
+  };
+
 
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 0.7}}>
+      <View >
         <View style={styles.headingBox}>
           <Text style={styles.headingText}>Recent Comments </Text>
         </View>
@@ -159,7 +204,7 @@ function CommentScreen({match}) {
         />
       </View>
 
-      <View style={{flex: 0.3, marginBottom: 20}}>
+      <View >
         <View style={styles.inputContainer}>
           <TextInput
             multiline={true}
@@ -171,6 +216,30 @@ function CommentScreen({match}) {
             style={styles.input}
           />
         </View>
+
+        { user ? (
+        <View>
+          <TextInput
+          placeholder="Name"
+          placeholderTextColor="#666666"
+          autoCapitalize="none"
+          onChangeText={(val) => handleNameChange(val)}
+          style={styles.inputDetails}
+        />
+
+        <TextInput
+          placeholder="Email"
+          placeholderTextColor="#666666"
+          autoCapitalize="none"
+          onChangeText={(val) => handleMailChange(val)}
+          style={styles.inputDetails}
+        />
+        </View>
+      ) : (null)}
+
+        <Text style={{color:'#000'}}>{state.body}</Text>
+       <Text style={{color:'#000'}}>{state.email}</Text>
+       <Text style={{color:'#000'}}>{state.name}</Text>
 
         <TouchableOpacity
           onPress={() => {
@@ -258,5 +327,9 @@ const styles = StyleSheet.create({
   textSign: {
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  inputDetails: {
+    margin: 10,
+    backgroundColor: '#fff',
   },
 });

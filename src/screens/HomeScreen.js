@@ -16,13 +16,13 @@ import  {AuthContext} from  '../context/AuthProvider'
 
 export default function HomeScreen({navigation}) {
 
-  const { token } = useContext(AuthContext);
+  const { token, scores } = useContext(AuthContext);
   //  hold all state
   // const [{token}, dispatch] = useStateValue();
 
   const [state, setState] = useState({
-    scores: [],
-    isLoaded: false,
+    scores: scores,
+    isLoaded: true,
     error: false,
     access_token: '',
     accessCodes: {
@@ -33,11 +33,12 @@ export default function HomeScreen({navigation}) {
 
   // app entering
 
-  useEffect(() => {
-    setTimeout(() => {
-     fetchData(token);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //       console.log('state.scores')
+  //       console.log(scores)
+  //   }, 5000);
+  // }, []);
 
   // getData from async storage
   const getData = async () => {
@@ -122,7 +123,7 @@ export default function HomeScreen({navigation}) {
 
       {state.isLoaded ? (
         <FlatList
-          data={state.scores}
+          data={scores}
           renderItem={({item}) => {
             return MatchListItem(item, navigation);
           }}

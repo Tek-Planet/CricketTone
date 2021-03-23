@@ -11,7 +11,7 @@ import {AuthContext}  from  '../context/AuthProvider'
 
 
 const Routes = () => {
-   const { setUser, setToken} = useContext(AuthContext);
+   const { setUser, setToken, setScores} = useContext(AuthContext);
 
   const [state, setState] = useState({
     accessCodes: {},
@@ -20,15 +20,17 @@ const Routes = () => {
 
   const onAuthStateChanged = (user) => {
     setUser(user);
-    console.log(user)
+    // console.log(user)
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-    tokenRequest();
+  const listenToUserState= () =>{
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
-}, 5000);
+  }
+
+  useEffect(() => {
+    tokenRequest();
+    listenToUserState()
   }, []);
 
   const tokenRequest = () => {
@@ -46,9 +48,31 @@ const Routes = () => {
         setToken(res.data.auth.access_token)
         // store the token in async stora for future uses
         storeToken(res.data.auth);
+
+        fetchData(res.data.auth.access_token)
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err); 
+      });
+  };
+// fetch Data for Home Page
+  const fetchData = (token) => {
+    axios
+      .get(
+        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
+      )
+      .then((res) => {
+         setScores(res.data.data.cards)
+      })
+      .catch((err) => {
+        //  console.log(err.type)
+        if (err.message === 'Network Error') {
+          console.log('Internet Problem');
+          setState({
+            ...state,
+            error: true,
+          });
+        } else console.log(err.message);
       });
   };
 

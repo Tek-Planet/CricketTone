@@ -24,6 +24,7 @@ MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React nati
 MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:flipper:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d42df2b72f00f9f80b9aded3df2c8776/flipper-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/049b901d6939365b4f1f8c0528b1c7a3/stetho-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/09649e964505793272094b1ae8ad471c/fresco-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -294,6 +295,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplan
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d42df2b72f00f9f80b9aded3df2c8776/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d42df2b72f00f9f80b9aded3df2c8776/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/049b901d6939365b4f1f8c0528b1c7a3/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
