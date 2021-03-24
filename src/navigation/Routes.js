@@ -20,7 +20,7 @@ const Routes = () => {
 
   const onAuthStateChanged = (user) => {
     setUser(user);
-    // console.log(user)
+ //   console.log(user)
   };
 
   const listenToUserState= () =>{

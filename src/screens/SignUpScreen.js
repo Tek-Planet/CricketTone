@@ -6,33 +6,38 @@ import {
   TextInput,
   Platform,
   StyleSheet,
-  Image,
+  ScrollView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-import {StackActions} from '@react-navigation/native';
-
-import {useTheme} from 'react-native-paper';
 
 import  {AuthContext} from  '../context/AuthProvider'
 
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
+
+
+import {signUp} from '../redux/actions/dataAction'
+
 
 const SignInScreen = ({navigation}) => {
-    const { user, error } = useContext(AuthContext);
 
+    const {  error, setError } = useContext(AuthContext);
     const [data, setData] = React.useState({
-    username: '',
+    userName: '',
     password: '',
+    email:'',
     check_textInputChange: false,
+    check_emailInputChange: false,
     secureTextEntry: true,
     isValidUser: true,
+    isValidEmail: true,
     isValidPassword: true,
     next: true,
   });
 
-  const {colors} = useTheme();
+
 
   // const { signIn } = React.useContext(AuthContext);
 
@@ -40,16 +45,34 @@ const SignInScreen = ({navigation}) => {
     if (val.trim().length >= 4) {
       setData({
         ...data,
-        username: val,
+        userName: val,
         check_textInputChange: true,
         isValidUser: true,
       });
     } else {
       setData({
         ...data,
-        username: val,
+        userName: val,
         check_textInputChange: false,
         isValidUser: false,
+      });
+    }
+  };
+
+  const textInputEmailChange = (val) => {
+    if (val.trim().length >= 4 && val.includes('@') && val.includes('.')) {
+      setData({
+        ...data,
+        email: val,
+        check_emailInputChange: true,
+        isValidEmail: true,
+      });
+    } else {
+      setData({
+        ...data,
+        email: val,
+        check_emailInputChange: false,
+        isValidEmail: false,
       });
     }
   };
@@ -91,9 +114,65 @@ const SignInScreen = ({navigation}) => {
     }
   };
 
-  const loginHandle = async (userName, password) => {
-    doLogin(userName, password);
-    // if (isLogged) navigation.navigate('Home', {screen: 'Home'});
+  const handleValidEmail = (val) => {
+    if (val.trim().length >= 4) {
+      setData({
+        ...data,
+        isValidEmail: true,
+      });
+    } else {
+      setData({
+        ...data,
+        isValidEmail: false,
+      });
+    }
+  };
+
+  const registerUser = (email, password, userName) => {
+    auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((user) => {
+      // console.log(res)
+      console.log('User account created & signed in!');
+     addUser(user.user.uid,email, userName)
+    //  console.log(user.user.uid)
+    })
+    .catch(error => {
+      if (error.code === 'auth/email-already-in-use') {
+        setError('That email address is already in use!')
+        console.log('That email address is already in use!');
+      }
+     
+      if (error.code === 'auth/invalid-email') {
+        console.log('That email address is invalid!');
+        setError('That email address is invalid!')
+      }
+
+      console.error(error);
+    });
+  };
+
+  const addUser = (userId, email, userName) => {
+    
+      const userDetails = {
+        userId: userId,
+        email: email,
+        userName:userName,
+        createdAt: new Date().toISOString(),
+      };
+
+      firestore()
+        .collection('users')
+        .doc(userId)
+        .set(userDetails)
+        .then(() => {
+          console.log('User added!');
+        })
+        .catch((error) => {
+          console.error(error);
+          setError(error)
+        });
+   
   };
 
 
@@ -109,7 +188,7 @@ const SignInScreen = ({navigation}) => {
           source={require('../img/logo.png')}
         /> */}
         
-          <Text style={styles.text_header}>Sign in now</Text> 
+          <Text style={styles.text_header}>Sign Up</Text>
        
       </View>
 
@@ -121,27 +200,75 @@ const SignInScreen = ({navigation}) => {
         style={[
           styles.footer,
           {
-            backgroundColor: colors.background,
+            backgroundColor: '#fff',
           },
         ]}>
+          <ScrollView>
+
+          
+            {/* emaail section */}
         <Text
           style={[
             styles.text_footer,
             {
-              color: '#37018D',
+              color: '#23395d',
             },
           ]}>
-          Username
+          Email
         </Text>
+
         <View style={styles.action}>
-          <FontAwesome name="user-o" color="{colors.text}" size={20} />
+          <FontAwesome name="user-o" color="#000" size={20} />
           <TextInput
-            placeholder="Your Username"
+            placeholder="Your userName"
             placeholderTextColor="#666666"
             style={[
               styles.textInput,
               {
-                color: colors.text,
+                color: '#000',
+              },
+            ]}
+            autoCapitalize="none"
+            onChangeText={(val) => textInputEmailChange(val)}
+            onEndEditing={(e) => handleValidEmail(e.nativeEvent.text)}   
+          />
+          {data.check_emailInputChange ? (
+            <Animatable.View animation="bounceIn">
+              <Feather name="check-circle" color="green" size={20} />
+            </Animatable.View>
+          ) : null}
+        </View>
+        {data.isValidEmail ? null : (
+          <Animatable.View animation="fadeInLeft" duration={500}>
+            <Text style={styles.errorMsg}>
+              Invalid email address
+            </Text>
+          </Animatable.View>
+        )}
+
+          {/* usernamre */}
+        <Text
+          style={[
+            styles.text_footer,
+            {
+              marginTop:15,
+              color: '#23395d',
+            },
+          ]}>
+          userName
+        </Text>
+
+        
+
+        <View style={styles.action}>
+          <FontAwesome name="user-o" color="#000" size={20} />
+          <TextInput
+            placeholder="Your userName"
+            placeholderTextColor="#666666"
+            style={[
+              styles.textInput,
+              {
+                color: '#000',
               },
             ]}
             autoCapitalize="none"
@@ -157,7 +284,7 @@ const SignInScreen = ({navigation}) => {
         {data.isValidUser ? null : (
           <Animatable.View animation="fadeInLeft" duration={500}>
             <Text style={styles.errorMsg}>
-              Username must be 4 characters long.
+              userName must be 4 characters long.
             </Text>
           </Animatable.View>
         )}
@@ -166,14 +293,14 @@ const SignInScreen = ({navigation}) => {
           style={[
             styles.text_footer,
             {
-              color: '#37018D',
-              marginTop: 35,
+              color: '#23395d',
+              marginTop: 15,
             },
           ]}>
           Password
         </Text>
         <View style={styles.action}>
-          <Feather name="lock" color={colors.text} size={20} />
+          <Feather name="lock" color={'#000'} size={20} />
           <TextInput
             placeholder="Your Password"
             placeholderTextColor="#666666"
@@ -181,7 +308,7 @@ const SignInScreen = ({navigation}) => {
             style={[
               styles.textInput,
               {
-                color: colors.text,
+                color: '#000',
               },
             ]}
             autoCapitalize="none"
@@ -210,16 +337,16 @@ const SignInScreen = ({navigation}) => {
         </TouchableOpacity> */}
 
         {error && (
-          <View style={styles.error}>
+          
             <Text style={styles.errorMsg}>{error}</Text>
-          </View>
+        
         )}
 
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.signIn}
             onPress={() => {
-              loginHandle(data.username, data.password);
+             registerUser(data.email, data.password, data.userName);
             }}>
           
               <Text
@@ -229,13 +356,13 @@ const SignInScreen = ({navigation}) => {
                     color: '#fff',
                   },
                 ]}>
-                Sign In
+                Sign Up
               </Text>
            
           </TouchableOpacity>
-
-          {/* <TouchableOpacity
-            onPress={() => navigation.navigate('Home')}
+          <Text style={{color:'#000', margin:10, fontSize:18}}>Already have an account ?</Text> 
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignIn')}
             style={[
               styles.signIn,
               {
@@ -248,13 +375,14 @@ const SignInScreen = ({navigation}) => {
               style={[
                 styles.textSign,
                 {
-                  color: '#37018D',
+                  color: '#fff',
                 },
               ]}>
-              Sign Up
+              SignIn
             </Text>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
+        </ScrollView>
       </Animatable.View>
   }
 </View>
@@ -269,13 +397,14 @@ export default SignInScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#23395d',
   },
   header: {
     flex: 1,
     alignItems: 'center',
   },
   footer: {
-    flex: 3,
+    flex: 4,
     backgroundColor: '#fff',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -283,9 +412,9 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
   },
   text_header: {
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 22,
     textAlign: 'center',
     marginTop: 25,
   },

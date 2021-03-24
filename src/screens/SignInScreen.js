@@ -20,6 +20,7 @@ import  {AuthContext} from  '../context/AuthProvider'
 
 
 const SignInScreen = ({navigation}) => {
+
     const { user, error } = useContext(AuthContext);
 
     const [data, setData] = React.useState({
@@ -123,7 +124,7 @@ const SignInScreen = ({navigation}) => {
              }}
 
             style={styles.btnContinue}>
-            <Text style={{ color: '#ffffff',
+            <Text style={{ color: '#000',
                   fontSize: 20,
     textAlign: 'center',}}>Continue</Text>
           </TouchableOpacity>
@@ -135,7 +136,7 @@ const SignInScreen = ({navigation}) => {
 
       {
       //  show this if user is logged in
-         user ?  
+         !user ?  
         (null)
       //  if user not logged in show this
        :
@@ -152,20 +153,20 @@ const SignInScreen = ({navigation}) => {
           style={[
             styles.text_footer,
             {
-              color: '#37018D',
+              color: '#23395d',
             },
           ]}>
           Username
         </Text>
         <View style={styles.action}>
-          <FontAwesome name="user-o" color="{colors.text}" size={20} />
+          <FontAwesome name="user-o" color="#000" size={20} />
           <TextInput
             placeholder="Your Username"
             placeholderTextColor="#666666"
             style={[
               styles.textInput,
               {
-                color: colors.text,
+                color: '#000',
               },
             ]}
             autoCapitalize="none"
@@ -190,14 +191,14 @@ const SignInScreen = ({navigation}) => {
           style={[
             styles.text_footer,
             {
-              color: '#37018D',
+              color: '#23395d',
               marginTop: 35,
             },
           ]}>
           Password
         </Text>
         <View style={styles.action}>
-          <Feather name="lock" color={colors.text} size={20} />
+          <Feather name="lock" color={'#000'} size={20} />
           <TextInput
             placeholder="Your Password"
             placeholderTextColor="#666666"
@@ -205,7 +206,7 @@ const SignInScreen = ({navigation}) => {
             style={[
               styles.textInput,
               {
-                color: colors.text,
+                color: '#000',
               },
             ]}
             autoCapitalize="none"
@@ -238,16 +239,13 @@ const SignInScreen = ({navigation}) => {
             <Text style={styles.errorMsg}>{error}</Text>
           </View>
         )}
-
-        <View style={styles.button}>
+          <View style={styles.button}>
           <TouchableOpacity
             style={styles.signIn}
             onPress={() => {
               loginHandle(data.username, data.password);
             }}>
-            <LinearGradient
-              colors={['#08d4c4', '#37018D']}
-              style={styles.signIn}>
+          
               <Text
                 style={[
                   styles.textSign,
@@ -255,13 +253,13 @@ const SignInScreen = ({navigation}) => {
                     color: '#fff',
                   },
                 ]}>
-                Sign In
+                SignIn
               </Text>
-            </LinearGradient>
+           
           </TouchableOpacity>
-
-          {/* <TouchableOpacity
-            onPress={() => navigation.navigate('Home')}
+          <Text style={{color:'#000', margin:10, fontSize:18}}>New here ?</Text> 
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignUp')}
             style={[
               styles.signIn,
               {
@@ -274,13 +272,14 @@ const SignInScreen = ({navigation}) => {
               style={[
                 styles.textSign,
                 {
-                  color: '#37018D',
+                  color: '#fff',
                 },
               ]}>
-              Sign Up
+              SignUp
             </Text>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
+
       </Animatable.View>
   }
 </View>
@@ -295,6 +294,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#23395d',
   },
   header: {
     flex: 1,
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
   },
   text_header: {
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
@@ -353,6 +353,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+    backgroundColor:'#23395d'
   },
   textSign: {
     fontSize: 18,
@@ -362,7 +363,7 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#23395d',
+    backgroundColor: '#fff',
     alignItems: 'center',
   },
 });
