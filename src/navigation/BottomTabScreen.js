@@ -8,7 +8,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import NewsScreen from '../screens/NewsScreen';
 import SeriesScreen from '../screens/SeriesScreen';
-import MoreScreen from '../screens/SignUpScreen';
+import MoreScreen from '../screens/MoreScreen';
 
 // const Tab = createMaterialBottomTabNavigator();
 const Tab = createMaterialBottomTabNavigator();
