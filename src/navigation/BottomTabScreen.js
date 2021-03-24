@@ -14,7 +14,7 @@ import MoreScreen from '../screens/MoreScreen';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const MainTabScreen = () => (
+const MainTabScreen = ({navigation}) => (
   <Tab.Navigator
     activeColor="#FFFFFF"
     inactiveColor="#A9A9A9"
@@ -48,7 +48,7 @@ const MainTabScreen = () => (
 
 export default MainTabScreen;
 
-const HomeStackScreen = () => (
+const HomeStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
       headerTitle: 'Live Scores',
@@ -61,7 +61,21 @@ const HomeStackScreen = () => (
         fontWeight: 'bold',
       },
     }}>
-    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{
+        headerLeft: () => (
+          <Ionicons
+            name="chevron-back-outline"
+            style={{margin: 10}}
+            size={25}
+            color={'#009688'}
+            onPress={() => navigation.navigate('Drawer')}
+          />
+        ),
+      }}
+    />
   </Stack.Navigator>
 );
 
@@ -99,7 +113,7 @@ const SeriesStackScreen = () => (
   </Stack.Navigator>
 );
 
-const MoreStackScreen = () => (
+const MoreStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
       headerTitle: 'Gallery',

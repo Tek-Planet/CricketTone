@@ -7,15 +7,15 @@ import NewsDetailsScreen from '../screens/NewsDetailsScreen';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignInScreen';
 
-import BottomTab from './BottomTabScreen';
+import DrawerNavigation from './DrawerNavigation';
 
 const RootStack = createStackNavigator();
 const Stack = createStackNavigator();
 
 function OtherStackScreen() {
   return (
-    <RootStack.Navigator headerMode={'none'} initialRouteName="Home">
-      <RootStack.Screen name="Home" component={BottomTab} />
+    <RootStack.Navigator headerMode={'none'} initialRouteName="Drawer">
+      <RootStack.Screen name="Drawer" component={DrawerNavigation} />
       <RootStack.Screen name="Splash" component={SplashScreen} />
       <RootStack.Screen name="MatchDetails" component={MatchDetailsStack} />
       <RootStack.Screen name="NewsDetails" component={NewsDetailsStack} />

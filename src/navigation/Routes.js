@@ -4,6 +4,7 @@ import auth from '@react-native-firebase/auth';
 import SplashScreen from '../screens/SplashScreen';
 import axios from 'axios';
 import MainNavigation from './MainNavigation';
+import BottomTabScreen from './BottomTabScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthContext} from '../context/AuthProvider';
 import {createDrawerNavigator} from '@react-navigation/drawer';
@@ -109,9 +110,7 @@ const Routes = () => {
 
   return (
     <NavigationContainer>
-      <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={MainNavigation} />
-      </Drawer.Navigator>
+      <MainNavigation />
     </NavigationContainer>
   );
 };
