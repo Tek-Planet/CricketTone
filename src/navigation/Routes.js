@@ -6,6 +6,10 @@ import axios from 'axios';
 import MainNavigation from './MainNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthContext} from '../context/AuthProvider';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {DrawerContent} from '../navigation/DrawerContent';
+
+const Drawer = createDrawerNavigator();
 
 const Routes = () => {
   const {setUser, setToken, setScores, setUserProfile} = useContext(
@@ -105,7 +109,9 @@ const Routes = () => {
 
   return (
     <NavigationContainer>
-      <MainNavigation />
+      <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
+        <Drawer.Screen name="Home" component={MainNavigation} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };

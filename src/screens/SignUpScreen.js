@@ -169,12 +169,7 @@ const SignInScreen = ({navigation}) => {
 
   const storeUserProfile = async (userDetails) => {
     try {
-      await AsyncStorage.setItem(
-        'userProfile',
-        JSON.stringify({
-          userDetails,
-        }),
-      );
+      await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
       console.log('Profile stored');
       navigation.navigate('Home');
     } catch {

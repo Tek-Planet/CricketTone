@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 
 function OtherStackScreen() {
   return (
-    <RootStack.Navigator headerMode={'none'} initialRouteName="SignUp">
+    <RootStack.Navigator headerMode={'none'} initialRouteName="Home">
       <RootStack.Screen name="Home" component={BottomTab} />
       <RootStack.Screen name="Splash" component={SplashScreen} />
       <RootStack.Screen name="MatchDetails" component={MatchDetailsStack} />

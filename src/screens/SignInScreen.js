@@ -101,9 +101,9 @@ const SignInScreen = ({navigation}) => {
         fetchUserDetails(res.user.uid);
       })
       .catch((error) => {
-        if (error.code === 'auth/email-already-in-use') {
-          console.log('That email address is already in use!');
-          setError('That email address is already in use!');
+        if (error.code === 'auth/user-not-found') {
+          console.log('here is no user record corresponding to this mail!');
+          setError('here is no user record corresponding to this mail!');
         }
 
         if (error.code === 'auth/invalid-email') {
@@ -118,7 +118,7 @@ const SignInScreen = ({navigation}) => {
           );
         }
         // setError(error);
-        // console.error(error);
+        console.error(error);
       });
   };
 
@@ -137,12 +137,7 @@ const SignInScreen = ({navigation}) => {
 
   const storeUserProfile = async (userDetails) => {
     try {
-      await AsyncStorage.setItem(
-        'userProfile',
-        JSON.stringify({
-          userDetails,
-        }),
-      );
+      await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
       console.log('Profile stored');
       navigation.navigate('Home');
     } catch {
@@ -160,31 +155,12 @@ const SignInScreen = ({navigation}) => {
           style={{width: 250, height: 30, marginTop: 15}}
           source={require('../img/logo.png')}
         /> */}
-          {!user ? (
-            <Text style={styles.text_header}>Sign in now</Text>
-          ) : (
-            <View>
-              <Text style={styles.text_header}>Login successful</Text>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.reset({
-                    index: 0,
-                    routes: [{name: 'Home'}],
-                  });
-                }}
-                style={styles.btnContinue}>
-                <Text
-                  style={{color: '#000', fontSize: 20, textAlign: 'center'}}>
-                  Continue
-                </Text>
-              </TouchableOpacity>
-            </View>
-          )}
+          <Text style={styles.text_header}>Sign in now</Text>
         </View>
 
         {
           //  show this if user is logged in
-          !user ? null : (
+          user ? null : (
             //  if user not logged in show this
             <Animatable.View
               animation="fadeInUpBig"
