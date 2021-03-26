@@ -10,12 +10,11 @@ import {
 import CustomNavigation from '../navigation/CustomBottomNav';
 import axios from 'axios';
 import LoadingData from '../components/LoadingData';
-import  {AuthContext} from  '../context/AuthProvider'
+import {AuthContext} from '../context/AuthProvider';
 
 function NewsScreen({route, navigation}) {
-  
   const {token} = useContext(AuthContext);
-  
+
   const [state, setState] = React.useState({
     match: {},
     isLoaded: false,
@@ -23,8 +22,8 @@ function NewsScreen({route, navigation}) {
   });
   const {key} = route.params;
   useEffect(() => {
-    console.log(key)
-    console.log(token)
+    console.log(key);
+    console.log(token);
     setTimeout(() => {
       axios
         .get(
@@ -59,16 +58,22 @@ function NewsScreen({route, navigation}) {
             <View style={styles.team}>
               <Text style={styles.teamName}>{state.match.teams.a.name}</Text>
               <View style={{alignItems: 'center'}}>
-              {Object.keys(state.match.innings).length !== 0 ? (
-              <View>
-                <Text style={styles.score}>{state.match.innings.a_1.runs} / {state.match.innings.a_1.wickets} </Text>
-                <Text style={styles.score}>{state.match.innings.a_1.overs}</Text>
-              </View>
-              )
-              
-              :(null)}
-                <Text style={styles.score}>{state.match.innings.a_1.runs} / {state.match.innings.a_1.wickets} </Text>
-                <Text style={styles.score}>{state.match.innings.a_1.overs}</Text>
+                {Object.keys(state.match.innings).length !== 0 ? (
+                  <View>
+                    <Text style={styles.score}>
+                      {state.match.innings.a_1.runs} /{' '}
+                      {state.match.innings.a_1.wickets}{' '}
+                    </Text>
+                    <Text style={styles.score}>
+                      {state.match.innings.a_1.overs}
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{alignItems: 'center'}}>
+                    <Text style={styles.score}>0 / 0</Text>
+                    <Text style={styles.score}>0</Text>
+                  </View>
+                )}
                 <Text style={styles.subTeamName}>Batman 1 - 40*</Text>
                 <Text style={styles.subTeamName}>Batman 2 - 30*</Text>
               </View>
@@ -78,13 +83,27 @@ function NewsScreen({route, navigation}) {
               <Text style={styles.teamName}>{state.match.teams.b.name}</Text>
 
               <View style={{alignItems: 'center'}}>
-              <Text style={styles.score}>{state.match.innings.b_1.runs} / {state.match.innings.b_1.wickets} </Text>
-                <Text style={styles.score}>{state.match.innings.b_1.overs}</Text>
+                {Object.keys(state.match.innings).length !== 0 ? (
+                  <View>
+                    <Text style={styles.score}>
+                      {state.match.innings.b_1.runs} /{' '}
+                      {state.match.innings.b_1.wickets}{' '}
+                    </Text>
+                    <Text style={styles.score}>
+                      {state.match.innings.b_1.overs}
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{alignItems: 'center'}}>
+                    <Text style={styles.score}>0 / 0</Text>
+                    <Text style={styles.score}>0</Text>
+                  </View>
+                )}
+
                 <Text style={styles.subTeamName}>Batman 1 - 40*</Text>
                 <Text style={styles.subTeamName}>Batman 2 - 30*</Text>
               </View>
             </View>
-            
           </View>
 
           <CustomNavigation match={state.match} />

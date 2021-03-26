@@ -10,7 +10,7 @@ import {
 import axios from 'axios';
 
 import LoadingData from '../components/LoadingData';
-import  {AuthContext} from  '../context/AuthProvider'
+import {AuthContext} from '../context/AuthProvider';
 
 export function SeriesScreen({navigation}) {
   const {token} = useContext(AuthContext);

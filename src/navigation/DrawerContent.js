@@ -33,7 +33,7 @@ export function DrawerContent({props, navigation}) {
               />
               <View style={{marginLeft: 15, flexDirection: 'column'}}>
                 <Title style={styles.title}>
-                  Welcome  {user && userProfile ? userProfile.userName : 'Guest'}
+                  Welcome {user && userProfile ? userProfile.userName : 'Guest'}
                 </Title>
                 <Caption style={styles.caption}>
                   {user && userProfile ? userProfile.email : null}
@@ -48,6 +48,33 @@ export function DrawerContent({props, navigation}) {
                 <Icon name="home-outline" color={color} size={size} />
               )}
               label="Home"
+              onPress={() => {
+                props.navigation.navigate('Home');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="email-newsletter" color={color} size={size} />
+              )}
+              label="News"
+              onPress={() => {
+                props.navigation.navigate('Home');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="clipboard-flow-outline" color={color} size={size} />
+              )}
+              label="Series"
+              onPress={() => {
+                props.navigation.navigate('Home');
+              }}
+            />
+            <DrawerItem
+              icon={({color, size}) => (
+                <Icon name="more" color={color} size={size} />
+              )}
+              label="More"
               onPress={() => {
                 props.navigation.navigate('Home');
               }}

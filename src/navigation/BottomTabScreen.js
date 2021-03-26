@@ -68,11 +68,13 @@ const HomeStackScreen = ({navigation}) => (
         headerLeft: () => (
           <Ionicons
             name="ios-menu"
-            color = {'#fff'}
+            color={'#fff'}
             style={{margin: 10}}
             size={25}
             color={'#FFF'}
-            onPress={() => {navigation.openDrawer()}}
+            onPress={() => {
+              navigation.openDrawer();
+            }}
           />
         ),
       }}
@@ -80,7 +82,7 @@ const HomeStackScreen = ({navigation}) => (
   </Stack.Navigator>
 );
 
-const NewsStackScreen = () => (
+const NewsStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
       headerTitle: 'Latest News',
@@ -93,11 +95,28 @@ const NewsStackScreen = () => (
         fontWeight: 'bold',
       },
     }}>
-    <Stack.Screen name="News" component={NewsScreen} />
+    <Stack.Screen
+      name="News"
+      component={NewsScreen}
+      options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            color={'#fff'}
+            style={{margin: 10}}
+            size={25}
+            color={'#FFF'}
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+        ),
+      }}
+    />
   </Stack.Navigator>
 );
 
-const SeriesStackScreen = () => (
+const SeriesStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
       headerTitle: 'Series',
@@ -110,7 +129,24 @@ const SeriesStackScreen = () => (
         fontWeight: 'bold',
       },
     }}>
-    <Stack.Screen name="Series" component={SeriesScreen} />
+    <Stack.Screen
+      name="Series"
+      component={SeriesScreen}
+      options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            color={'#fff'}
+            style={{margin: 10}}
+            size={25}
+            color={'#FFF'}
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+        ),
+      }}
+    />
   </Stack.Navigator>
 );
 
@@ -127,7 +163,23 @@ const MoreStackScreen = ({navigation}) => (
         fontWeight: 'bold',
       },
     }}>
-    <Stack.Screen name="More" component={MoreScreen} />
+    <Stack.Screen
+      name="More"
+      component={MoreScreen}
+      options={{
+        headerLeft: () => (
+          <Ionicons
+            name="ios-menu"
+            color={'#fff'}
+            style={{margin: 10}}
+            size={25}
+            color={'#FFF'}
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+        ),
+      }}
+    />
   </Stack.Navigator>
 );
- 

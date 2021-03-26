@@ -3,12 +3,11 @@ import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import axios from 'axios';
 import SeriesTopNav from '../navigation/SeriesTopNav';
 import LoadingData from '../components/LoadingData';
-import  {AuthContext} from  '../context/AuthProvider'
-
+import {AuthContext} from '../context/AuthProvider';
 
 export default function SeriesDetailsScreen({route, navigation}) {
   const {token} = useContext(AuthContext);
-  
+
   const [state, setState] = React.useState({
     matches: [],
     table: [],
@@ -21,7 +20,7 @@ export default function SeriesDetailsScreen({route, navigation}) {
   const {key, name} = route.params;
 
   const matchesQuerry = axios.get(
-    `https://rest.cricketapi.com/rest/v2/season/${key}/?access_token=${token}`,
+    `https://rest.cricketapi.com/rest/v2/season/${key}/?access_token=${token}&card_type=summary_card`,
   );
   const tableQuerry = axios.get(
     `https://rest.cricketapi.com/rest/v2/season/${key}/points/?access_token=${token}`,
