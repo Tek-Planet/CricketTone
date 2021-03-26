@@ -49,7 +49,7 @@ export function DrawerContent({props, navigation}) {
               )}
               label="Home"
               onPress={() => {
-                props.navigation.navigate('Home');
+                navigation.navigate('Home');
               }}
             />
             <DrawerItem
@@ -58,7 +58,7 @@ export function DrawerContent({props, navigation}) {
               )}
               label="News"
               onPress={() => {
-                props.navigation.navigate('Home');
+                navigation.navigate('News');
               }}
             />
             <DrawerItem
@@ -67,7 +67,7 @@ export function DrawerContent({props, navigation}) {
               )}
               label="Series"
               onPress={() => {
-                props.navigation.navigate('Home');
+                navigation.navigate('Series');
               }}
             />
             <DrawerItem
@@ -76,7 +76,7 @@ export function DrawerContent({props, navigation}) {
               )}
               label="More"
               onPress={() => {
-                props.navigation.navigate('Home');
+                navigation.navigate('More');
               }}
             />
           </Drawer.Section>
@@ -103,7 +103,7 @@ export function DrawerContent({props, navigation}) {
             )}
             label="Sign In"
             onPress={() => {
-              navigation.navigate('SignIn');
+              navigation.navigate('SignIn]]');
             }}
           />
         )}
@@ -117,16 +117,21 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   userInfoSection: {
+    marginTop:-5  ,
+    padding:10,
     paddingLeft: 20,
+    backgroundColor:'#23395d'
   },
   title: {
     fontSize: 16,
     marginTop: 3,
     fontWeight: 'bold',
+    color:'#fff'
   },
   caption: {
     fontSize: 14,
     lineHeight: 14,
+    color:'#fff'
   },
   row: {
     marginTop: 20,

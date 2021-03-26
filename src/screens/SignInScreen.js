@@ -22,7 +22,7 @@ import firestore from '@react-native-firebase/firestore';
 import {set} from 'react-native-reanimated';
 
 const SignInScreen = ({navigation}) => {
-  const {user, error, setError} = useContext(AuthContext);
+  const {user, error, setError, setUserProfile} = useContext(AuthContext);
 
   const [data, setData] = React.useState({
     email: '',
@@ -94,16 +94,18 @@ const SignInScreen = ({navigation}) => {
   };
 
   const loginUser = (email, password) => {
+    if(email.length > 0 && password.length > 0){
     auth()
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
+        setError(null)
         console.log('signed in successful!');
         fetchUserDetails(res.user.uid);
       })
       .catch((error) => {
         if (error.code === 'auth/user-not-found') {
           console.log('here is no user record corresponding to this mail!');
-          setError('here is no user record corresponding to this mail!');
+          setError('There is no user record corresponding to this mail!');
         }
 
         if (error.code === 'auth/invalid-email') {
@@ -119,7 +121,10 @@ const SignInScreen = ({navigation}) => {
         }
         // setError(error);
         console.error(error);
-      });
+      });}
+      else{
+        setError('email and password cannot be empty')
+      }
   };
 
   const fetchUserDetails = (userId) => {
@@ -133,12 +138,15 @@ const SignInScreen = ({navigation}) => {
           storeUserProfile(documentSnapshot.data());
         }
       });
+    
+    
   };
 
   const storeUserProfile = async (userDetails) => {
     try {
       await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
       console.log('Profile stored');
+      setUserProfile(userDetails);
       navigation.navigate('Home');
     } catch {
       setError('Error storing data on device');

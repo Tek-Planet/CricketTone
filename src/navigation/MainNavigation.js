@@ -5,7 +5,7 @@ import MatchDetailsScreen from '../screens/MatchDetailedScreen';
 import SeriesDetailsScreen from '../screens/SeriesDetailsScreen';
 import NewsDetailsScreen from '../screens/NewsDetailsScreen';
 import SignInScreen from '../screens/SignInScreen';
-import SignUpScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 
 import DrawerNavigation from './DrawerNavigation';
 

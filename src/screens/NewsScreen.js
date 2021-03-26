@@ -16,15 +16,15 @@ import  {AuthContext} from  '../context/AuthProvider'
 
 function NewsScreen({navigation}) {
 
-  const { token } = useContext(AuthContext);
+  const { token , news} = useContext(AuthContext);
 
   const [state, setState] = React.useState({
-    news: [], 
-    isLoaded: false,
+    news: news? news : [], 
+    isLoaded: true,
     error: false,
   });
 
-  const fetchData = (token) => {
+  const fetchData = () => {
     axios
       .get(
         `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
@@ -48,11 +48,11 @@ function NewsScreen({navigation}) {
       });
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-     fetchData(token);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //    fetchData(token);
+  //   }, 5000);
+  // }, []);
 
   const errorPage = () => {
     return (
@@ -90,9 +90,9 @@ function NewsScreen({navigation}) {
         <Text style={styles.headingText}>Latest News</Text>
       </View> */}
 
-      {state.isLoaded ? (
+      {state.news ? (
         <FlatList
-          data={state.news}
+          data={news}
           renderItem={({item}) => {
             return NewsListItem(item, navigation);
           }}

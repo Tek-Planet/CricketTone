@@ -13,9 +13,9 @@ import LoadingData from '../components/LoadingData';
 import {AuthContext} from '../context/AuthProvider';
 
 export function SeriesScreen({navigation}) {
-  const {token} = useContext(AuthContext);
+  const {token, series} = useContext(AuthContext);
   const [state, setState] = useState({
-    series: [],
+    series: series ? series : [],
     isLoaded: false,
     error: false,
   });
@@ -73,13 +73,13 @@ export function SeriesScreen({navigation}) {
     );
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (!state.isLoaded) {
-        fetchData();
-      } else console.log('Data is available');
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (!state.isLoaded) {
+  //       fetchData();
+  //     } else console.log('Data is available');
+  //   }, 1000);
+  // }, []);
 
   const seriesListItem = (item) => {
     return (
@@ -109,7 +109,7 @@ export function SeriesScreen({navigation}) {
 
   return (
     <View style={{flex: 1}}>
-      {state.isLoaded ? (
+      {state.series ? (
         <FlatList
           data={state.series}
           renderItem={({item}) => {

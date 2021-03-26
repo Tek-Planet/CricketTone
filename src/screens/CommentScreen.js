@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   FlatList,
   Image,
+  ActivityIndicator
 } from 'react-native';
 
 import firestore from '@react-native-firebase/firestore';
@@ -21,6 +22,7 @@ function CommentScreen({match}) {
   dayjs.extend(relativeTime);
   const [body, setBody] = useState(null)
   const [comments, setComments] = useState(null)
+  const [loaded, setLoaded] = useState(false)
   const [state, setState] = useState({
     name:  user && userProfile ? userProfile.userName :  '',
     email:  user && userProfile ? userProfile.email :  '',
@@ -134,6 +136,7 @@ function CommentScreen({match}) {
           });
         });
         setComments(msgs);
+        setLoaded(true)
       })
       .catch((err) => {
         console.log(err.message);
@@ -196,13 +199,18 @@ function CommentScreen({match}) {
         <View style={styles.headingBox}>
           <Text style={styles.headingText}>Recent Comments </Text>
         </View>
-        <FlatList
-          data={comments}
-          renderItem={({item}) => {
-            return messageListItem(item);
-          }}
-          keyExtractor={(item) => item.title}
-        />
+        {
+          !loaded ? ( <ActivityIndicator color="#23395d" size="large" /> ): (  
+          <FlatList
+            data={comments}
+            renderItem={({item}) => {
+              return messageListItem(item);
+            }}
+            keyExtractor={(item) => item.title}
+          />
+          )
+        }
+      
       </View>
 
       <View style={styles.scoreBox}>

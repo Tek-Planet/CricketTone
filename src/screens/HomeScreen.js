@@ -21,7 +21,7 @@ export default function HomeScreen({navigation}) {
   // const [{token}, dispatch] = useStateValue();
 
   const [state, setState] = useState({
-    scores: scores,
+    scores: scores ? scores : [],
     isLoaded: true,
     error: false,
     access_token: '',
@@ -51,7 +51,7 @@ export default function HomeScreen({navigation}) {
         // this will save token in the context api for other aplliations to use
         setToken(newCodes.access_token, dispatch);
         // fetch data from api using stored access stoken
-        fetchData(newCodes.access_token);
+        fetchData();
       } else {
         console.log('No JSON data found');
       }
@@ -61,7 +61,7 @@ export default function HomeScreen({navigation}) {
   };
 
   // make request to the api server
-  const fetchData = (token) => {
+  const fetchData = () => {
     axios
       .get(
         `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
@@ -121,7 +121,7 @@ export default function HomeScreen({navigation}) {
         <Text style={styles.headingText}>Live Scores</Text>
       </View> */}
 
-      {state.isLoaded ? (
+      {state.scores ? (
         <FlatList
           data={scores}
           renderItem={({item}) => {

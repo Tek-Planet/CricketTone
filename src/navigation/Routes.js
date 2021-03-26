@@ -4,22 +4,27 @@ import auth from '@react-native-firebase/auth';
 import SplashScreen from '../screens/SplashScreen';
 import axios from 'axios';
 import MainNavigation from './MainNavigation';
-import BottomTabScreen from './BottomTabScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthContext} from '../context/AuthProvider';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {DrawerContent} from '../navigation/DrawerContent';
+import {
+  View,
+  Text,
 
-const Drawer = createDrawerNavigator();
+  Image,
+
+  TouchableOpacity,
+} from 'react-native';
 
 const Routes = () => {
-  const {setUser, setToken, setScores, setUserProfile} = useContext(
+  const {setUser, setToken, setScores, setUserProfile, setNews, setSeries} = useContext(
     AuthContext,
   );
 
   const [state, setState] = useState({
     accessCodes: {},
     isLoading: true,
+    error:false,
+    token:''
   });
 
   const onAuthStateChanged = (user) => {
@@ -27,7 +32,7 @@ const Routes = () => {
     if (user) {
       getUserDetails();
     }
-      console.log(user)
+      // console.log(user)
   };
 
   const listenToUserState = () => {
@@ -50,8 +55,10 @@ const Routes = () => {
         setState({
           ...state,
           isLoading: false,
+          token:res.data.auth.access_token,
         });
         // set token for global use
+       
         setToken(res.data.auth.access_token);
         // store the token in async stora for future uses
         storeToken(res.data.auth);
@@ -60,17 +67,23 @@ const Routes = () => {
       })
       .catch((err) => {
         console.log(err);
+        setState({
+          ...state,
+          error: true,
+        });
       });
   };
 
   // fetch Data for Home Page
   const fetchData = (token) => {
-    axios
-      .get(
-        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
-      )
+    const matchQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`)
+    const newsQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`)
+    const seriesQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${token}` )
+    Promise.all([matchQuery, newsQuery, seriesQuery])
       .then((res) => {
-        setScores(res.data.data.cards);
+        setScores(res[0].data.data.cards);
+        setNews(res[1].data.data.news);
+        setSeries(res[2].data.data)
       })
       .catch((err) => {
         //  console.log(err.type)
@@ -88,10 +101,10 @@ const Routes = () => {
     try {
       const jsonValue = JSON.stringify(value);
       await AsyncStorage.setItem('accessCodes', jsonValue);
-      console.log('stored');
+      // console.log('stored');
     } catch (e) {
       console.log(e);
-    }
+    } 
   };
 
   const getUserDetails = () => {
@@ -103,6 +116,49 @@ const Routes = () => {
       }
     });
   };
+
+  // error  page
+  const errorPage = () => {
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Image
+          style={{width: 200, height: 200, borderRadius: 100, marginBottom: 20}}
+          source={require('../assets/imgs/err.jpg')}
+        />
+        <Text style={{color: '#000', fontSize: 18, marginBottom: 10}}>
+          Hmm. We’re having trouble fetching data
+        </Text>
+
+        <Text style={{color: '#000', fontSize: 18, marginBottom: 20}}>
+          Check your network connection.
+        </Text>
+
+        <TouchableOpacity
+          onPress={() => [
+            tokenRequest(),
+            setState({
+              ...state,
+              error: false,
+            }),
+          ]}
+          style={{
+            padding: 14,
+            borderRadius: 10,
+            backgroundColor: '#23395d',
+          }}>
+          <Text style={{
+    color: '#ffffff',
+    fontSize: 16,
+  }}> Try Again</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+
+  if (state.error) {
+   return errorPage()
+  }
 
   if (state.isLoading) {
     return <SplashScreen />;

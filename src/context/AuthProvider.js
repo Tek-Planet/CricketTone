@@ -9,6 +9,8 @@ export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [scores, setScores] = useState(null);
+  const [news, setNews] = useState(null);
+  const [series, setSeries] = useState(null);
   const [error, setError] = useState(null);
   return (
     <AuthContext.Provider
@@ -21,6 +23,10 @@ export const AuthProvider = ({children}) => {
         setToken,
         scores,
         setScores,
+        news,
+        setNews,
+        series,
+        setSeries,
         error,
         setError,
       }}>

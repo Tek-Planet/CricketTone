@@ -20,7 +20,7 @@ import {AuthContext} from '../context/AuthProvider';
 import {signUp} from '../redux/actions/dataAction';
 
 const SignInScreen = ({navigation}) => {
-  const {error, setError} = useContext(AuthContext);
+  const {error, setError,  setUserProfile} = useContext(AuthContext);
   const [data, setData] = React.useState({
     userName: '',
     password: '',
@@ -171,6 +171,7 @@ const SignInScreen = ({navigation}) => {
     try {
       await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
       console.log('Profile stored');
+      setUserProfile(userDetails);
       navigation.navigate('Home');
     } catch {
       setError('Error storing data on device');
