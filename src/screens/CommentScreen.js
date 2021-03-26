@@ -17,13 +17,14 @@ import  {AuthContext} from  '../context/AuthProvider'
 
 
 function CommentScreen({match}) {
-  const { user } = useContext(AuthContext);
+  const { user, userProfile } = useContext(AuthContext);
   dayjs.extend(relativeTime);
+  const [body, setBody] = useState(null)
+  const [comments, setComments] = useState(null)
   const [state, setState] = useState({
-    comments: [],
-    body: '',
-    name:'', 
-    email:''
+    name:  user && userProfile ? userProfile.userName :  '',
+    email:  user && userProfile ? userProfile.email :  '',
+    userId:  user && userProfile ? userProfile.userId :  'anonymous',
   });
 
   useEffect(() => {
@@ -40,10 +41,11 @@ function CommentScreen({match}) {
           margin: 5,
           elevation: 5,
           borderRadius: 10,
+          padding:10
         }}>
         <Image
           style={{width: 50, height: 50, borderRadius: 100, margin: 10}}
-          source={item.image}
+          source={require('../assets/imgs/noImage.png')}
         />
 
         <View style={{width: '75%'}}>
@@ -87,11 +89,12 @@ function CommentScreen({match}) {
   const saveComment = () => {
     if (state.body.length > 0) {
       const newComments = {
-        body: state.body,
+        body: body,
         matchId: match.key,
         teamId: 'teamId 002',
-        userId: 'anonymous',
-        userName: 'Anonymous',
+        userId: state.userId,
+        email: state.email,
+        userName: state.name,
         createdAt: new Date().toISOString(),
       };
 
@@ -99,11 +102,10 @@ function CommentScreen({match}) {
         .collection('messages')
         .add(newComments)
         .then(() => {
+          // getComments()
+          comments.push(newComments)
           console.log('User added!');
-          setState({
-            ...state,
-            comments: state.comments.push(newComments),
-          });
+          setBody('')
         })
         .catch((error) => {
           console.error(error);
@@ -128,13 +130,10 @@ function CommentScreen({match}) {
             userId: doc.data().userId,
             userName: doc.data().userName,
             createdAt: doc.data().createdAt,
-            image: require('../assets/flag.png'),
+            // image: require('../assets/imgs/noImage.png'),
           });
         });
-        setState({
-          ...state,
-          comments: msgs,
-        });
+        setComments(msgs);
       })
       .catch((err) => {
         console.log(err.message);
@@ -153,7 +152,7 @@ function CommentScreen({match}) {
     else{
       setState({
         ...state,
-        body: '',
+        body: val,
       });
     }
   };
@@ -198,7 +197,7 @@ function CommentScreen({match}) {
           <Text style={styles.headingText}>Recent Comments </Text>
         </View>
         <FlatList
-          data={state.comments}
+          data={comments}
           renderItem={({item}) => {
             return messageListItem(item);
           }}
@@ -206,9 +205,10 @@ function CommentScreen({match}) {
         />
       </View>
 
-      <View >
+      <View style={styles.scoreBox}>
         <View style={styles.inputContainer}>
           <TextInput
+            value={body}
             multiline={true}
             numberOfLines={5}
             placeholder="Description"
@@ -219,7 +219,7 @@ function CommentScreen({match}) {
           />
         </View>
 
-        { user ? (
+        { !user ? (
         <View>
           <TextInput
           placeholder="Name"
@@ -230,6 +230,7 @@ function CommentScreen({match}) {
         />
 
         <TextInput
+          value={state.email}
           placeholder="Email"
           placeholderTextColor="#666666"
           autoCapitalize="none"
@@ -239,9 +240,9 @@ function CommentScreen({match}) {
         </View>
       ) : (null)}
 
-        <Text style={{color:'#000'}}>{state.body}</Text>
+        {/* <Text style={{color:'#000'}}>{state.body}</Text>
        <Text style={{color:'#000'}}>{state.email}</Text>
-       <Text style={{color:'#000'}}>{state.name}</Text>
+       <Text style={{color:'#000'}}>{state.name}</Text> */}
 
         <TouchableOpacity
           onPress={() => {
@@ -286,8 +287,6 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 5,
     borderRadius: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
     backgroundColor: '#fff',
     elevation: 5,
   },
@@ -332,6 +331,6 @@ const styles = StyleSheet.create({
   },
   inputDetails: {
     margin: 10,
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
   },
 });

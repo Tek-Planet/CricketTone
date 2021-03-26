@@ -20,7 +20,7 @@ function scoreListItem(item, navigation) {
                   <Text style={styles.score}>
                     {item.innings.a_1.runs} / {item.innings.a_1.wickets}
                   </Text>
-                  <Text style={styles.score}>{item.innings.a_1.overs}</Text>
+                  <Text style={styles.score}>{item.innings.a_1.overs} </Text>
                 </View>
               ) : (
                 <View style={{alignItems: 'center'}}>

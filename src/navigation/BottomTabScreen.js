@@ -67,11 +67,12 @@ const HomeStackScreen = ({navigation}) => (
       options={{
         headerLeft: () => (
           <Ionicons
-            name="chevron-back-outline"
+            name="ios-menu"
+            color = {'#fff'}
             style={{margin: 10}}
             size={25}
-            color={'#009688'}
-            onPress={() => navigation.navigate('Drawer')}
+            color={'#FFF'}
+            onPress={() => {navigation.openDrawer()}}
           />
         ),
       }}
@@ -129,3 +130,4 @@ const MoreStackScreen = ({navigation}) => (
     <Stack.Screen name="More" component={MoreScreen} />
   </Stack.Navigator>
 );
+ 

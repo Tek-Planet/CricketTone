@@ -11,7 +11,7 @@ import DrawerNavigation from './DrawerNavigation';
 
 const RootStack = createStackNavigator();
 const Stack = createStackNavigator();
-
+ 
 function OtherStackScreen() {
   return (
     <RootStack.Navigator headerMode={'none'} initialRouteName="Drawer">

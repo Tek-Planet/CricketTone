@@ -29,9 +29,9 @@ function CustomBottomNav({match}) {
           <Text style={styles.buttonText}>Live Chat</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => swapScreen(3)}>
+        {/* <TouchableOpacity style={styles.button} onPress={() => swapScreen(3)}>
           <Text style={styles.buttonText}>Score Card</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
 
       {
@@ -51,7 +51,7 @@ export default CustomBottomNav;
 
 const styles = StyleSheet.create({
   button: {
-    width: '32%',
+    width: '50%',
     padding: 5,
     borderRadius: 5,
     borderWidth: 1,

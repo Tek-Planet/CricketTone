@@ -22,8 +22,9 @@ function NewsScreen({route, navigation}) {
     error: false,
   });
   const {key} = route.params;
-
   useEffect(() => {
+    console.log(key)
+    console.log(token)
     setTimeout(() => {
       axios
         .get(
@@ -54,11 +55,20 @@ function NewsScreen({route, navigation}) {
       {state.isLoaded ? (
         <ScrollView>
           <View style={styles.scoreBox}>
+            {/* <Text style={styles.subTeamName}>Batman 2 - 30*</Text> */}
             <View style={styles.team}>
               <Text style={styles.teamName}>{state.match.teams.a.name}</Text>
               <View style={{alignItems: 'center'}}>
-                <Text style={styles.score}>120/3</Text>
-                <Text style={styles.score}>14.4</Text>
+              {Object.keys(state.match.innings).length !== 0 ? (
+              <View>
+                <Text style={styles.score}>{state.match.innings.a_1.runs} / {state.match.innings.a_1.wickets} </Text>
+                <Text style={styles.score}>{state.match.innings.a_1.overs}</Text>
+              </View>
+              )
+              
+              :(null)}
+                <Text style={styles.score}>{state.match.innings.a_1.runs} / {state.match.innings.a_1.wickets} </Text>
+                <Text style={styles.score}>{state.match.innings.a_1.overs}</Text>
                 <Text style={styles.subTeamName}>Batman 1 - 40*</Text>
                 <Text style={styles.subTeamName}>Batman 2 - 30*</Text>
               </View>
@@ -68,12 +78,13 @@ function NewsScreen({route, navigation}) {
               <Text style={styles.teamName}>{state.match.teams.b.name}</Text>
 
               <View style={{alignItems: 'center'}}>
-                <Text style={styles.score}>120/3</Text>
-                <Text style={styles.score}>14.4</Text>
+              <Text style={styles.score}>{state.match.innings.b_1.runs} / {state.match.innings.b_1.wickets} </Text>
+                <Text style={styles.score}>{state.match.innings.b_1.overs}</Text>
                 <Text style={styles.subTeamName}>Batman 1 - 40*</Text>
                 <Text style={styles.subTeamName}>Batman 2 - 30*</Text>
               </View>
             </View>
+            
           </View>
 
           <CustomNavigation match={state.match} />

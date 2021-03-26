@@ -27,7 +27,7 @@ const Routes = () => {
     if (user) {
       getUserDetails();
     }
-    //   console.log(user)
+      console.log(user)
   };
 
   const listenToUserState = () => {
