@@ -12,11 +12,10 @@ import MatchListItem from '../components/MatchListItem';
 import LoadingData from '../components/LoadingData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {setToken} from '../redux/actions/dataAction';
-import  {AuthContext} from  '../context/AuthProvider'
+import {AuthContext} from '../context/AuthProvider';
 
 export default function HomeScreen({navigation}) {
-
-  const { token, scores } = useContext(AuthContext);
+  const {token, scores} = useContext(AuthContext);
   //  hold all state
   // const [{token}, dispatch] = useStateValue();
 
@@ -29,6 +28,7 @@ export default function HomeScreen({navigation}) {
       access_token: 'default',
       expires: '0',
     },
+    refreshing: false,
   });
 
   // app entering
@@ -128,6 +128,8 @@ export default function HomeScreen({navigation}) {
             return MatchListItem(item, navigation);
           }}
           keyExtractor={(item) => item.key}
+          refreshing={state.refreshing}
+          onRefresh={() => console.log('refreshing')}
         />
       ) : !state.error ? (
         <LoadingData />

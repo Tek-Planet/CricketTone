@@ -9,14 +9,9 @@ import {AuthContext} from '../context/AuthProvider';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 const Routes = () => {
-  const {
-    setUser,
-    setToken,
-    setScores,
-    setUserProfile,
-    setNews,
-    setSeries,
-  } = useContext(AuthContext);
+  const {setUser, setToken, setScores, setUserProfile, fetchData} = useContext(
+    AuthContext,
+  );
 
   const [state, setState] = useState({
     accessCodes: {},
@@ -73,33 +68,6 @@ const Routes = () => {
   };
 
   // fetch Data for Home Page
-  const fetchData = (token) => {
-    const matchQuery = axios.get(
-      `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
-    );
-    const newsQuery = axios.get(
-      `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
-    );
-    const seriesQuery = axios.get(
-      `https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${token}`,
-    );
-    Promise.all([matchQuery, newsQuery, seriesQuery])
-      .then((res) => {
-        setScores(res[0].data.data.cards);
-        setNews(res[1].data.data.news);
-        setSeries(res[2].data.data);
-      })
-      .catch((err) => {
-        //  console.log(err.type)
-        if (err.message === 'Network Error') {
-          console.log('Internet Problem');
-          setState({
-            ...state,
-            error: true,
-          });
-        } else console.log(err.message);
-      });
-  };
 
   const storeToken = async (value) => {
     try {

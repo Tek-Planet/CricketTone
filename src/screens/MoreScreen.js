@@ -4,69 +4,58 @@ import {
   Text,
   StyleSheet,
   Image,
+  TouchableOpacity,
   FlatList,
   ImageBackground,
 } from 'react-native';
 import axios from 'axios';
 import firestore from '@react-native-firebase/firestore';
+import ImageView from 'react-native-image-viewing';
 
-export default function HomeScreen({navigation}) {
-  //  hold all state
-  const [state, setState] = useState({
-    scores: {},
-    isLoaded: false,
-    matches: [],
-  });
-
-  function validate() {
-    let formData = new FormData();
-    formData.append('type', 'login');
-    formData.append('email', 'techplanet49@gmail.com');
-    formData.append('password', 'QuidProQuo@1012');
-
-    return fetch('https://trailerbabu.com/authentication.php', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((res) => {
-        console.log(res.data);
-      })
-
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     //   getMessages();
-  //   }, 5000);
-  // }, []);
-
-  const [images, setImages] = useState([
+export default function MoreScreen({navigation}) {
+  const images = [
     {
-      title: 'Viajes Deza',
-      image: require('../assets/imgs/more/one.jpg'),
       id: 0,
+      title: 'Ball',
+      uri:
+        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/one.jpg?alt=media&token=6f192742-30ea-440e-8cae-084a16596bf4',
     },
     {
-      title: 'Last Minute',
-      image: require('../assets/imgs/more/two.jpg'),
       id: 1,
+      title: 'Receiver',
+      uri:
+        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/two.jpg?alt=media&token=922102dd-2153-449d-81b0-0f23370074ef',
     },
-    {title: 'Dream CC', image: require('../assets/imgs/more/three.jpg'), id: 2},
     {
-      title: 'Jorge Aristegui',
-      image: require('../assets/imgs/more/four.jpg'),
+      id: 2,
+      title: 'Score',
+      uri:
+        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/three.jpg?alt=media&token=c60d0bf7-8818-4b58-9074-8073db30bd96',
+    },
+    {
       id: 3,
+      title: 'Indian National Team',
+      uri:
+        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/four.jpg?alt=media&token=403ef0a8-4e84-4a60-beda-195a3565a204',
     },
     {
-      title: 'Melissa Zuñiga',
-      image: require('../assets/imgs/more/five.jpg'),
       id: 4,
+      title: 'Celebration',
+      uri:
+        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/five.jpg?alt=media&token=403ef0a8-4e84-4a60-beda-195a3565a204',
     },
-    {title: 'Viajes', image: require('../assets/imgs/more/one.jpg'), id: 5},
-  ]);
+  ];
+
+  const [visible, setIsVisible] = useState(false);
+  const [pos, setPos] = useState(0);
+
+  const footer = (item) => (
+    <View style={{marginTop: -130, alignItems: 'center'}}>
+      <Text style={{fontSize: 20, textAlign: 'center', color: '#fff'}}>
+        {item.title}
+      </Text>
+    </View>
+  );
 
   const imageListItem = (item) => {
     return (
@@ -78,32 +67,46 @@ export default function HomeScreen({navigation}) {
           borderTopStartRadius: 10,
           borderTopEndRadius: 10,
         }}>
-        <ImageBackground
-          style={{
-            width: 170,
-            height: 150,
-            margin: 5,
-            borderTopStartRadius: 10,
-            borderTopEndRadius: 10,
-          }}
-          source={item.image}
-        />
+        <TouchableOpacity
+          onPress={() => [setIsVisible(true), setPos(images.indexOf(item))]}>
+          <ImageBackground
+            style={{
+              width: 170,
+              height: 150,
+              margin: 5,
+              borderTopStartRadius: 10,
+              borderTopEndRadius: 10,
+            }}
+            source={{uri: item.uri}}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
 
-  return (
-    <View style={{flex: 1}}>
+  if (visible) {
+    return (
+      <ImageView
+        images={images}
+        imageIndex={pos}
+        onImageIndexChange={(pos) => setPos(pos)}
+        visible={visible}
+        onRequestClose={() => setIsVisible(false)}
+        FooterComponent={() => footer(images[pos])}
+      />
+    );
+  } else {
+    return (
       <FlatList
         numColumns={2}
         data={images}
         renderItem={({item}) => {
           return imageListItem(item);
         }}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.id}
       />
-    </View>
-  );
+    );
+  }
 }
 
 const styles = StyleSheet.create({
