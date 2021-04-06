@@ -13,35 +13,12 @@ import LoadingData from '../components/LoadingData';
 import {AuthContext} from '../context/AuthProvider';
 
 export function SeriesScreen({navigation}) {
-  const {token, series} = useContext(AuthContext);
+  const {token, series, fetchData} = useContext(AuthContext);
   const [state, setState] = useState({
     series: series ? series : [],
     isLoaded: false,
     error: false,
   });
-
-  const fetchData = () => {
-    axios
-      .get(
-        `https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${token}`,
-      )
-      .then((res) => {
-        setState({
-          ...state,
-          series: res.data.data,
-          isLoaded: true,
-        });
-      })
-      .catch((err) => {
-        if (err.message === 'Network Error') {
-          console.log('Internet Problem');
-          setState({
-            ...state,
-            error: true,
-          });
-        } else console.log('non Internet Problem');
-      });
-  };
 
   const errorPage = () => {
     return (
@@ -60,7 +37,7 @@ export function SeriesScreen({navigation}) {
 
         <TouchableOpacity
           onPress={() => [
-            fetchData(),
+            fetchData(token),
             setState({
               ...state,
               error: false,

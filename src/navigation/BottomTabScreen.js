@@ -17,10 +17,9 @@ const Stack = createStackNavigator();
 
 const MainTabScreen = ({navigation}) => (
   <Tab.Navigator
-    tabStyle={{backgroundColor: '#ccc'}}
     tabBarOptions={{
       activeTintColor: '#23395d',
-      inactiveTintColor: '#A9A9A9',
+      inactiveTintColor: '#000000',
     }}
     initialRouteName="Matches"
     screenOptions={({route}) => ({

@@ -15,7 +15,7 @@ import {setToken} from '../redux/actions/dataAction';
 import {AuthContext} from '../context/AuthProvider';
 
 export default function HomeScreen({navigation}) {
-  const {token, scores} = useContext(AuthContext);
+  const {token, scores, fetchData} = useContext(AuthContext);
   //  hold all state
   // const [{token}, dispatch] = useStateValue();
 
@@ -61,7 +61,7 @@ export default function HomeScreen({navigation}) {
   };
 
   // make request to the api server
-  const fetchData = () => {
+  const fetchDatas = () => {
     axios
       .get(
         `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
@@ -102,7 +102,7 @@ export default function HomeScreen({navigation}) {
 
         <TouchableOpacity
           onPress={() => [
-            fetchData(),
+            fetchData(token),
             setState({
               ...state,
               error: false,
@@ -129,7 +129,7 @@ export default function HomeScreen({navigation}) {
           }}
           keyExtractor={(item) => item.key}
           refreshing={state.refreshing}
-          onRefresh={() => console.log('refreshing')}
+          onRefresh={() => fetchData(token)}
         />
       ) : !state.error ? (
         <LoadingData />

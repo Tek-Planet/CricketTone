@@ -11,48 +11,17 @@ import axios from 'axios';
 import NewsListItem from '../components/NewListItem';
 import LoadingData from '../components/LoadingData';
 import {useStateValue} from '../data/StateProvider';
-import  {AuthContext} from  '../context/AuthProvider'
-
+import {AuthContext} from '../context/AuthProvider';
 
 function NewsScreen({navigation}) {
-
-  const { token , news} = useContext(AuthContext);
+  const {token, news, fetchData} = useContext(AuthContext);
 
   const [state, setState] = React.useState({
-    news: news? news : [], 
+    news: news ? news : [],
     isLoaded: true,
     error: false,
+    refreshing: false,
   });
-
-  const fetchData = () => {
-    axios
-      .get(
-        `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
-      )
-      .then((res) => {
-        //   console.log(res.data)
-        setState({
-          ...state,
-          news: res.data.data.news,
-          isLoaded: true,
-        });
-      })
-      .catch((err) => {
-        if (err.message === 'Network Error') {
-          console.log('Internet Problem');
-          setState({
-            ...state,
-            error: true,
-          });
-        } else console.log('non Internet Problem');
-      });
-  };
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //    fetchData(token);
-  //   }, 5000);
-  // }, []);
 
   const errorPage = () => {
     return (
@@ -71,7 +40,7 @@ function NewsScreen({navigation}) {
 
         <TouchableOpacity
           onPress={() => [
-            fetchData(),
+            fetchData(token),
             setState({
               ...state,
               error: false,
@@ -97,6 +66,8 @@ function NewsScreen({navigation}) {
             return NewsListItem(item, navigation);
           }}
           keyExtractor={(item) => item.title}
+          refreshing={state.refreshing}
+          onRefresh={() => fetchData(token)}
         />
       ) : !state.error ? (
         <LoadingData />

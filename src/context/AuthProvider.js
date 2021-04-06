@@ -1,4 +1,5 @@
 import React, {createContext, useState} from 'react';
+import axios from 'axios';
 
 // Prepares the dataLayer
 export const AuthContext = createContext();
@@ -12,6 +13,7 @@ export const AuthProvider = ({children}) => {
   const [news, setNews] = useState(null);
   const [series, setSeries] = useState(null);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = (token) => {
     const matchQuery = axios.get(
@@ -28,6 +30,7 @@ export const AuthProvider = ({children}) => {
         setScores(res[0].data.data.cards);
         setNews(res[1].data.data.news);
         setSeries(res[2].data.data);
+        setIsLoading(false);
       })
       .catch((err) => {
         //  console.log(err.type)
@@ -57,6 +60,8 @@ export const AuthProvider = ({children}) => {
         fetchData: (token) => {
           fetchData(token);
         },
+        isLoading,
+        setIsLoading,
       }}>
       {children}
     </AuthContext.Provider>

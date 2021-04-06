@@ -9,13 +9,12 @@ import {AuthContext} from '../context/AuthProvider';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 const Routes = () => {
-  const {setUser, setToken, setScores, setUserProfile, fetchData} = useContext(
+  const {setUser, setToken, isLoading, setUserProfile, fetchData} = useContext(
     AuthContext,
   );
 
   const [state, setState] = useState({
     accessCodes: {},
-    isLoading: true,
     error: false,
     token: '',
   });
@@ -44,10 +43,9 @@ const Routes = () => {
         'https://rest.cricketapi.com/rest/v2/auth/?access_key=7d57345feed8c93ebc43f2e0a2d4c8e2&secret_key=77743e11913923fc67347e2cb2d3ab56&app_id=Test100&device_id=developer',
       )
       .then((res) => {
-        // set isloading true after the response
+        console.log(res);
         setState({
           ...state,
-          isLoading: false,
           token: res.data.auth.access_token,
         });
         // set token for global use
@@ -135,7 +133,7 @@ const Routes = () => {
     return errorPage();
   }
 
-  if (state.isLoading) {
+  if (isLoading) {
     return <SplashScreen />;
   }
 
