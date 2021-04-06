@@ -31,7 +31,7 @@ function NewsScreen({route, navigation}) {
           `https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=${token}`,
         )
         .then((res) => {
-          //  console.log(res.data);
+          console.log(res.data.data.card);
           setState({
             ...state,
             match: res.data.data.card,

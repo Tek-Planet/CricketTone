@@ -23,6 +23,7 @@ function CommentScreen({match}) {
   const {user, userProfile} = useContext(AuthContext);
   dayjs.extend(relativeTime);
   const [body, setBody] = useState(null);
+  const [selectedTeamId, setSelectedTeamId] = useState('default');
   const [comments, setComments] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [state, setState] = useState({
@@ -62,14 +63,24 @@ function CommentScreen({match}) {
             }}>
             {item.userName}
           </Text>
+          {item.teamId !== 'default' ? (
+            <Text
+              style={{
+                fontSize: 14,
+                fontStyle: 'italic',
+                color: '#DC0021',
+                marginTop: -3,
+              }}>
+              in support of @ {item.teamId}
+            </Text>
+          ) : null}
           <Text
             style={{
-              fontSize: 16,
+              fontSize: 14,
               fontStyle: 'italic',
               color: '#000',
               marginTop: -3,
             }}>
-            {' '}
             {dayjs(item.createdAt).fromNow()}
           </Text>
           <Text
@@ -95,7 +106,7 @@ function CommentScreen({match}) {
       const newComments = {
         body: body,
         matchId: match.key,
-        teamId: 'teamId 002',
+        teamId: selectedTeamId,
         userId: state.userId,
         email: state.email,
         userName: state.name,
@@ -193,7 +204,7 @@ function CommentScreen({match}) {
             renderItem={({item}) => {
               return messageListItem(item);
             }}
-            keyExtractor={(item) => item.title}
+            keyExtractor={(item) => item.commentId}
           />
         )}
       </View>
@@ -214,31 +225,39 @@ function CommentScreen({match}) {
         {/* Team Name View */}
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity
-            onPress={() => {
-              alert('Team');
-            }}
-            style={styles.teamButton}>
+            onPress={() => setSelectedTeamId(match.teams.a.short_name)}
+            style={[
+              styles.teamButton,
+              selectedTeamId === match.teams.a.short_name
+                ? {backgroundColor: '#23395d'}
+                : null,
+            ]}>
             <Text
-              style={{
-                color: '#23395d',
-                textAlign: 'center',
-                fontWeight: 'bold',
-              }}>
-              ABC
+              style={[
+                styles.teamButtonText,
+                selectedTeamId === match.teams.a.short_name
+                  ? {color: '#FFFFFF'}
+                  : null,
+              ]}>
+              {match.teams.a.short_name}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => {
-              alert('Team');
-            }}
-            style={styles.teamButton}>
+            onPress={() => setSelectedTeamId(match.teams.b.short_name)}
+            style={[
+              styles.teamButton,
+              selectedTeamId === match.teams.b.short_name
+                ? {backgroundColor: '#23395d'}
+                : null,
+            ]}>
             <Text
-              style={{
-                color: '#23395d',
-                textAlign: 'center',
-                fontWeight: 'bold',
-              }}>
-              ABC
+              style={[
+                styles.teamButtonText,
+                selectedTeamId === match.teams.b.short_name
+                  ? {color: '#FFFFFF'}
+                  : null,
+              ]}>
+              {match.teams.b.short_name}
             </Text>
           </TouchableOpacity>
         </View>
@@ -348,5 +367,10 @@ const styles = StyleSheet.create({
     width: 50,
     borderWidth: 1,
     margin: 3,
+  },
+  teamButtonText: {
+    color: '#23395d',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
 });
