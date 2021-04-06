@@ -11,6 +11,7 @@ import {
 import axios from 'axios';
 import firestore from '@react-native-firebase/firestore';
 import ImageView from 'react-native-image-viewing';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 export default function MoreScreen({navigation}) {
   const images = [
@@ -48,6 +49,17 @@ export default function MoreScreen({navigation}) {
 
   const [visible, setIsVisible] = useState(false);
   const [pos, setPos] = useState(0);
+  const onSwipeRight = () => {
+    navigation.navigate('Matches');
+  };
+
+  const onSwipeLeft = () => {
+    navigation.goBack();
+  };
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80,
+  };
 
   const footer = (item) => (
     <View style={{marginTop: -130, alignItems: 'center'}}>
@@ -97,14 +109,22 @@ export default function MoreScreen({navigation}) {
     );
   } else {
     return (
-      <FlatList
-        numColumns={2}
-        data={images}
-        renderItem={({item}) => {
-          return imageListItem(item);
-        }}
-        keyExtractor={(item) => item.id}
-      />
+      <GestureRecognizer
+        onSwipeRight={() => onSwipeRight()}
+        onSwipeLeft={() => onSwipeLeft()}
+        config={config}
+        style={{
+          flex: 1,
+        }}>
+        <FlatList
+          numColumns={2}
+          data={images}
+          renderItem={({item}) => {
+            return imageListItem(item);
+          }}
+          keyExtractor={(item) => item.id}
+        />
+      </GestureRecognizer>
     );
   }
 }

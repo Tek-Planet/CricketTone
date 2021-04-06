@@ -12,6 +12,7 @@ import NewsListItem from '../components/NewListItem';
 import LoadingData from '../components/LoadingData';
 import {useStateValue} from '../data/StateProvider';
 import {AuthContext} from '../context/AuthProvider';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 function NewsScreen({navigation}) {
   const {token, news, fetchData} = useContext(AuthContext);
@@ -22,6 +23,18 @@ function NewsScreen({navigation}) {
     error: false,
     refreshing: false,
   });
+
+  const onSwipeRight = () => {
+    navigation.navigate('Series');
+  };
+
+  const onSwipeLeft = () => {
+    navigation.goBack();
+  };
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80,
+  };
 
   const errorPage = () => {
     return (
@@ -54,11 +67,13 @@ function NewsScreen({navigation}) {
   };
 
   return (
-    <View style={{flex: 1}}>
-      {/* <View style={styles.headingBox}>
-        <Text style={styles.headingText}>Latest News</Text>
-      </View> */}
-
+    <GestureRecognizer
+      onSwipeRight={() => onSwipeRight()}
+      onSwipeLeft={() => onSwipeLeft()}
+      config={config}
+      style={{
+        flex: 1,
+      }}>
       {state.news ? (
         <FlatList
           data={news}
@@ -74,7 +89,7 @@ function NewsScreen({navigation}) {
       ) : (
         errorPage()
       )}
-    </View>
+    </GestureRecognizer>
   );
 }
 

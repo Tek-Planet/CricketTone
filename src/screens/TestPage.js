@@ -1,43 +1,88 @@
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
-import ImageView from 'react-native-image-viewing';
+import {View, Text} from 'react-native';
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
-export function MoreScreen() {
-  const images = [
-    {
-      uri:
-        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/one.jpg?alt=media&token=6f192742-30ea-440e-8cae-084a16596bf4',
-    },
-    {
-      uri:
-        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/two.jpg?alt=media&token=922102dd-2153-449d-81b0-0f23370074ef',
-    },
-    {
-      uri:
-        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/three.jpg?alt=media&token=c60d0bf7-8818-4b58-9074-8073db30bd96',
-    },
-    {
-      uri:
-        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/four.jpg?alt=media&token=403ef0a8-4e84-4a60-beda-195a3565a204',
-    },
-    {
-      uri:
-        'https://firebasestorage.googleapis.com/v0/b/uberclone-8449d.appspot.com/o/four.jpg?alt=media&token=403ef0a8-4e84-4a60-beda-195a3565a204',
-    },
-  ];
-  const [visible, setIsVisible] = useState(true);
+function SomeComponent({navigation}) {
+  const [state, setState] = useState({
+    myText: "I'm ready to get swiped!",
+    gestureName: 'none',
+    backgroundColor: '#fff',
+  });
+
+  const onSwipeUp = (gestureState) => {
+    setState({
+      ...state,
+      myText: 'You swiped up!',
+    });
+  };
+
+  const onSwipeDown = (gestureState) => {
+    setState({
+      ...state,
+      myText: 'You swiped down!',
+    });
+  };
+
+  const onSwipeLeft = () => {
+    navigation.goBack();
+  };
+
+  const onSwipeRight = (gestureState) => {
+    setState({
+      ...state,
+      myText: 'You swiped right!',
+    });
+  };
+
+  const onSwipe = (gestureName, gestureState) => {
+    const {SWIPE_UP, SWIPE_DOWN, SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
+    setState({...state, gestureName: gestureName});
+
+    switch (gestureName) {
+      case SWIPE_UP:
+        setState({
+          ...state,
+          backgroundColor: 'red',
+        });
+        break;
+      case SWIPE_DOWN:
+        setState({
+          ...state,
+          backgroundColor: 'green',
+        });
+        break;
+      case SWIPE_LEFT:
+        setState({
+          ...state,
+          backgroundColor: 'blue',
+        });
+        break;
+      case SWIPE_RIGHT:
+        setState({
+          ...state,
+          backgroundColor: 'yellow',
+        });
+        break;
+    }
+  };
+
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80,
+  };
 
   return (
-    <View>
-      <ImageView
-        images={images}
-        imageIndex={0}
-        visible={visible}
-        onRequestClose={() => setIsVisible(false)}
-      />
-      <Text>not showing</Text>
-    </View>
+    <GestureRecognizer
+      onSwipeLeft={() => onSwipeLeft()}
+      onSwipeRight={(state) => onSwipeRight(state)}
+      config={config}
+      style={{
+        flex: 1,
+      }}>
+      <Text>{state.myText}</Text>
+      <Text>onSwipe callback received gesture: {state.gestureName}</Text>
+    </GestureRecognizer>
   );
 }
 
-export default MoreScreen;
+export default SomeComponent;

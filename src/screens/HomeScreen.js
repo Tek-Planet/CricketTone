@@ -13,6 +13,7 @@ import LoadingData from '../components/LoadingData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {setToken} from '../redux/actions/dataAction';
 import {AuthContext} from '../context/AuthProvider';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 export default function HomeScreen({navigation}) {
   const {token, scores, fetchData} = useContext(AuthContext);
@@ -31,58 +32,13 @@ export default function HomeScreen({navigation}) {
     refreshing: false,
   });
 
-  // app entering
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //       console.log('state.scores')
-  //       console.log(scores)
-  //   }, 5000);
-  // }, []);
-
-  // getData from async storage
-  const getData = async () => {
-    try {
-      const accessCodes = await AsyncStorage.getItem('accessCodes');
-
-      if (accessCodes !== null) {
-        // conver the retrived data to json
-        const newCodes = JSON.parse(accessCodes);
-        // this will save token in the context api for other aplliations to use
-        setToken(newCodes.access_token, dispatch);
-        // fetch data from api using stored access stoken
-        fetchData();
-      } else {
-        console.log('No JSON data found');
-      }
-    } catch (e) {
-      console.log(e.message);
-    }
+  const onSwipeRight = () => {
+    navigation.navigate('News');
   };
 
-  // make request to the api server
-  const fetchDatas = () => {
-    axios
-      .get(
-        `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
-      )
-      .then((res) => {
-        setState({
-          ...state,
-          scores: res.data.data.cards,
-          isLoaded: true,
-        });
-      })
-      .catch((err) => {
-        //  console.log(err.type)
-        if (err.message === 'Network Error') {
-          console.log('Internet Problem');
-          setState({
-            ...state,
-            error: true,
-          });
-        } else console.log(err.message);
-      });
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80,
   };
 
   const errorPage = () => {
@@ -116,11 +72,12 @@ export default function HomeScreen({navigation}) {
   };
 
   return (
-    <View style={{flex: 1}}>
-      {/* <View style={styles.headingBox}>
-        <Text style={styles.headingText}>Live Scores</Text>
-      </View> */}
-
+    <GestureRecognizer
+      onSwipeRight={() => onSwipeRight()}
+      config={config}
+      style={{
+        flex: 1,
+      }}>
       {state.scores ? (
         <FlatList
           data={scores}
@@ -136,7 +93,7 @@ export default function HomeScreen({navigation}) {
       ) : (
         errorPage()
       )}
-    </View>
+    </GestureRecognizer>
   );
 }
 

@@ -11,6 +11,7 @@ import axios from 'axios';
 
 import LoadingData from '../components/LoadingData';
 import {AuthContext} from '../context/AuthProvider';
+import GestureRecognizer from 'react-native-swipe-gestures';
 
 export function SeriesScreen({navigation}) {
   const {token, series, fetchData} = useContext(AuthContext);
@@ -83,9 +84,25 @@ export function SeriesScreen({navigation}) {
       </View>
     );
   };
+  const onSwipeRight = () => {
+    navigation.navigate('More');
+  };
 
+  const onSwipeLeft = () => {
+    navigation.goBack();
+  };
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80,
+  };
   return (
-    <View style={{flex: 1}}>
+    <GestureRecognizer
+      onSwipeRight={() => onSwipeRight()}
+      onSwipeLeft={() => onSwipeLeft()}
+      config={config}
+      style={{
+        flex: 1,
+      }}>
       {state.series ? (
         <FlatList
           data={state.series}
@@ -99,7 +116,7 @@ export function SeriesScreen({navigation}) {
       ) : (
         errorPage()
       )}
-    </View>
+    </GestureRecognizer>
   );
 }
 
