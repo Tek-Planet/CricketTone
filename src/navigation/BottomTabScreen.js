@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/HomeScreen';
 import NewsScreen from '../screens/NewsScreen';
@@ -11,15 +12,17 @@ import SeriesScreen from '../screens/SeriesScreen';
 import MoreScreen from '../screens/MoreScreen';
 
 // const Tab = createMaterialBottomTabNavigator();
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const MainTabScreen = ({navigation}) => (
   <Tab.Navigator
-    activeColor="#FFFFFF"
-    inactiveColor="#A9A9A9"
+    tabStyle={{backgroundColor: '#ccc'}}
+    tabBarOptions={{
+      activeTintColor: '#23395d',
+      inactiveTintColor: '#A9A9A9',
+    }}
     initialRouteName="Matches"
-    barStyle={{backgroundColor: '#222222', height: 60}}
     screenOptions={({route}) => ({
       tabBarIcon: ({focused, color}) => {
         let iconName;
@@ -36,7 +39,29 @@ const MainTabScreen = ({navigation}) => (
         }
 
         // You can return any component that you like here!
-        return <Ionicons name={iconName} size={26} color={color} />;
+        return (
+          <Ionicons
+            name={iconName}
+            size={26}
+            color={color}
+            style={{paddingTop: 5}}
+          />
+        );
+      },
+      tabBarLabel: ({focused, color}) => {
+        let labelName;
+        if (route.name === 'Matches') {
+          labelName = 'Matches';
+        } else if (route.name === 'News') {
+          labelName = 'News';
+        } else if (route.name === 'Series') {
+          labelName = 'Series';
+        } else if (route.name === 'More') {
+          labelName = 'More';
+        }
+
+        // You can return any component that you like here!
+        return <Text style={{color: color, marginBottom: 5}}>{labelName}</Text>;
       },
     })}>
     <Tab.Screen name="Matches" component={HomeStackScreen} />
@@ -51,15 +76,13 @@ export default MainTabScreen;
 const HomeStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'Live Scores',
+      headerTitle: 'CricketTone (Live Scores)',
 
       headerStyle: {
         backgroundColor: '#23395d',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      headerTitleStyle: {},
     }}>
     <Stack.Screen
       name="Home"
@@ -85,15 +108,13 @@ const HomeStackScreen = ({navigation}) => (
 const NewsStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'Latest News',
+      headerTitle: 'CricketTone (Latest News)',
 
       headerStyle: {
         backgroundColor: '#23395d',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      headerTitleStyle: {},
     }}>
     <Stack.Screen
       name="News"
@@ -119,14 +140,14 @@ const NewsStackScreen = ({navigation}) => (
 const SeriesStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'Series',
+      headerTitle: 'CricketTone (Series)',
 
       headerStyle: {
         backgroundColor: '#23395d',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
-        fontWeight: 'bold',
+        fontWeight: 'normal',
       },
     }}>
     <Stack.Screen
@@ -153,15 +174,13 @@ const SeriesStackScreen = ({navigation}) => (
 const MoreStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'Gallery',
+      headerTitle: 'CricketTone (Gallery)',
 
       headerStyle: {
         backgroundColor: '#23395d',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      headerTitleStyle: {},
     }}>
     <Stack.Screen
       name="More"

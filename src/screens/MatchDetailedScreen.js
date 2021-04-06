@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  SafeAreaView,
   ScrollView,
 } from 'react-native';
 import CustomNavigation from '../navigation/CustomBottomNav';
@@ -30,7 +31,7 @@ function NewsScreen({route, navigation}) {
           `https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=${token}`,
         )
         .then((res) => {
-          console.log(res.data);
+          //  console.log(res.data);
           setState({
             ...state,
             match: res.data.data.card,
@@ -50,9 +51,9 @@ function NewsScreen({route, navigation}) {
   }, []);
 
   return (
-    <View style={{flex: 1, marginBottom: 60}}>
+    <SafeAreaView style={{flex: 1, marginBottom: 60}}>
       {state.isLoaded ? (
-        <ScrollView>
+        <View>
           <View style={styles.scoreBox}>
             {/* <Text style={styles.subTeamName}>Batman 2 - 30*</Text> */}
             <View style={styles.team}>
@@ -105,9 +106,10 @@ function NewsScreen({route, navigation}) {
               </View>
             </View>
           </View>
-
-          <CustomNavigation match={state.match} />
-        </ScrollView>
+          <ScrollView>
+            <CustomNavigation match={state.match} />
+          </ScrollView>
+        </View>
       ) : !state.error ? (
         <LoadingData />
       ) : (
@@ -142,22 +144,13 @@ function NewsScreen({route, navigation}) {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 
 export default NewsScreen;
 
 const styles = StyleSheet.create({
-  headingBox: {
-    padding: 10,
-    backgroundColor: '#23395d',
-    margin: 5,
-    borderRadius: 10,
-  },
-
-  headingText: {color: '#FFF', fontSize: 22, fontWeight: 'bold'},
-
   scoreBox: {
     padding: 10,
     margin: 5,
@@ -168,7 +161,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 
-  teamName: {color: '#000', fontSize: 20, fontWeight: 'bold'},
+  teamName: {color: '#000', fontSize: 16, fontWeight: 'bold'},
 
   subTeamName: {color: '#000', fontSize: 16, textAlign: 'center'},
 
@@ -179,18 +172,8 @@ const styles = StyleSheet.create({
   seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
 
   loadingText: {
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 200,
-  },
-
-  categoryList: {
-    padding: 14,
-    borderRadius: 10,
-    backgroundColor: '#23395d',
-  },
-  categoryListText: {
-    color: '#ffffff',
-    fontSize: 14,
   },
 });
 

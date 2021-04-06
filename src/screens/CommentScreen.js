@@ -8,25 +8,27 @@ import {
   TouchableOpacity,
   FlatList,
   Image,
-  ActivityIndicator
+  ActivityIndicator,
+  LogBox,
 } from 'react-native';
 
 import firestore from '@react-native-firebase/firestore';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import  {AuthContext} from  '../context/AuthProvider'
+import {AuthContext} from '../context/AuthProvider';
 
+LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
 
 function CommentScreen({match}) {
-  const { user, userProfile } = useContext(AuthContext);
+  const {user, userProfile} = useContext(AuthContext);
   dayjs.extend(relativeTime);
-  const [body, setBody] = useState(null)
-  const [comments, setComments] = useState(null)
-  const [loaded, setLoaded] = useState(false)
+  const [body, setBody] = useState(null);
+  const [comments, setComments] = useState(null);
+  const [loaded, setLoaded] = useState(false);
   const [state, setState] = useState({
-    name:  user && userProfile ? userProfile.userName :  '',
-    email:  user && userProfile ? userProfile.email :  '',
-    userId:  user && userProfile ? userProfile.userId :  'anonymous',
+    name: user && userProfile ? userProfile.userName : '',
+    email: user && userProfile ? userProfile.email : '',
+    userId: user && userProfile ? userProfile.userId : 'anonymous',
   });
 
   useEffect(() => {
@@ -43,7 +45,7 @@ function CommentScreen({match}) {
           margin: 5,
           elevation: 5,
           borderRadius: 10,
-          padding:10
+          padding: 10,
         }}>
         <Image
           style={{width: 50, height: 50, borderRadius: 100, margin: 10}}
@@ -65,7 +67,7 @@ function CommentScreen({match}) {
               fontSize: 16,
               fontStyle: 'italic',
               color: '#000',
-              marginTop: 5,
+              marginTop: -3,
             }}>
             {' '}
             {dayjs(item.createdAt).fromNow()}
@@ -89,7 +91,7 @@ function CommentScreen({match}) {
   };
 
   const saveComment = () => {
-    if (state.body.length > 0) {
+    if (body.trim().length > 0) {
       const newComments = {
         body: body,
         matchId: match.key,
@@ -105,9 +107,9 @@ function CommentScreen({match}) {
         .add(newComments)
         .then(() => {
           // getComments()
-          comments.push(newComments)
+          comments.push(newComments);
           console.log('User added!');
-          setBody('')
+          setBody('');
         })
         .catch((error) => {
           console.error(error);
@@ -136,39 +138,26 @@ function CommentScreen({match}) {
           });
         });
         setComments(msgs);
-        setLoaded(true)
+        setLoaded(true);
       })
       .catch((err) => {
         console.log(err.message);
       });
   };
 
- 
   const textInputChange = (val) => {
-
-    if (val.trim().length > 0 ) {
-      setState({
-        ...state,
-        body: val,
-      });
-    }
-    else{
-      setState({
-        ...state,
-        body: val,
-      });
-    }
+    if (val.trim().length > 0) {
+      setBody(val);
+    } else setBody(val);
   };
 
   const handleNameChange = (val) => {
-
-    if (val.trim().length > 0 ) {
+    if (val.trim().length > 0) {
       setState({
         ...state,
         name: val,
       });
-    }
-    else{
+    } else {
       setState({
         ...state,
         name: '',
@@ -177,14 +166,12 @@ function CommentScreen({match}) {
   };
 
   const handleMailChange = (val) => {
-
-    if (val.trim().length > 0 ) {
+    if (val.trim().length > 0) {
       setState({
         ...state,
         email: val,
       });
-    }
-    else{
+    } else {
       setState({
         ...state,
         email: '',
@@ -192,15 +179,15 @@ function CommentScreen({match}) {
     }
   };
 
-
   return (
-    <View style={{flex: 1}}>
-      <View >
+    <View style={{marginBottom: 100}}>
+      <View>
         <View style={styles.headingBox}>
           <Text style={styles.headingText}>Recent Comments </Text>
         </View>
-        {
-          !loaded ? ( <ActivityIndicator color="#23395d" size="large" /> ): (  
+        {!loaded ? (
+          <ActivityIndicator color="#23395d" size="large" />
+        ) : (
           <FlatList
             data={comments}
             renderItem={({item}) => {
@@ -208,9 +195,7 @@ function CommentScreen({match}) {
             }}
             keyExtractor={(item) => item.title}
           />
-          )
-        }
-      
+        )}
       </View>
 
       <View style={styles.scoreBox}>
@@ -226,27 +211,58 @@ function CommentScreen({match}) {
             style={styles.input}
           />
         </View>
-
-        { !user ? (
-        <View>
-          <TextInput
-          placeholder="Name"
-          placeholderTextColor="#666666"
-          autoCapitalize="none"
-          onChangeText={(val) => handleNameChange(val)}
-          style={styles.inputDetails}
-        />
-
-        <TextInput
-          value={state.email}
-          placeholder="Email"
-          placeholderTextColor="#666666"
-          autoCapitalize="none"
-          onChangeText={(val) => handleMailChange(val)}
-          style={styles.inputDetails}
-        />
+        {/* Team Name View */}
+        <View style={{flexDirection: 'row'}}>
+          <TouchableOpacity
+            onPress={() => {
+              alert('Team');
+            }}
+            style={styles.teamButton}>
+            <Text
+              style={{
+                color: '#23395d',
+                textAlign: 'center',
+                fontWeight: 'bold',
+              }}>
+              ABC
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              alert('Team');
+            }}
+            style={styles.teamButton}>
+            <Text
+              style={{
+                color: '#23395d',
+                textAlign: 'center',
+                fontWeight: 'bold',
+              }}>
+              ABC
+            </Text>
+          </TouchableOpacity>
         </View>
-      ) : (null)}
+
+        {!user ? (
+          <View>
+            <TextInput
+              placeholder="Name"
+              placeholderTextColor="#666666"
+              autoCapitalize="none"
+              onChangeText={(val) => handleNameChange(val)}
+              style={styles.inputDetails}
+            />
+
+            <TextInput
+              value={state.email}
+              placeholder="Email"
+              placeholderTextColor="#666666"
+              autoCapitalize="none"
+              onChangeText={(val) => handleMailChange(val)}
+              style={styles.inputDetails}
+            />
+          </View>
+        ) : null}
 
         {/* <Text style={{color:'#000'}}>{state.body}</Text>
        <Text style={{color:'#000'}}>{state.email}</Text>
@@ -289,7 +305,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
-  headingText: {color: '#FFF', fontSize: 22, fontWeight: 'bold'},
+  headingText: {color: '#FFF', fontSize: 18, fontWeight: 'bold'},
 
   scoreBox: {
     padding: 10,
@@ -299,26 +315,13 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 
-  imgFlag: {width: 30, height: 30, borderRadius: 100},
-
-  teamName: {color: '#000', fontSize: 20, fontWeight: 'bold'},
-
-  subTeamName: {color: '#000', fontSize: 16, textAlign: 'center'},
-
-  team: {flexDirection: 'column', alignItems: 'center'},
-
-  row: {flexDirection: 'row'},
-
-  score: {color: '#000', fontSize: 16, marginTop: 10},
-
-  seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
-
   inputContainer: {
     margin: 5,
     borderRadius: 5,
     borderLeftWidth: 4,
     borderRightWidth: 4,
   },
+
   input: {
     textAlignVertical: 'top',
     backgroundColor: '#ccc',
@@ -340,5 +343,10 @@ const styles = StyleSheet.create({
   inputDetails: {
     margin: 10,
     backgroundColor: '#ccc',
+  },
+  teamButton: {
+    width: 50,
+    borderWidth: 1,
+    margin: 3,
   },
 });

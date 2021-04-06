@@ -129,15 +129,6 @@ export function SeriesScreen({navigation}) {
 export default SeriesScreen;
 
 const styles = StyleSheet.create({
-  headingBox: {
-    padding: 10,
-    backgroundColor: '#23395d',
-    margin: 5,
-    borderRadius: 10,
-  },
-
-  headingText: {color: '#FFF', fontSize: 22, fontWeight: 'bold'},
-
   scoreBox: {
     padding: 10,
     margin: 5,
@@ -148,26 +139,11 @@ const styles = StyleSheet.create({
 
   teamName: {
     color: '#000',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'justify',
   },
 
   score: {color: '#000', fontSize: 16, textAlign: 'justify'},
-
   seperator: {color: '#000', fontSize: 18, fontWeight: 'bold'},
-
-  textStyle: {
-    color: '#E91E63',
-    textDecorationLine: 'underline',
-  },
-  categoryList: {
-    padding: 14,
-    borderRadius: 10,
-    backgroundColor: '#23395d',
-  },
-  categoryListText: {
-    color: '#ffffff',
-    fontSize: 14,
-  },
 });

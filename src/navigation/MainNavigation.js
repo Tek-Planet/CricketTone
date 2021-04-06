@@ -11,7 +11,7 @@ import DrawerNavigation from './DrawerNavigation';
 
 const RootStack = createStackNavigator();
 const Stack = createStackNavigator();
- 
+
 function OtherStackScreen() {
   return (
     <RootStack.Navigator headerMode={'none'} initialRouteName="Drawer">
@@ -31,7 +31,7 @@ export default OtherStackScreen;
 const MatchDetailsStack = () => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'Match Details',
+      headerTitle: 'CricketTone (Match Details)',
 
       headerStyle: {
         backgroundColor: '#23395d',

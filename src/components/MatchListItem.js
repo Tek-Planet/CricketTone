@@ -49,7 +49,22 @@ function scoreListItem(item, navigation) {
             </View>
             <Text style={styles.teamName}>{item.teams.b.name}</Text>
           </View>
-          <Text style={styles.completed}>{item.msgs.completed}</Text>
+          <Text style={styles.completed}>
+            Start Date: {item.start_date.str}
+          </Text>
+          {item.status === 'completed' ? (
+            <Text style={[styles.completed, {color: 'green'}]}>
+              {item.msgs.completed}
+            </Text>
+          ) : null}
+
+          {item.status === 'notstarted' ? (
+            <Text style={styles.completed}>Match Not Started</Text>
+          ) : null}
+
+          {item.status !== 'notstarted' && item.status !== 'completed' ? (
+            <Text style={styles.completed}>Live</Text>
+          ) : null}
         </View>
       </TouchableOpacity>
     </View>
@@ -65,21 +80,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#fff',
     elevation: 5,
-    borderWidth: 1,
-    borderColor: '#23395d',
   },
 
   teamName: {
     color: '#000',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 10,
     marginRight: 10,
     width: 100,
     textAlign: 'center',
   },
 
-  score: {color: '#000', fontSize: 16, fontWeight: 'bold'},
+  score: {color: '#000', fontSize: 15, fontWeight: 'bold'},
 
   seperator: {
     color: '#000',

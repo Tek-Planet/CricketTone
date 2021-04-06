@@ -6,25 +6,23 @@ import axios from 'axios';
 import MainNavigation from './MainNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthContext} from '../context/AuthProvider';
-import {
-  View,
-  Text,
-
-  Image,
-
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 const Routes = () => {
-  const {setUser, setToken, setScores, setUserProfile, setNews, setSeries} = useContext(
-    AuthContext,
-  );
+  const {
+    setUser,
+    setToken,
+    setScores,
+    setUserProfile,
+    setNews,
+    setSeries,
+  } = useContext(AuthContext);
 
   const [state, setState] = useState({
     accessCodes: {},
     isLoading: true,
-    error:false,
-    token:''
+    error: false,
+    token: '',
   });
 
   const onAuthStateChanged = (user) => {
@@ -32,7 +30,7 @@ const Routes = () => {
     if (user) {
       getUserDetails();
     }
-      // console.log(user)
+    // console.log(user)
   };
 
   const listenToUserState = () => {
@@ -55,10 +53,10 @@ const Routes = () => {
         setState({
           ...state,
           isLoading: false,
-          token:res.data.auth.access_token,
+          token: res.data.auth.access_token,
         });
         // set token for global use
-       
+
         setToken(res.data.auth.access_token);
         // store the token in async stora for future uses
         storeToken(res.data.auth);
@@ -76,14 +74,20 @@ const Routes = () => {
 
   // fetch Data for Home Page
   const fetchData = (token) => {
-    const matchQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`)
-    const newsQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`)
-    const seriesQuery =  axios.get(`https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${token}` )
+    const matchQuery = axios.get(
+      `https://rest.cricketapi.com/rest/v2/recent_matches/?access_token=${token}&card_type=summary_card`,
+    );
+    const newsQuery = axios.get(
+      `https://rest.cricketapi.com/rest/v2/news_aggregation/?access_token=${token}`,
+    );
+    const seriesQuery = axios.get(
+      `https://rest.cricketapi.com/rest/v2/recent_seasons/?access_token=${token}`,
+    );
     Promise.all([matchQuery, newsQuery, seriesQuery])
       .then((res) => {
         setScores(res[0].data.data.cards);
         setNews(res[1].data.data.news);
-        setSeries(res[2].data.data)
+        setSeries(res[2].data.data);
       })
       .catch((err) => {
         //  console.log(err.type)
@@ -104,7 +108,7 @@ const Routes = () => {
       // console.log('stored');
     } catch (e) {
       console.log(e);
-    } 
+    }
   };
 
   const getUserDetails = () => {
@@ -146,18 +150,21 @@ const Routes = () => {
             borderRadius: 10,
             backgroundColor: '#23395d',
           }}>
-          <Text style={{
-    color: '#ffffff',
-    fontSize: 16,
-  }}> Try Again</Text>
+          <Text
+            style={{
+              color: '#ffffff',
+              fontSize: 16,
+            }}>
+            {' '}
+            Try Again
+          </Text>
         </TouchableOpacity>
       </View>
     );
   };
 
-
   if (state.error) {
-   return errorPage()
+    return errorPage();
   }
 
   if (state.isLoading) {

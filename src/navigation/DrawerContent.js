@@ -103,7 +103,7 @@ export function DrawerContent({props, navigation}) {
             )}
             label="Sign In"
             onPress={() => {
-              navigation.navigate('SignIn]]');
+              navigation.navigate('SignIn');
             }}
           />
         )}

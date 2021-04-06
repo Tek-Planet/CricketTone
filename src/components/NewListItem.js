@@ -31,18 +31,13 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 
-  imgFlag: {width: 80, height: 80, borderRadius: 10},
-
   teamName: {
     color: '#000',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'justify',
+    marginBottom: 5,
   },
-
-  teamA: {flexDirection: 'row'},
-
-  teamB: {flexDirection: 'row'},
 
   score: {color: '#000', fontSize: 16, textAlign: 'justify'},
 

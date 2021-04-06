@@ -94,37 +94,37 @@ const SignInScreen = ({navigation}) => {
   };
 
   const loginUser = (email, password) => {
-    if(email.length > 0 && password.length > 0){
-    auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((res) => {
-        setError(null)
-        console.log('signed in successful!');
-        fetchUserDetails(res.user.uid);
-      })
-      .catch((error) => {
-        if (error.code === 'auth/user-not-found') {
-          console.log('here is no user record corresponding to this mail!');
-          setError('There is no user record corresponding to this mail!');
-        }
+    if (email.length > 0 && password.length > 0) {
+      auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((res) => {
+          setError(null);
+          console.log('signed in successful!');
+          fetchUserDetails(res.user.uid);
+        })
+        .catch((error) => {
+          if (error.code === 'auth/user-not-found') {
+            console.log('here is no user record corresponding to this mail!');
+            setError('There is no user record corresponding to this mail!');
+          }
 
-        if (error.code === 'auth/invalid-email') {
-          console.log('That email address is invalid!');
-          setError('That email address is invalid!');
-        }
+          if (error.code === 'auth/invalid-email') {
+            console.log('That email address is invalid!');
+            setError('That email address is invalid!');
+          }
 
-        if (error.code === 'auth/wrong-password') {
-          console.log('That email address is invalid!');
-          setError(
-            'The password is invalid or the user does not have a password',
-          );
-        }
-        // setError(error);
-        console.error(error);
-      });}
-      else{
-        setError('email and password cannot be empty')
-      }
+          if (error.code === 'auth/wrong-password') {
+            console.log('That email address is invalid!');
+            setError(
+              'The password is invalid or the user does not have a password',
+            );
+          }
+          // setError(error);
+          console.error(error);
+        });
+    } else {
+      setError('email and password cannot be empty');
+    }
   };
 
   const fetchUserDetails = (userId) => {
@@ -138,8 +138,6 @@ const SignInScreen = ({navigation}) => {
           storeUserProfile(documentSnapshot.data());
         }
       });
-    
-    
   };
 
   const storeUserProfile = async (userDetails) => {
@@ -198,6 +196,7 @@ const SignInScreen = ({navigation}) => {
                       color: '#000',
                     },
                   ]}
+                  autoCompleteType="email"
                   autoCapitalize="none"
                   onChangeText={(val) => textInputEmailChange(val)}
                   onEndEditing={(e) => handleValidEmail(e.nativeEvent.text)}

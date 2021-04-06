@@ -6,7 +6,7 @@ import ScoreCardScreen from '../screens/ScoreCardScreen';
 import CommentScreen from '../screens/CommentScreen';
 
 function CustomBottomNav({match}) {
-  const [selector, setSelector] = useState(1);
+  const [selector, setSelector] = useState(2);
 
   const swapScreen = (id) => {
     setSelector(id);
@@ -21,9 +21,9 @@ function CustomBottomNav({match}) {
           elevation: 5,
           justifyContent: 'space-evenly',
         }}>
-        <TouchableOpacity style={styles.button} onPress={() => swapScreen(1)}>
+        {/* <TouchableOpacity style={styles.button} onPress={() => swapScreen(1)}>
           <Text style={styles.buttonText}>Info</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.button} onPress={() => swapScreen(2)}>
           <Text style={styles.buttonText}>Live Chat</Text>
@@ -51,11 +51,11 @@ export default CustomBottomNav;
 
 const styles = StyleSheet.create({
   button: {
-    width: '50%',
+    marginEnd: 10,
+    marginStart: 10,
     padding: 5,
     borderRadius: 5,
-    borderWidth: 1,
     borderColor: '#000',
   },
-  buttonText: {color: '#000', fontSize: 20, textAlign: 'center'},
+  buttonText: {color: '#000', fontSize: 18, textAlign: 'center'},
 });

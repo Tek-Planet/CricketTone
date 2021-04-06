@@ -20,7 +20,7 @@ import {AuthContext} from '../context/AuthProvider';
 import {signUp} from '../redux/actions/dataAction';
 
 const SignInScreen = ({navigation}) => {
-  const {error, setError,  setUserProfile} = useContext(AuthContext);
+  const {error, setError, setUserProfile} = useContext(AuthContext);
   const [data, setData] = React.useState({
     userName: '',
     password: '',
@@ -220,6 +220,7 @@ const SignInScreen = ({navigation}) => {
                 <TextInput
                   placeholder="Your email"
                   placeholderTextColor="#666666"
+                  autoCompleteType="email"
                   style={[
                     styles.textInput,
                     {
@@ -251,7 +252,7 @@ const SignInScreen = ({navigation}) => {
                     color: '#23395d',
                   },
                 ]}>
-                userName
+                Username
               </Text>
 
               <View style={styles.action}>
