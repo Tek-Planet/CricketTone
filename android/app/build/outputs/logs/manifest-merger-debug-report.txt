@@ -14,6 +14,7 @@ MERGED from [:react-native-firebase_firestore] /home/tekplanet/Documents/Project
 MERGED from [:react-native-firebase_app] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/40855a0806b651f7f544bd90a36414d7/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-async-storage_async-storage] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_google-signin] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-community_masked-view] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -21,7 +22,7 @@ MERGED from [:react-native-safe-area-context] /home/tekplanet/Documents/Project/
 MERGED from [:react-native-screens] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
-MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/41aa5cea00227d35bdeb28fdd41f8b82/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-linear-gradient] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -40,7 +41,7 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/tekplanet/.g
 MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9b3be565713bfe9b9e719888d2fa4aab/imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:soloader:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/638c4d7f79e40087014a6248b1f17c50/soloader-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:2:1-26:12
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f4dd6765e14761b2cc2b956c30f1e05/material-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1407a986925c8facc88e38d49d4207e8/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -49,7 +50,7 @@ MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/tekplanet/.grad
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c643cdab41a32981a96ee0f0c85214b5/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5e32f1230eb1489a90fb1b4b08938a01/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:17:1-83:12
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea24f191d98597e2ed209ddfbaa4916e/play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9022f89b7ed33522d5936d9009669ee1/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b515259f72bd52fafe33e2f5938d643/play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
@@ -59,7 +60,7 @@ MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/tekplanet/.
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4a2ba8261d03ccadc0af8e8c7977ded2/firebase-analytics-18.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:2:1-24:12
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:15:1-49:12
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:15:1-49:12
 MERGED from [com.google.firebase:firebase-installations-interop:16.0.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/94259fc7be07afd3229497a18edf540a/firebase-installations-interop-16.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/42f6d2a67be876e4963277e9a9d55d46/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:17:1-46:12
@@ -70,7 +71,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.2] /h
 MERGED from [com.google.android.gms:play-services-measurement-base:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f81b50102131d6c5d709a62b0df69be8/play-services-measurement-base-18.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/045801d1d4b5479682a3e08083c3dab4/play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/2372f3df8a0062f9748f45a6a82b42ed/firebase-measurement-connector-18.0.0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96f1b29f5806f9d1c7c207094f3e0f3b/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.2.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ca45d9715f4b92f67b682f80f9d372e0/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3122bcd688d379ebaa33a295cadea719/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -90,7 +91,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/tekp
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/cb4990fdab9a1b584650651353ddce87/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b96aa1b54b5ef80eee0ea9597fe1f6d7/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/31ec32de44f143b2dd3959e0df1cbdb3/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c17ab4ba5cb074232580de08ba8e04a7/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/74b776a2a4568856572f976c12271268/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f50bd566880661098b96f70045e51ae/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b46cb08634b9ee5e234c57f00f9cac43/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/880ecec5e56fc31cc63782392059eb84/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -98,7 +99,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/tekplanet/.
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/33b5a8e63964558d4f21201ca8631c63/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/74febf8f05fdeb4801a3c6de7743cd26/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/11cc4f157a8bf6845781936888705491/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/38460e046d53b32d57e90ab74b8863c5/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c1a38f6afe6723f9e6875287c86a33fe/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9e62b317d4e1c44b1152fb2676f98c89/ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/0f289813b087e1811b7867266ace11a5/protolite-well-known-types-17.1.1/AndroidManifest.xml:2:1-11:12
 INJECTED from /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:2:1-8:12
@@ -129,10 +130,10 @@ MERGED from [:react-native-firebase_analytics] /home/tekplanet/Documents/Project
 MERGED from [:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
 MERGED from [:react-native-firebase_auth] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
 MERGED from [:react-native-firebase_auth] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:11:5-67
@@ -153,18 +154,18 @@ MERGED from [:react-native-firebase_analytics] /home/tekplanet/Documents/Project
 MERGED from [:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
 MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
-MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/41aa5cea00227d35bdeb28fdd41f8b82/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/41aa5cea00227d35bdeb28fdd41f8b82/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:11:5-20
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:16:5-24:19
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.android.material:material:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f4dd6765e14761b2cc2b956c30f1e05/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f4dd6765e14761b2cc2b956c30f1e05/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:26:5-81:19
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b515259f72bd52fafe33e2f5938d643/play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b515259f72bd52fafe33e2f5938d643/play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4a150706ee15494a8af4b8d1ae19d8b5/firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
@@ -177,8 +178,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:14:5-22:19
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:25:5-47:19
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:25:5-47:19
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:25:5-47:19
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:25:5-47:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/42f6d2a67be876e4963277e9a9d55d46/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/42f6d2a67be876e4963277e9a9d55d46/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:28:5-44:19
@@ -195,8 +196,8 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/tekplanet/
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/045801d1d4b5479682a3e08083c3dab4/play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/2372f3df8a0062f9748f45a6a82b42ed/firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/2372f3df8a0062f9748f45a6a82b42ed/firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b707818bd543435f177dcfe0ccc56e5/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b707818bd543435f177dcfe0ccc56e5/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/27bc33ad9aaabd3f3a8657ba7a32f802/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -275,6 +276,8 @@ MERGED from [androidx.multidex:multidex:2.0.1] /home/tekplanet/.gradle/caches/tr
 MERGED from [androidx.multidex:multidex:2.0.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/40855a0806b651f7f544bd90a36414d7/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [:react-native-async-storage_async-storage] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-async-storage_async-storage] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_google-signin] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_google-signin] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_masked-view] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -289,8 +292,8 @@ MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React
 MERGED from [:react-native-vector-icons] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4fbd50efce4fbfd1a05ea32cbc2480f1/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/41aa5cea00227d35bdeb28fdd41f8b82/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.4] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/41aa5cea00227d35bdeb28fdd41f8b82/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/002cfc9530f83fe4daf3f57b0087c461/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/059000cd316732b6a0ccdddf8fa51a84/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
@@ -327,8 +330,8 @@ MERGED from [com.facebook.fresco:soloader:2.2.0] /home/tekplanet/.gradle/caches/
 MERGED from [com.facebook.fresco:soloader:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/638c4d7f79e40087014a6248b1f17c50/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.9.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/137840d3119b7abcb0075d85b513d21b/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f4dd6765e14761b2cc2b956c30f1e05/material-1.1.0/AndroidManifest.xml:20:5-44
@@ -345,8 +348,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /home/tekplanet/.gradle/c
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5e32f1230eb1489a90fb1b4b08938a01/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:21:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea24f191d98597e2ed209ddfbaa4916e/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea24f191d98597e2ed209ddfbaa4916e/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9022f89b7ed33522d5936d9009669ee1/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
@@ -365,8 +368,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-installations-interop:16.0.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/94259fc7be07afd3229497a18edf540a/firebase-installations-interop-16.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-installations-interop:16.0.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/94259fc7be07afd3229497a18edf540a/firebase-installations-interop-16.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/42f6d2a67be876e4963277e9a9d55d46/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
@@ -387,8 +390,8 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/tekplanet/
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/045801d1d4b5479682a3e08083c3dab4/play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/2372f3df8a0062f9748f45a6a82b42ed/firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/2372f3df8a0062f9748f45a6a82b42ed/firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96f1b29f5806f9d1c7c207094f3e0f3b/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96f1b29f5806f9d1c7c207094f3e0f3b/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ca45d9715f4b92f67b682f80f9d372e0/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
@@ -427,8 +430,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] /home/tekplanet/.gradle/caches/tr
 MERGED from [androidx.cardview:cardview:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b96aa1b54b5ef80eee0ea9597fe1f6d7/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/31ec32de44f143b2dd3959e0df1cbdb3/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/31ec32de44f143b2dd3959e0df1cbdb3/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c17ab4ba5cb074232580de08ba8e04a7/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c17ab4ba5cb074232580de08ba8e04a7/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/74b776a2a4568856572f976c12271268/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/74b776a2a4568856572f976c12271268/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f50bd566880661098b96f70045e51ae/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8f50bd566880661098b96f70045e51ae/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b46cb08634b9ee5e234c57f00f9cac43/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -443,8 +446,8 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/tekplanet/.gradle/c
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/74febf8f05fdeb4801a3c6de7743cd26/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/11cc4f157a8bf6845781936888705491/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/11cc4f157a8bf6845781936888705491/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/38460e046d53b32d57e90ab74b8863c5/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/38460e046d53b32d57e90ab74b8863c5/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c1a38f6afe6723f9e6875287c86a33fe/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/c1a38f6afe6723f9e6875287c86a33fe/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9e62b317d4e1c44b1152fb2676f98c89/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9e62b317d4e1c44b1152fb2676f98c89/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/0f289813b087e1811b7867266ace11a5/protolite-well-known-types-17.1.1/AndroidManifest.xml:7:5-9:41
@@ -469,12 +472,12 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
 MERGED from [:react-native-firebase_auth] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
 MERGED from [:react-native-firebase_auth] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:13:5-79
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
 MERGED from [io.grpc:grpc-android:1.28.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/d623e4e31bb8751c70a29d0c00881dd8/grpc-android-1.28.0/AndroidManifest.xml:11:5-79
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:10:5-79
@@ -524,29 +527,29 @@ ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React nativ
 	android:name
 		ADDED from [:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:17:9-23:19
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:74:9-80:19
-MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:74:9-80:19
+ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:74:9-80:19
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:15:9-21:19
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
-MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
+MERGED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:19:13-37
+		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:19:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:37:13-32
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:37:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:18:13-84
+		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:18:13-84
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:20:13-22:85
+ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:20:13-22:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:22:17-82
+		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:22:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dd0510e9b76a156e34074a96d3878b7f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:21:17-111
+		ADDED from [com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:21:17-111
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -568,73 +571,73 @@ ADDED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.g
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
 activity#com.google.firebase.auth.internal.GenericIdpActivity
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:27:9-44:20
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:27:9-44:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:29:13-46
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:29:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:31:13-44
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:31:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:30:13-36
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:30:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:32:13-72
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:32:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:28:13-80
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:28:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:33:13-43:29
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:33:13-43:29
 action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:34:17-69
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:34:25-66
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:34:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:36:17-76
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:36:17-76
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:36:27-73
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:36:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:37:17-78
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:37:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:37:27-75
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:37:27-75
 data
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:39:17-42:51
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:39:17-42:51
 	android:path
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:41:21-37
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:41:21-37
 	android:host
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:40:21-49
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:40:21-49
 	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:42:21-48
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:42:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:45:9-62:20
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:45:9-62:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:47:13-46
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:47:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:49:13-44
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:49:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:48:13-36
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:48:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:50:13-72
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:50:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:46:13-79
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:46:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:51:13-61:29
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:51:13-61:29
 service#com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:64:9-73:19
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:64:9-73:19
 	android:enabled
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:66:13-35
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:66:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:67:13-37
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:67:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:65:13-101
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:65:13-101
 intent-filter#action:name:com.google.firebase.auth.api.gms.service.START+category:name:android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:68:13-72:29
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:68:13-72:29
 action#com.google.firebase.auth.api.gms.service.START
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:17-89
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:17-89
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:25-86
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:25-86
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:77:13-79:85
+ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:77:13-79:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:79:17-82
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:79:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/501856a56552311a61198483ec293abc/jetified-firebase-auth-20.0.2/AndroidManifest.xml:78:17-109
+		ADDED from [com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:78:17-109
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ba5e9b7ba64e148f800594f95a188cbb/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
 	android:exported
@@ -656,23 +659,23 @@ ADDED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.
 	android:name
 		ADDED from [com.google.firebase:firebase-installations:16.3.5] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/fa274d9cd4a59325d91621edcf883f5e/firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
 meta-data#com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar
-ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
 	android:value
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/717074aac23cfa554d512ba69ff29e37/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
 ADDED from [com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/645da4c6734f9cca8e8743ea081a4b8c/play-services-measurement-impl-18.0.2/AndroidManifest.xml:26:5-110
@@ -706,8 +709,8 @@ ADDED from [com.google.android.gms:play-services-measurement:18.0.2] /home/tekpl
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:40:13-87
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/4dbde7183c3b6759796ab474abd6391a/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58

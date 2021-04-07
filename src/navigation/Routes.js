@@ -7,6 +7,7 @@ import MainNavigation from './MainNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthContext} from '../context/AuthProvider';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {GoogleSignin} from '@react-native-community/google-signin';
 
 const Routes = () => {
   const {setUser, setToken, isLoading, setUserProfile, fetchData} = useContext(
@@ -24,7 +25,7 @@ const Routes = () => {
     if (user) {
       getUserDetails();
     }
-    // console.log(user)
+    console.log(user);
   };
 
   const listenToUserState = () => {
@@ -35,6 +36,12 @@ const Routes = () => {
   useEffect(() => {
     tokenRequest();
     listenToUserState();
+
+    // initiates google client
+    GoogleSignin.configure({
+      webClientId:
+        '9169917780-eie2go8otjp9erku2mekigkpvpe5sgco.apps.googleusercontent.com',
+    });
   }, []);
 
   const tokenRequest = () => {
@@ -43,7 +50,7 @@ const Routes = () => {
         'https://rest.cricketapi.com/rest/v2/auth/?access_key=7d57345feed8c93ebc43f2e0a2d4c8e2&secret_key=77743e11913923fc67347e2cb2d3ab56&app_id=Test100&device_id=developer',
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setState({
           ...state,
           token: res.data.auth.access_token,
