@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   Text,
   View,
@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import axios from 'axios';
 
 import LoadingData from '../components/LoadingData';
 import {AuthContext} from '../context/AuthProvider';
 import GestureRecognizer from 'react-native-swipe-gestures';
+import Header from '../components/Header';
 
 export function SeriesScreen({navigation}) {
   const {token, series, fetchData} = useContext(AuthContext);
@@ -103,6 +103,7 @@ export function SeriesScreen({navigation}) {
       style={{
         flex: 1,
       }}>
+      <Header header={'Series'} />
       {state.series ? (
         <FlatList
           data={state.series}

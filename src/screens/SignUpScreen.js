@@ -349,27 +349,18 @@ const SignInScreen = ({navigation}) => {
                     Sign Up
                   </Text>
                 </TouchableOpacity>
-                <Text style={{color: '#000', margin: 10, fontSize: 18}}>
-                  Already have an account ?
-                </Text>
+
                 <TouchableOpacity
                   onPress={() => navigation.navigate('SignIn')}
-                  style={[
-                    styles.signIn,
-                    {
-                      borderColor: '#37018D',
-                      borderWidth: 1,
-                      marginTop: 15,
-                    },
-                  ]}>
+                  style={{margin: 15}}>
                   <Text
                     style={[
                       styles.textSign,
                       {
-                        color: '#fff',
+                        color: '#23395d',
                       },
                     ]}>
-                    SignIn
+                    Already have an account? SignIn
                   </Text>
                 </TouchableOpacity>
               </View>

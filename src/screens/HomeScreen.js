@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   View,
   Text,
@@ -7,14 +7,13 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import axios from 'axios';
+
 import MatchListItem from '../components/MatchListItem';
 import LoadingData from '../components/LoadingData';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {setToken} from '../redux/actions/dataAction';
+
 import {AuthContext} from '../context/AuthProvider';
 import GestureRecognizer from 'react-native-swipe-gestures';
-
+import Header from '../components/Header';
 export default function HomeScreen({navigation}) {
   const {token, scores, fetchData} = useContext(AuthContext);
   //  hold all state
@@ -78,6 +77,7 @@ export default function HomeScreen({navigation}) {
       style={{
         flex: 1,
       }}>
+      <Header header={'Live Scores'} />
       {state.scores ? (
         <FlatList
           data={scores}

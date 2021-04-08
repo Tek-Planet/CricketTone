@@ -24,9 +24,14 @@ import firestore from '@react-native-firebase/firestore';
 import {set} from 'react-native-reanimated';
 
 const SignInScreen = ({navigation}) => {
-  const {user, error, setError, setUserProfile, googleLogin} = useContext(
-    AuthContext,
-  );
+  const {
+    user,
+    error,
+    setError,
+    setUserProfile,
+    googleLogin,
+    fbLogin,
+  } = useContext(AuthContext);
 
   const [data, setData] = React.useState({
     email: '',
@@ -286,29 +291,6 @@ const SignInScreen = ({navigation}) => {
                       SignIn
                     </Text>
                   </TouchableOpacity>
-                  <Text style={{color: '#000', margin: 10, fontSize: 18}}>
-                    New here ?
-                  </Text>
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate('SignUp')}
-                    style={[
-                      styles.signIn,
-                      {
-                        borderColor: '#37018D',
-                        borderWidth: 1,
-                        marginTop: 15,
-                      },
-                    ]}>
-                    <Text
-                      style={[
-                        styles.textSign,
-                        {
-                          color: '#fff',
-                        },
-                      ]}>
-                      SignUp
-                    </Text>
-                  </TouchableOpacity>
 
                   {Platform.OS === 'android' ? (
                     <View>
@@ -317,7 +299,7 @@ const SignInScreen = ({navigation}) => {
                         btnType="facebook"
                         color="#4867aa"
                         backgroundColor="#e6eaf4"
-                        onPress={() => fbLogin()}
+                        onPress={() => fbLogin(navigation)}
                       />
 
                       <SocialButton
@@ -325,10 +307,24 @@ const SignInScreen = ({navigation}) => {
                         btnType="google"
                         color="#de4d41"
                         backgroundColor="#f5e7ea"
-                        onPress={() => googleLogin()}
+                        onPress={() => googleLogin(navigation)}
                       />
                     </View>
                   ) : null}
+
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate('SignUp')}
+                    style={{margin: 15}}>
+                    <Text
+                      style={[
+                        styles.textSign,
+                        {
+                          color: '#23395d',
+                        },
+                      ]}>
+                      Don't have an account? Create here
+                    </Text>
+                  </TouchableOpacity>
                 </View>
               </ScrollView>
             </Animatable.View>

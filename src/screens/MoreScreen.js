@@ -8,10 +8,10 @@ import {
   FlatList,
   ImageBackground,
 } from 'react-native';
-import axios from 'axios';
-import firestore from '@react-native-firebase/firestore';
+
 import ImageView from 'react-native-image-viewing';
 import GestureRecognizer from 'react-native-swipe-gestures';
+import Header from '../components/Header';
 
 export default function MoreScreen({navigation}) {
   const images = [
@@ -116,6 +116,7 @@ export default function MoreScreen({navigation}) {
         style={{
           flex: 1,
         }}>
+        <Header header={'Gallery'} />
         <FlatList
           numColumns={2}
           data={images}

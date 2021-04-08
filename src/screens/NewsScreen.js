@@ -13,7 +13,7 @@ import LoadingData from '../components/LoadingData';
 import {useStateValue} from '../data/StateProvider';
 import {AuthContext} from '../context/AuthProvider';
 import GestureRecognizer from 'react-native-swipe-gestures';
-
+import Header from '../components/Header';
 function NewsScreen({navigation}) {
   const {token, news, fetchData} = useContext(AuthContext);
 
@@ -74,6 +74,7 @@ function NewsScreen({navigation}) {
       style={{
         flex: 1,
       }}>
+      <Header header={'News'} />
       {state.news ? (
         <FlatList
           data={news}

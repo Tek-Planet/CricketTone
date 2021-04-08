@@ -3,6 +3,7 @@ import axios from 'axios';
 import {GoogleSignin} from '@react-native-community/google-signin';
 import auth from '@react-native-firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
 
 // Prepares the dataLayer
 export const AuthContext = createContext();
@@ -43,12 +44,12 @@ export const AuthProvider = ({children}) => {
       });
   };
 
-  const storeUserProfile = async (userDetails) => {
+  const storeUserProfile = async (navigation, userDetails) => {
     try {
       await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
       console.log('Profile stored');
       setUserProfile(userDetails);
-      //  navigation.navigate('Home');
+      navigation.navigate('Home');
     } catch {
       setError('Error storing data on device');
     }
@@ -77,7 +78,38 @@ export const AuthProvider = ({children}) => {
         isLoading,
         setIsLoading,
 
-        googleLogin: async () => {
+        fbLogin: async (navigation) => {
+          try {
+            const result = await LoginManager.logInWithPermissions([
+              'public_profile',
+              'email',
+            ]);
+
+            if (result.isCancelled) {
+              throw 'User cancelled the login process';
+            }
+
+            // Once signed in, get the users AccesToken
+            const data = await AccessToken.getCurrentAccessToken();
+
+            if (!data) {
+              throw 'Something went wrong obtaining access token';
+            }
+
+            // Create a Firebase credential with the AccessToken
+            const facebookCredential = auth.FacebookAuthProvider.credential(
+              data.accessToken,
+            );
+
+            // Sign-in the user with the credential
+            const res = await auth().signInWithCredential(facebookCredential);
+            storeUserProfile(navigation, res.user);
+          } catch (error) {
+            console.log(error);
+          }
+        },
+
+        googleLogin: async (navigation) => {
           try {
             // Get the users ID token
             const {idToken} = await GoogleSignin.signIn();
@@ -96,7 +128,7 @@ export const AuthProvider = ({children}) => {
               .signInWithCredential(googleCredential)
               .then((res) => {
                 console.log('signed in successful!');
-                storeUserProfile(res.user);
+                storeUserProfile(navigation, res.user);
               })
               .catch((error) => {
                 console.log(error);

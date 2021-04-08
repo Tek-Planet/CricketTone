@@ -75,7 +75,7 @@ export default MainTabScreen;
 const HomeStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'CricketTone (Live Scores)',
+      headerTitle: 'CricketTone',
 
       headerStyle: {
         backgroundColor: '#23395d',
@@ -107,7 +107,7 @@ const HomeStackScreen = ({navigation}) => (
 const NewsStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'CricketTone (Latest News)',
+      headerTitle: 'CricketTone',
 
       headerStyle: {
         backgroundColor: '#23395d',
@@ -139,7 +139,7 @@ const NewsStackScreen = ({navigation}) => (
 const SeriesStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'CricketTone (Series)',
+      headerTitle: 'CricketTone',
 
       headerStyle: {
         backgroundColor: '#23395d',
@@ -173,7 +173,7 @@ const SeriesStackScreen = ({navigation}) => (
 const MoreStackScreen = ({navigation}) => (
   <Stack.Navigator
     screenOptions={{
-      headerTitle: 'CricketTone (Gallery)',
+      headerTitle: 'CricketTone',
 
       headerStyle: {
         backgroundColor: '#23395d',
