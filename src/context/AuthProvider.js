@@ -2,6 +2,7 @@ import React, {createContext, useState} from 'react';
 import axios from 'axios';
 import {GoogleSignin} from '@react-native-community/google-signin';
 import auth from '@react-native-firebase/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Prepares the dataLayer
 export const AuthContext = createContext();
@@ -42,6 +43,17 @@ export const AuthProvider = ({children}) => {
       });
   };
 
+  const storeUserProfile = async (userDetails) => {
+    try {
+      await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
+      console.log('Profile stored');
+      setUserProfile(userDetails);
+      //  navigation.navigate('Home');
+    } catch {
+      setError('Error storing data on device');
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -75,10 +87,20 @@ export const AuthProvider = ({children}) => {
               idToken,
             );
 
-            console.log('credentials', googleCredential);
+            // console.log('credentials', googleCredential);
 
             // Sign-in the user with the credential
-            return auth().signInWithCredential(googleCredential);
+            // return auth().signInWithCredential(googleCredential);
+
+            auth()
+              .signInWithCredential(googleCredential)
+              .then((res) => {
+                console.log('signed in successful!');
+                storeUserProfile(res.user);
+              })
+              .catch((error) => {
+                console.log(error);
+              });
           } catch (error) {
             console.log(error);
           }

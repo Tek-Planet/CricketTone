@@ -33,7 +33,10 @@ export function DrawerContent({props, navigation}) {
               />
               <View style={{marginLeft: 15, flexDirection: 'column'}}>
                 <Title style={styles.title}>
-                  Welcome {user && userProfile ? userProfile.userName : 'Guest'}
+                  Welcome{' '}
+                  {user && userProfile
+                    ? userProfile.userName || userProfile.displayName
+                    : 'Guest'}
                 </Title>
                 <Caption style={styles.caption}>
                   {user && userProfile ? userProfile.email : null}
@@ -117,21 +120,21 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   userInfoSection: {
-    marginTop:-5  ,
-    padding:10,
+    marginTop: -5,
+    padding: 10,
     paddingLeft: 20,
-    backgroundColor:'#23395d'
+    backgroundColor: '#23395d',
   },
   title: {
     fontSize: 16,
     marginTop: 3,
     fontWeight: 'bold',
-    color:'#fff'
+    color: '#fff',
   },
   caption: {
     fontSize: 14,
     lineHeight: 14,
-    color:'#fff'
+    color: '#fff',
   },
   row: {
     marginTop: 20,

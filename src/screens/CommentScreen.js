@@ -27,7 +27,10 @@ function CommentScreen({match}) {
   const [comments, setComments] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [state, setState] = useState({
-    name: user && userProfile ? userProfile.userName : '',
+    name:
+      user && userProfile
+        ? userProfile.userName || userProfile.displayName
+        : '',
     email: user && userProfile ? userProfile.email : '',
     userId: user && userProfile ? userProfile.userId : 'anonymous',
   });

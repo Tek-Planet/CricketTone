@@ -23,15 +23,15 @@ function NewsScreen({route, navigation}) {
   });
   const {key} = route.params;
   useEffect(() => {
-    console.log(key);
-    console.log(token);
+    //console.log(key);
+    //console.log(token);
     setTimeout(() => {
       axios
         .get(
           `https://rest.cricketapi.com/rest/v2/match/${key}/?access_token=${token}`,
         )
         .then((res) => {
-          console.log(res.data.data.card);
+          //  console.log(res.data.data.card);
           setState({
             ...state,
             match: res.data.data.card,
