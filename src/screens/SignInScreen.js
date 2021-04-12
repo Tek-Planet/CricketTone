@@ -6,7 +6,6 @@ import {
   TextInput,
   Platform,
   StyleSheet,
-  Image,
   ScrollView,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -21,7 +20,6 @@ import {AuthContext} from '../context/AuthProvider';
 
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
-import {set} from 'react-native-reanimated';
 
 const SignInScreen = ({navigation}) => {
   const {
@@ -31,6 +29,8 @@ const SignInScreen = ({navigation}) => {
     setUserProfile,
     googleLogin,
     fbLogin,
+    fetchLikes,
+    loginUser,
   } = useContext(AuthContext);
 
   const [data, setData] = React.useState({
@@ -44,8 +44,6 @@ const SignInScreen = ({navigation}) => {
   });
 
   const {colors} = useTheme();
-
-  // const { signIn } = React.useContext(AuthContext);
 
   const textInputEmailChange = (val) => {
     if (val.trim().length >= 4 && val.includes('@') && val.includes('.')) {
@@ -102,53 +100,6 @@ const SignInScreen = ({navigation}) => {
     });
   };
 
-  const loginUser = (email, password) => {
-    if (email.length > 0 && password.length > 0) {
-      auth()
-        .signInWithEmailAndPassword(email, password)
-        .then((res) => {
-          setError(null);
-          console.log('signed in successful!');
-          fetchUserDetails(res.user.uid);
-        })
-        .catch((error) => {
-          if (error.code === 'auth/user-not-found') {
-            console.log('here is no user record corresponding to this mail!');
-            setError('There is no user record corresponding to this mail!');
-          }
-
-          if (error.code === 'auth/invalid-email') {
-            console.log('That email address is invalid!');
-            setError('That email address is invalid!');
-          }
-
-          if (error.code === 'auth/wrong-password') {
-            console.log('That email address is invalid!');
-            setError(
-              'The password is invalid or the user does not have a password',
-            );
-          }
-          // setError(error);
-          console.error(error);
-        });
-    } else {
-      setError('email and password cannot be empty');
-    }
-  };
-
-  const fetchUserDetails = (userId) => {
-    firestore()
-      .collection('users')
-      .doc(userId)
-      .get()
-      .then((documentSnapshot) => {
-        if (documentSnapshot.exists) {
-          console.log('User data: ', documentSnapshot.data());
-          storeUserProfile(documentSnapshot.data());
-        }
-      });
-  };
-
   const storeUserProfile = async (userDetails) => {
     try {
       await AsyncStorage.setItem('userProfile', JSON.stringify(userDetails));
@@ -162,8 +113,6 @@ const SignInScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      {/* <StatusBar backgroundColor='#009387' barStyle="light-content"/> */}
-
       <View style={styles.container}>
         <View style={styles.header}>
           {/* <Image
@@ -279,7 +228,7 @@ const SignInScreen = ({navigation}) => {
                   <TouchableOpacity
                     style={styles.signIn}
                     onPress={() => {
-                      loginUser(data.email, data.password);
+                      loginUser(data.email, data.password, navigation);
                     }}>
                     <Text
                       style={[

@@ -87,6 +87,9 @@ const Routes = () => {
   const getUserDetails = () => {
     AsyncStorage.getItem('userProfile').then((value) => {
       if (value !== null) {
+        // const userProfile = JSON.parse(value);
+        // console.log(userProfile);
+        // fetch likes
         setUserProfile(JSON.parse(value));
       } else {
         console.log('No Profile Data found');

@@ -12,6 +12,7 @@ import {
 import ImageView from 'react-native-image-viewing';
 import GestureRecognizer from 'react-native-swipe-gestures';
 import Header from '../components/Header';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function MoreScreen({navigation}) {
   const images = [
@@ -62,10 +63,28 @@ export default function MoreScreen({navigation}) {
   };
 
   const footer = (item) => (
-    <View style={{marginTop: -130, alignItems: 'center'}}>
-      <Text style={{fontSize: 20, textAlign: 'center', color: '#fff'}}>
+    <View
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+      }}>
+      <Text
+        style={{
+          marginEnd: 10,
+          fontSize: 20,
+          textAlign: 'center',
+          color: '#fff',
+        }}>
         {item.title}
       </Text>
+
+      <Ionicons
+        onPress={() => alert('Like Me')}
+        name={'heart-outline'}
+        size={20}
+        color={'#FFFFFF'}
+      />
     </View>
   );
 
