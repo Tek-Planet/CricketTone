@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/b96aa1b54b5ef80eee0ea9597fe1f6d7/cardview-1.0.0/res/values-v23/values-v23.xml",

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
             "map": [
-                {
-                    "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/res/values-zh-rTW/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "161",
-                        "endOffsets": "412"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "5912",
-                        "endColumns": "161",
-                        "endOffsets": "6069"
-                    }
-                },
                 {
                     "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b707818bd543435f177dcfe0ccc56e5/core-1.1.0/res/values-zh-rTW/values-zh-rTW.xml",
                     "from": {
@@ -86,6 +69,23 @@
                         "startOffsets": "4890,4993,5153,5270,5374,5540,5658,5788,6074,6243,6346,6506,6623,6784,6922,7008,7095",
                         "endColumns": "102,159,116,103,165,117,129,123,168,102,159,116,160,137,85,86,102",
                         "endOffsets": "4988,5148,5265,5369,5535,5653,5783,5907,6238,6341,6501,6618,6779,6917,7003,7090,7193"
+                    }
+                },
+                {
+                    "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/f3a17d5699c8d39009cb71d62199b6c1/jetified-play-services-basement-17.1.1/res/values-zh-rTW/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "161",
+                        "endOffsets": "412"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "5912",
+                        "endColumns": "161",
+                        "endOffsets": "6069"
                     }
                 }
             ]

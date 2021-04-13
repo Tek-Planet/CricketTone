@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/23a1aac72e10d8266479aefc32aa0a03/facebook-login-9.0.0/res/values-pt/values-pt.xml",

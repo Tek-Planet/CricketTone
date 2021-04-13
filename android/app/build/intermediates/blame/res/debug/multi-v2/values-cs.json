@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/23a1aac72e10d8266479aefc32aa0a03/facebook-login-9.0.0/res/values-cs/values-cs.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2798,2956,3084,3216,3328,3421,3515,3591,3680,3773,3889,4003,4098,4193,4298,4416,4499,4582,4778,4874,4978,5094,5203",
                         "endColumns": "157,127,131,111,92,93,75,88,92,115,113,94,94,104,117,82,82,195,95,103,115,108,149",
                         "endOffsets": "2951,3079,3211,3323,3416,3510,3586,3675,3768,3884,3998,4093,4188,4293,4411,4494,4577,4773,4869,4973,5089,5198,5348"
-                    }
-                },
-                {
-                    "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/res/values-cs/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "201",
-                        "endOffsets": "448"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "6505",
-                        "endColumns": "201",
-                        "endOffsets": "6702"
                     }
                 },
                 {
@@ -69,6 +52,23 @@
                         "startOffsets": "105,212,314,423,509,614,731,809,886,977,1069,1164,1258,1353,1446,1541,1638,1729,1820,1903,2007,2119,2218,2324,2435,2537,2700,8094",
                         "endColumns": "106,101,108,85,104,116,77,76,90,91,94,93,94,92,94,96,90,90,82,103,111,98,105,110,101,162,97,81",
                         "endOffsets": "207,309,418,504,609,726,804,881,972,1064,1159,1253,1348,1441,1536,1633,1724,1815,1898,2002,2114,2213,2319,2430,2532,2695,2793,8171"
+                    }
+                },
+                {
+                    "source": "/home/tekplanet/.gradle/caches/transforms-2/files-2.1/f3a17d5699c8d39009cb71d62199b6c1/jetified-play-services-basement-17.1.1/res/values-cs/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "201",
+                        "endOffsets": "448"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "6505",
+                        "endColumns": "201",
+                        "endOffsets": "6702"
                     }
                 },
                 {

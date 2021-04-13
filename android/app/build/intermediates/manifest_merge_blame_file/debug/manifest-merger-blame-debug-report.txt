@@ -9,102 +9,102 @@
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 13-->[com.facebook.flipper:flipper:0.54.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/54a7aae5b034135aecf18fe01026e016/flipper-0.54.0/AndroidManifest.xml:16:5-76
 13-->[com.facebook.flipper:flipper:0.54.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/54a7aae5b034135aecf18fe01026e016/flipper-0.54.0/AndroidManifest.xml:16:22-73
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-14-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-76
+14-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+14-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-76
 15    <uses-permission android:name="android.permission.WAKE_LOCK" />
-15-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-68
-15-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-65
+15-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-68
+15-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-65
 16    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 16-->[com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:26:5-110
 16-->[com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:26:22-107
 17
 18    <application
-18-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:6:5-26:19
+18-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:6:5-26:19
 19        android:name="com.cricketinfo.MainApplication"
-19-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:7:7-38
+19-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:7:7-38
 20        android:allowBackup="false"
-20-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:11:7-34
+20-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:11:7-34
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/8b707818bd543435f177dcfe0ccc56e5/core-1.1.0/AndroidManifest.xml:24:18-86
 22        android:debuggable="true"
 23        android:icon="@mipmap/ic_launcher_custom"
-23-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-48
+23-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:9:7-48
 24        android:label="@string/app_name"
-24-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:8:7-39
+24-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:8:7-39
 25        android:roundIcon="@mipmap/ic_launcher_custom_round"
-25-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-59
+25-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:10:7-59
 26        android:supportsRtl="true"
 26-->[com.facebook.android:facebook-android-sdk:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/dbdefccd54c8f1c494ffedcdcc9cecb1/facebook-android-sdk-9.0.0/AndroidManifest.xml:28:18-44
 27        android:theme="@style/AppTheme"
-27-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:12:7-38
+27-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:12:7-38
 28        android:usesCleartextTraffic="true" >
-28-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/debug/AndroidManifest.xml:7:18-53
+28-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/debug/AndroidManifest.xml:7:18-53
 29        <meta-data
-29-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:13:7-105
+29-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:13:7-105
 30            android:name="com.facebook.sdk.ApplicationId"
-30-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:13:18-63
+30-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:13:18-63
 31            android:value="@string/facebook_app_id" />
-31-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:13:64-103
+31-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:13:64-103
 32
 33        <activity
-33-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:14:7-24:18
+33-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:14:7-24:18
 34            android:name="com.cricketinfo.MainActivity"
-34-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:15:9-37
+34-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:15:9-37
 35            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-35-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:17:9-86
+35-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:17:9-86
 36            android:label="@string/app_name"
-36-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:16:9-41
+36-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:16:9-41
 37            android:launchMode="singleTask"
-37-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:18:9-40
+37-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:18:9-40
 38            android:windowSoftInputMode="adjustResize" >
-38-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:19:9-51
+38-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:19:9-51
 39            <intent-filter>
-39-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:20:9-23:25
+39-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:20:9-23:25
 40                <action android:name="android.intent.action.MAIN" />
-40-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:21:13-65
-40-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:21:21-62
+40-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:21:13-65
+40-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:21:21-62
 41
 42                <category android:name="android.intent.category.LAUNCHER" />
-42-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:22:13-73
-42-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:22:23-70
+42-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:22:13-73
+42-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:22:23-70
 43            </intent-filter>
 44        </activity>
 45        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-45-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:25:7-84
-45-->/home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/src/main/AndroidManifest.xml:25:17-81
+45-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:25:7-84
+45-->/home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/src/main/AndroidManifest.xml:25:17-81
 46
 47        <meta-data
-47-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:36
+47-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:36
 48            android:name="firebase_analytics_collection_enabled"
-48-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-65
+48-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-65
 49            android:value="true" />
-49-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-33
+49-->[:react-native-firebase_analytics] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/@react-native-firebase/analytics/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-33
 50
 51        <provider
-51-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+51-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
 52            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-52-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+52-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
 53            android:authorities="com.cricketinfo.fileprovider"
-53-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+53-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
 54            android:exported="false"
-54-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+54-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
 55            android:grantUriPermissions="true" >
-55-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+55-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
 56            <meta-data
-56-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+56-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
 57                android:name="android.support.FILE_PROVIDER_PATHS"
-57-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+57-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
 58                android:resource="@xml/file_provider_paths" />
-58-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+58-->[:react-native-webview] /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
 59        </provider>
 60
 61        <activity
@@ -147,25 +147,25 @@
 79        </activity>
 80
 81        <service
-81-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:17:9-23:19
+81-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:17:9-23:19
 82            android:name="com.google.firebase.components.ComponentDiscoveryService"
-82-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:18:13-84
+82-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:18:13-84
 83            android:directBootAware="true"
-83-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+83-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
 84            android:exported="false" >
-84-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:19:13-37
+84-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:19:13-37
 85            <meta-data
-85-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:20:13-22:85
+85-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:20:13-22:85
 86                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-86-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:21:17-111
+86-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:21:17-111
 87                android:value="com.google.firebase.components.ComponentRegistrar" />
-87-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/a309a5bfc534c810e80f2b8af9de0b1f/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:22:17-82
+87-->[com.google.firebase:firebase-firestore:22.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/5a9cdea721dce27df7d6e2d687b24be4/jetified-firebase-firestore-22.1.0/AndroidManifest.xml:22:17-82
 88            <meta-data
-88-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:77:13-79:85
+88-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:77:13-79:85
 89                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-89-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:78:17-109
+89-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:78:17-109
 90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:79:17-82
+90-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:79:17-82
 91            <meta-data
 91-->[com.google.android.gms:play-services-measurement-api:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/1fe9fbb111f177e129b8b2060dcd6821/play-services-measurement-api-18.0.2/AndroidManifest.xml:30:13-32:85
 92                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
@@ -183,11 +183,11 @@
 99                clients to use it as well, by defining this registrar in their own core/common library.
 100            -->
 101            <meta-data
-101-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+101-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
 102                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-102-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+102-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
 103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+103-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
 104        </service>
 105        <!--
 106         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
@@ -199,25 +199,25 @@
 112         a completely different provider.
 113        -->
 114        <provider
-114-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
+114-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
 115            android:name="com.facebook.internal.FacebookInitProvider"
-115-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
+115-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
 116            android:authorities="com.cricketinfo.FacebookInitProvider"
-116-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
+116-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
 117            android:exported="false" />
-117-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
+117-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
 118
 119        <receiver
-119-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
+119-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
 120            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
-120-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
+120-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
 121            android:exported="false" >
-121-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
+121-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
 122            <intent-filter>
-122-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
+122-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
 123                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
-123-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
-123-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/644219a1308666197d582f3e87b301e5/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
+123-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
+123-->[com.facebook.android:facebook-core:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/00903dd6b76457a957a77b05afa15a4e/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
 124            </intent-filter>
 125        </receiver>
 126
@@ -247,19 +247,19 @@
 140-->[com.google.android.gms:play-services-auth:19.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/96c1df4837b737c04f5cf6c4192b56e6/play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
 141
 142        <activity
-142-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:27:9-44:20
+142-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:27:9-44:20
 143            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-143-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:28:13-80
+143-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:28:13-80
 144            android:excludeFromRecents="true"
-144-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:29:13-46
+144-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:29:13-46
 145            android:exported="true"
-145-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:30:13-36
+145-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:30:13-36
 146            android:launchMode="singleTask"
-146-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:31:13-44
+146-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:31:13-44
 147            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-147-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:32:13-72
+147-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:32:13-72
 148            <intent-filter>
-148-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:33:13-43:29
+148-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:33:13-43:29
 149                <action android:name="android.intent.action.VIEW" />
 149-->[com.facebook.android:facebook-common:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea5e32b096060a87708931f1fb140de7/facebook-common-9.0.0/AndroidManifest.xml:40:17-69
 149-->[com.facebook.android:facebook-common:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea5e32b096060a87708931f1fb140de7/facebook-common-9.0.0/AndroidManifest.xml:40:25-66
@@ -281,19 +281,19 @@
 158            </intent-filter>
 159        </activity>
 160        <activity
-160-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:45:9-62:20
+160-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:45:9-62:20
 161            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-161-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:46:13-79
+161-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:46:13-79
 162            android:excludeFromRecents="true"
-162-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:47:13-46
+162-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:47:13-46
 163            android:exported="true"
-163-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:48:13-36
+163-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:48:13-36
 164            android:launchMode="singleTask"
-164-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:49:13-44
+164-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:49:13-44
 165            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-165-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:50:13-72
+165-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:50:13-72
 166            <intent-filter>
-166-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:51:13-61:29
+166-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:51:13-61:29
 167                <action android:name="android.intent.action.VIEW" />
 167-->[com.facebook.android:facebook-common:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea5e32b096060a87708931f1fb140de7/facebook-common-9.0.0/AndroidManifest.xml:40:17-69
 167-->[com.facebook.android:facebook-common:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea5e32b096060a87708931f1fb140de7/facebook-common-9.0.0/AndroidManifest.xml:40:25-66
@@ -316,18 +316,18 @@
 177        </activity>
 178
 179        <service
-179-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:64:9-73:19
+179-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:64:9-73:19
 180            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-180-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:65:13-101
+180-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:65:13-101
 181            android:enabled="true"
-181-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:66:13-35
+181-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:66:13-35
 182            android:exported="false" >
-182-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:67:13-37
+182-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:67:13-37
 183            <intent-filter>
-183-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:68:13-72:29
+183-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:68:13-72:29
 184                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-184-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:17-89
-184-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/b0af25d2b5ee72c8986d0d0eca8a02f7/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:25-86
+184-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:17-89
+184-->[com.google.firebase:firebase-auth:20.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/3fd5fc99aa12ea07796736dddad8d6b1/jetified-firebase-auth-20.0.2/AndroidManifest.xml:69:25-86
 185
 186                <category android:name="android.intent.category.DEFAULT" />
 186-->[com.facebook.android:facebook-common:9.0.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ea5e32b096060a87708931f1fb140de7/facebook-common-9.0.0/AndroidManifest.xml:42:17-76
@@ -345,17 +345,17 @@
 193-->[com.google.android.gms:play-services-base:17.1.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/ba5e9b7ba64e148f800594f95a188cbb/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
 194
 195        <provider
-195-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+195-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
 196            android:name="com.google.firebase.provider.FirebaseInitProvider"
-196-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+196-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
 197            android:authorities="com.cricketinfo.firebaseinitprovider"
-197-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+197-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
 198            android:directBootAware="true"
-198-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+198-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
 199            android:exported="false"
-199-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+199-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
 200            android:initOrder="100" />
-200-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f0eefbbf77b1d41b15778a8201d70460/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+200-->[com.google.firebase:firebase-common:19.5.0] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/46e050452c8126a06fcc946436f6a139/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
 201
 202        <receiver
 202-->[com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:29:9-33:20
@@ -387,11 +387,11 @@
 216-->[com.google.android.gms:play-services-measurement:18.0.2] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/93f1eb026960e45a089efbc3fb13f5e0/play-services-measurement-18.0.2/AndroidManifest.xml:43:13-69
 217
 218        <meta-data
-218-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
+218-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f3a17d5699c8d39009cb71d62199b6c1/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
 219            android:name="com.google.android.gms.version"
-219-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
+219-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f3a17d5699c8d39009cb71d62199b6c1/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
 220            android:value="@integer/google_play_services_version" />
-220-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/9861b5244c14326246b24e49aad19e64/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
+220-->[com.google.android.gms:play-services-basement:17.1.1] /home/tekplanet/.gradle/caches/transforms-2/files-2.1/f3a17d5699c8d39009cb71d62199b6c1/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
 221    </application>
 222
 223</manifest>

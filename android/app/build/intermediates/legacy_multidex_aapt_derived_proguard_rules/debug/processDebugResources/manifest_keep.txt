@@ -1,4 +1,4 @@
-# Referenced at /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:18
+# Referenced at /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:18
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at /home/tekplanet/Documents/Project/React native/NativeProjects/CricketTone/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:18
+# Referenced at /home/tekplanet/Documents/Project/React native/NativeProjects/Complete/CricketTone/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:18
 -keep class com.cricketinfo.MainApplication { <init>(); }
